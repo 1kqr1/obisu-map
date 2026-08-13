@@ -2,16 +2,21 @@
 
 山口県・九州北部の速度取締り装置（オービス）情報を、公開されている各県警サイトのHTML/PDFから収集・構造化し、地図で確認できるようにする個人用Webアプリ。
 
+**公開URL: https://1kqr1.github.io/obisu-map/**
+
 要件・背景・データモデル・Phase 0調査結果の全体は [requirements.md](./requirements.md) を参照。
 
-## 現在の状況（Phase 1: 山口県データパイプライン構築中）
+## 現在の状況（Phase 1: 山口県データパイプライン構築 ほぼ完了）
 
 - [x] Phase 0: 山口県分の事前調査（データソースの実在性・粒度・利用規約の確認）
 - [x] 山口県警「速度取締り計画」PDFのスクレイパー・パーサー（`scripts/scrape_yamaguchi.py`）
 - [x] 警察署管轄 → 市区町村 対応表の作成（I-7、`data/manual/police_station_jurisdiction.json`）
 - [x] OSM国道ライン × 市区町村境界による区間ジオメトリ生成（`scripts/build_segments.py`）
-- [ ] フロントエンド（地図表示・ルート検索）
-- [ ] GitHub Actions 定期実行の本稼働確認（リポジトリ未push）
+- [x] フロントエンド（地図表示・ルート検索、`frontend/`）
+- [x] GitHub Pagesへのデプロイ（`.github/workflows/deploy-pages.yml`）
+- [x] 山口県データの日次自動取得（`.github/workflows/scrape-yamaguchi.yml`、毎日6:00 JST）
+- [ ] 固定式オービスの実データ（DS-4手動収集）。現状 `fixed_cameras.json` は空
+- [ ] 九州北部への対象拡大（Phase 4）
 
 ## セットアップ
 
@@ -43,6 +48,17 @@ OSM上の国道ライン × 市区町村行政界（`data/manual/police_station_
 取締り区間のジオメトリを `data/processed/enforcement_segments.json` に出力する。
 道路網・行政界はほぼ変化しないため、対応表を更新した時のみ再実行すればよい
 （`yamaguchi_enforcement_raw.json` の `segment_id` から参照される）。
+
+## フロントエンドの開発
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+`data/processed/*.json` を `frontend/public/data/` にコピーしてから起動する（`predev`/`prebuild` npm script）。
+デプロイは `main` への push で GitHub Actions が自動的にビルド・公開する。
 
 ## 重要な注意
 
