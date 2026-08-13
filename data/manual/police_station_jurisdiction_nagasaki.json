@@ -1,0 +1,16 @@
+{
+  "_meta": {
+    "description": "長崎県警察の警察署管轄区域を市区町村単位で近似したもの。現時点では「可搬式オービス運用計画」に登場する警察署のみを収録（他署は未収録）。",
+    "source": "長崎県警察 時津警察署ページおよびWeb検索（2026-08-14取得）",
+    "verified_at": "2026-08-14"
+  },
+  "stations": [
+    {
+      "station_raw": "時津警察署",
+      "station_official": "時津警察署",
+      "source_url": "https://www.police.pref.nagasaki.jp/police/togitsu/",
+      "municipalities": ["時津町", "長与町"],
+      "sub_municipality_note": "長崎市の一部地区も管轄に含まれるが、市区町村単位の近似のため長崎市は含めていない（既知の精度限界）。"
+    }
+  ]
+}

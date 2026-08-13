@@ -1,25 +1,29 @@
-"""取締り区間ジオメトリ（enforcement_segments.json）を生成する。
+"""取締り区間ジオメトリ（enforcement_segments_<prefecture>.json）を生成する。
 
-山口県警の「速度取締り計画」PDFには住所が含まれず、実施主体は
-「国道番号 × 警察署管轄」という単位でしか特定できない（requirements.md 11.5節）。
-警察署管轄の公式GISデータは存在しないため、市区町村行政界で近似する
-（data/manual/police_station_jurisdiction.json、requirements.md 7.2節）。
+山口県・長崎県の警察は「速度取締り予定」に住所を含まず、
+「国道番号（不明な場合あり）× 警察署管轄」という単位でしか特定できない
+（requirements.md 11.5, 11.6節）。警察署管轄の公式GISデータは存在しないため、
+市区町村行政界で近似する（data/manual/police_station_jurisdiction_<prefecture>.json）。
 
 処理の流れ:
-  1. yamaguchi_enforcement_raw.json から実在する (road, police_station_raw) の組を集める
+  1. <prefecture>_enforcement_raw.json から実在する (road, police_station_raw) の組を集める
   2. 国道番号を特定できるものは、OSM上の該当国道ラインを取得する
   3. 管轄市区町村の行政界ポリゴン（OSM boundary relation）を取得する
   4. 国道ライン ∩ 市区町村ポリゴン を計算し、区間ジオメトリとする
-  5. 国道番号を特定できないもの（「その他道路」「国道その他」）は、
-     市区町村ポリゴンそのものを区間とする（route指定なしの近似、精度はさらに低い）
+  5. 国道番号を特定できないものは、市区町村ポリゴンそのものを区間とする
+     （route指定なしの近似、精度はさらに低い）
 
-同一市区町村を複数署が分割管轄しているケース（山口市・下関市など）は、
-市区町村単位の近似では区別できない。この場合、複数の segment が同一の
-ジオメトリを持つことになる。既知の精度限界としてrequirements.mdに記載済み。
+同一市区町村を複数署が分割管轄しているケースは、市区町村単位の近似では
+区別できない。この場合、複数の segment が同一のジオメトリを持つことになる。
+既知の精度限界としてrequirements.mdに記載済み。
+
+県ごとに独立実行できるようにしている（NFR-06）。1県のOverpass取得に
+失敗しても他県には影響しない。
 """
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -29,7 +33,7 @@ from pathlib import Path
 
 import requests
 from shapely.geometry import LineString, mapping
-from shapely.ops import linemerge, polygonize, unary_union
+from shapely.ops import polygonize, unary_union
 
 from common import segment_id_for
 
@@ -43,9 +47,29 @@ CACHE_DIR = Path("data/raw/osm_cache")
 SIMPLIFY_TOLERANCE_DEG = 0.0005
 COORDINATE_DECIMALS = 5
 
-SCHEDULES_PATH = Path("data/processed/yamaguchi_enforcement_raw.json")
-JURISDICTION_PATH = Path("data/manual/police_station_jurisdiction.json")
-OUTPUT_PATH = Path("data/processed/enforcement_segments.json")
+
+@dataclass(frozen=True)
+class PrefectureConfig:
+    slug: str
+    name_ja: str  # Overpassのarea["name"=...]検索に使う正式名
+
+    @property
+    def jurisdiction_path(self) -> Path:
+        return Path(f"data/manual/police_station_jurisdiction_{self.slug}.json")
+
+    @property
+    def schedules_path(self) -> Path:
+        return Path(f"data/processed/{self.slug}_enforcement_raw.json")
+
+    @property
+    def output_path(self) -> Path:
+        return Path(f"data/processed/enforcement_segments_{self.slug}.json")
+
+
+PREFECTURES = {
+    "yamaguchi": PrefectureConfig("yamaguchi", "山口県"),
+    "nagasaki": PrefectureConfig("nagasaki", "長崎県"),
+}
 
 
 def route_ref_number(road: str) -> str | None:
@@ -121,10 +145,10 @@ def fetch_municipality_polygon(name: str):
     return polys[0] if len(polys) == 1 else unary_union(polys)
 
 
-def fetch_route_line(ref_number: str):
+def fetch_route_line(ref_number: str, prefecture_name: str):
     query = f"""
     [out:json][timeout:80];
-    area["name"="山口県"]["boundary"="administrative"]->.a;
+    area["name"="{prefecture_name}"]["boundary"="administrative"]->.a;
     way["highway"]["ref"~"(^|;){ref_number}(;|$)"](area.a);
     out geom;
     """
@@ -141,6 +165,7 @@ def fetch_route_line(ref_number: str):
 
 @dataclass
 class SegmentBuilder:
+    prefecture: PrefectureConfig
     jurisdiction: dict
     municipality_cache: dict = field(default_factory=dict)
     route_cache: dict = field(default_factory=dict)
@@ -155,7 +180,7 @@ class SegmentBuilder:
 
     def get_route_line(self, ref_number: str):
         if ref_number not in self.route_cache:
-            self.route_cache[ref_number] = fetch_route_line(ref_number)
+            self.route_cache[ref_number] = fetch_route_line(ref_number, self.prefecture.name_ja)
         return self.route_cache[ref_number]
 
     def build(self, road: str, station_raw: str) -> dict:
@@ -186,8 +211,8 @@ class SegmentBuilder:
             raise ValueError(f"交差結果が空です: road={road} station={station_raw}")
 
         return {
-            "id": segment_id_for("yamaguchi", road, station_raw),
-            "prefecture": "山口県",
+            "id": segment_id_for(self.prefecture.slug, road, station_raw),
+            "prefecture": self.prefecture.name_ja,
             "road": road,
             "police_station": station["station_official"],
             "police_station_raw": station_raw,
@@ -199,14 +224,14 @@ class SegmentBuilder:
         }
 
 
-def main() -> int:
-    jurisdiction = json.loads(JURISDICTION_PATH.read_text(encoding="utf-8"))
-    schedules = json.loads(SCHEDULES_PATH.read_text(encoding="utf-8"))
+def run(prefecture: PrefectureConfig) -> int:
+    jurisdiction = json.loads(prefecture.jurisdiction_path.read_text(encoding="utf-8"))
+    schedules = json.loads(prefecture.schedules_path.read_text(encoding="utf-8"))
 
     pairs = sorted({(r["road"], r["police_station_raw"]) for r in schedules})
-    print(f"[INFO] {len(pairs)} 件のユニークな (road, station) の組を処理します")
+    print(f"[INFO] [{prefecture.slug}] {len(pairs)} 件のユニークな (road, station) の組を処理します")
 
-    builder = SegmentBuilder(jurisdiction=jurisdiction)
+    builder = SegmentBuilder(prefecture=prefecture, jurisdiction=jurisdiction)
     segments = []
     errors = []
     for road, station_raw in pairs:
@@ -217,17 +242,24 @@ def main() -> int:
             errors.append((road, station_raw, str(exc)))
             print(f"  NG: {road} / {station_raw} -> {exc}")
 
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(
+    prefecture.output_path.parent.mkdir(parents=True, exist_ok=True)
+    prefecture.output_path.write_text(
         json.dumps(segments, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    print(f"[OK] {len(segments)} 件の区間を {OUTPUT_PATH} に出力しました")
+    print(f"[OK] [{prefecture.slug}] {len(segments)} 件の区間を {prefecture.output_path} に出力しました")
     if errors:
-        print(f"[WARN] {len(errors)} 件でエラーが発生しました:")
+        print(f"[WARN] [{prefecture.slug}] {len(errors)} 件でエラーが発生しました:")
         for road, station_raw, msg in errors:
             print(f"  - {road} / {station_raw}: {msg}")
         return 1
     return 0
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--prefecture", choices=sorted(PREFECTURES), required=True)
+    args = parser.parse_args()
+    return run(PREFECTURES[args.prefecture])
 
 
 if __name__ == "__main__":

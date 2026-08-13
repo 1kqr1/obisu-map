@@ -1,9 +1,16 @@
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./style.css";
-import { ObisuMap } from "./map";
+import { ObisuMap, defaultFilters, type MapFilters } from "./map";
 import { loadAppData, schedulesForSegment } from "./data";
-import { geocode, fetchRoute, segmentsAlongRoute, fixedCamerasAlongRoute } from "./route";
-import type { AppData } from "./types";
+import {
+  geocode,
+  fetchRoute,
+  segmentsAlongRoute,
+  pointsAlongRoute,
+  routeProgressKm,
+  segmentRouteProgressKm,
+} from "./route";
+import type { AppData, EnforcementSegment, FixedCamera, MobilePoint } from "./types";
 
 const mapEl = document.getElementById("map")!;
 const form = document.getElementById("route-form") as HTMLFormElement;
@@ -15,6 +22,13 @@ const resultsEl = document.getElementById("route-results")!;
 const lastUpdatedEl = document.getElementById("last-updated")!;
 const clearButton = document.getElementById("clear-route-button") as HTMLButtonElement;
 
+const filterFixed = document.getElementById("filter-fixed") as HTMLInputElement;
+const filterMobileSegments = document.getElementById("filter-mobile-segments") as HTMLInputElement;
+const filterMobilePoints = document.getElementById("filter-mobile-points") as HTMLInputElement;
+const filterPrefCheckboxes = Array.from(
+  document.querySelectorAll<HTMLInputElement>(".filter-pref"),
+);
+
 dateInput.value = toLocalISODate(new Date());
 
 function toLocalISODate(d: Date): string {
@@ -25,12 +39,34 @@ function toLocalISODate(d: Date): string {
 const obisuMap = new ObisuMap(mapEl);
 
 let appData: AppData | null = null;
+let lastRouteLine: GeoJSON.LineString | null = null;
+
+function currentFilters(): MapFilters {
+  return {
+    prefectures: filterPrefCheckboxes.filter((c) => c.checked).map((c) => c.value),
+    showFixed: filterFixed.checked,
+    showMobileSegments: filterMobileSegments.checked,
+    showMobilePoints: filterMobilePoints.checked,
+  };
+}
+
+function onFiltersChanged(): void {
+  obisuMap.applyFilters(currentFilters());
+  if (lastRouteLine && appData) {
+    renderMatches(lastRouteLine, appData, dateInput.value);
+  }
+}
+
+for (const el of [filterFixed, filterMobileSegments, filterMobilePoints, ...filterPrefCheckboxes]) {
+  el.addEventListener("change", onFiltersChanged);
+}
 
 async function init(): Promise<void> {
   await obisuMap.whenReady();
   try {
     appData = await loadAppData();
-    obisuMap.setData(appData.segments, appData.schedules, appData.fixedCameras);
+    obisuMap.setData(appData.segments, appData.schedules, appData.fixedCameras, appData.mobilePoints);
+    obisuMap.applyFilters(defaultFilters());
     if (appData.lastUpdated) {
       const d = new Date(appData.lastUpdated);
       lastUpdatedEl.textContent = `データ最終更新: ${d.toLocaleString("ja-JP")}`;
@@ -46,24 +82,20 @@ form.addEventListener("submit", async (e) => {
   setStatus("経路を検索しています…", false);
   resultsEl.innerHTML = "";
   clearButton.hidden = true;
+  lastRouteLine = null;
 
   try {
     const [from, to] = await Promise.all([geocode(fromInput.value), geocode(toInput.value)]);
     const route = await fetchRoute(from, to);
     obisuMap.showRoute(route.line);
     clearButton.hidden = false;
-
-    const targetDate = dateInput.value;
-    const matchedSegments = segmentsAlongRoute(route.line, appData.segments).filter((seg) =>
-      schedulesForSegment(appData!.schedules, seg.id).some((s) => !targetDate || s.date === targetDate),
-    );
-    const matchedCameras = fixedCamerasAlongRoute(route.line, appData.fixedCameras);
+    lastRouteLine = route.line;
 
     setStatus(
       `${from.label} → ${to.label}（約${route.distanceKm.toFixed(1)}km, ${Math.round(route.durationMin)}分）`,
       false,
     );
-    renderResults(matchedSegments, matchedCameras, appData, targetDate);
+    renderMatches(route.line, appData, dateInput.value);
   } catch (err) {
     setStatus(`検索に失敗しました: ${(err as Error).message}`, true);
   }
@@ -72,17 +104,58 @@ form.addEventListener("submit", async (e) => {
 clearButton.addEventListener("click", () => {
   obisuMap.clearRoute();
   clearButton.hidden = true;
+  lastRouteLine = null;
   resultsEl.innerHTML = "";
   setStatus("", false);
 });
 
+function renderMatches(routeLine: GeoJSON.LineString, data: AppData, targetDate: string): void {
+  const filters = currentFilters();
+  const prefSet = new Set(filters.prefectures);
+
+  const matchedSegments = filters.showMobileSegments
+    ? segmentsAlongRoute(routeLine, data.segments)
+        .filter((seg) => prefSet.has(seg.prefecture))
+        .filter((seg) =>
+          schedulesForSegment(data.schedules, seg.id).some((s) => !targetDate || s.date === targetDate),
+        )
+    : [];
+
+  const matchedCameras = filters.showFixed
+    ? pointsAlongRoute(routeLine, data.fixedCameras).filter((c) => prefSet.has(c.prefecture))
+    : [];
+
+  const matchedPoints = filters.showMobilePoints
+    ? pointsAlongRoute(routeLine, data.mobilePoints)
+        .filter((p) => prefSet.has(p.prefecture))
+        .filter((p) => !targetDate || p.date === targetDate)
+    : [];
+
+  // FR-13: 出発地からの経路上の順序で並べる。
+  const segmentsSorted = matchedSegments
+    .map((seg) => ({ seg, progress: segmentRouteProgressKm(routeLine, seg) }))
+    .sort((a, b) => a.progress - b.progress)
+    .map((x) => x.seg);
+  const camerasSorted = matchedCameras
+    .map((c) => ({ c, progress: routeProgressKm(routeLine, c.lat as number, c.lon as number) }))
+    .sort((a, b) => a.progress - b.progress)
+    .map((x) => x.c);
+  const pointsSorted = matchedPoints
+    .map((p) => ({ p, progress: routeProgressKm(routeLine, p.lat as number, p.lon as number) }))
+    .sort((a, b) => a.progress - b.progress)
+    .map((x) => x.p);
+
+  renderResults(segmentsSorted, camerasSorted, pointsSorted, data, targetDate);
+}
+
 function renderResults(
-  segments: ReturnType<typeof segmentsAlongRoute>,
-  cameras: ReturnType<typeof fixedCamerasAlongRoute>,
+  segments: EnforcementSegment[],
+  cameras: FixedCamera[],
+  points: MobilePoint[],
   data: AppData,
   targetDate: string,
 ): void {
-  if (segments.length === 0 && cameras.length === 0) {
+  if (segments.length === 0 && cameras.length === 0 && points.length === 0) {
     resultsEl.innerHTML = "<p>経路沿いにオービス・取締り予定は見つかりませんでした。</p>";
     return;
   }
@@ -91,18 +164,25 @@ function renderResults(
   if (cameras.length > 0) {
     html += `<h2>固定式オービス（${cameras.length}件）</h2><ul>`;
     for (const cam of cameras) {
-      html += `<li>${escapeHtml(cam.road)}</li>`;
+      html += `<li>${escapeHtml(cam.road)}（${escapeHtml(cam.prefecture)}）</li>`;
     }
     html += "</ul>";
   }
   if (segments.length > 0) {
-    html += `<h2>可搬式オービス 取締り区間（${segments.length}件）</h2><ul>`;
+    html += `<h2>可搬式オービス 取締り区間（${segments.length}件、出発地から近い順）</h2><ul>`;
     for (const seg of segments) {
       const dates = schedulesForSegment(data.schedules, seg.id)
         .filter((s) => !targetDate || s.date === targetDate)
         .map((s) => s.date)
         .join(", ");
-      html += `<li>${escapeHtml(seg.road)} / ${escapeHtml(seg.police_station)}${dates ? `（${escapeHtml(dates)}）` : ""}</li>`;
+      html += `<li>${escapeHtml(seg.road)} / ${escapeHtml(seg.police_station)}（${escapeHtml(seg.prefecture)}）${dates ? `（${escapeHtml(dates)}）` : ""}</li>`;
+    }
+    html += "</ul>";
+  }
+  if (points.length > 0) {
+    html += `<h2>可搬式オービス 取締り地点（${points.length}件、出発地から近い順）</h2><ul>`;
+    for (const p of points) {
+      html += `<li>${escapeHtml(p.raw_location)}（${escapeHtml(p.prefecture)}） ${p.date}</li>`;
     }
     html += "</ul>";
   }

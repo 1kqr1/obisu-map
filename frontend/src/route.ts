@@ -1,5 +1,5 @@
 import * as turf from "@turf/turf";
-import type { EnforcementSegment, FixedCamera } from "./types";
+import type { EnforcementSegment, FixedCamera, MobilePoint } from "./types";
 
 const GSI_ADDRESS_SEARCH = "https://msearch.gsi.go.jp/address-search/AddressSearch";
 const OSRM_DEMO = "https://router.project-osrm.org/route/v1/driving";
@@ -7,7 +7,7 @@ const OSRM_DEMO = "https://router.project-osrm.org/route/v1/driving";
 // 経路との突き合わせ時の許容誤差。ルーティングAPIとOSMから個別に取得した
 // 道路ラインは同じ道でも数十m単位でズレることがあるための緩衝。
 const ROUTE_MATCH_BUFFER_KM = 0.1;
-const FIXED_CAMERA_BUFFER_M = 500;
+const POINT_BUFFER_M = 500;
 
 export interface GeocodeResult {
   lat: number;
@@ -58,7 +58,7 @@ export async function fetchRoute(from: GeocodeResult, to: GeocodeResult): Promis
   };
 }
 
-/** FR-12: 可搬式の取締り区間は、経路との交差（許容誤差付き）で抽出する。 */
+/** FR-12: 区間（線・面）は、経路との交差（許容誤差付き）で抽出する。 */
 export function segmentsAlongRoute(
   routeLine: GeoJSON.LineString,
   segments: EnforcementSegment[],
@@ -76,17 +76,42 @@ export function segmentsAlongRoute(
   });
 }
 
-/** FR-12: 固定式は経路から指定距離（既定500m）以内の点を抽出する。 */
-export function fixedCamerasAlongRoute(
+interface LatLon {
+  lat: number | null;
+  lon: number | null;
+}
+
+/** FR-12: 点（固定式・大分県の可搬式ポイント）は経路から指定距離（既定500m）以内を抽出する。 */
+export function pointsAlongRoute<T extends LatLon>(
   routeLine: GeoJSON.LineString,
-  cameras: FixedCamera[],
-  maxDistanceM = FIXED_CAMERA_BUFFER_M,
-): FixedCamera[] {
+  points: T[],
+  maxDistanceM = POINT_BUFFER_M,
+): T[] {
   const line = turf.lineString(routeLine.coordinates);
-  return cameras.filter((cam) => {
-    const dist = turf.pointToLineDistance(turf.point([cam.lon, cam.lat]), line, {
-      units: "meters",
-    });
+  return points.filter((p) => {
+    if (p.lat == null || p.lon == null) return false;
+    const dist = turf.pointToLineDistance(turf.point([p.lon, p.lat]), line, { units: "meters" });
     return dist <= maxDistanceM;
   });
 }
+
+/** FR-13: 出発地からの経路上の順序で並べるための概算距離(km)。 */
+export function routeProgressKm(routeLine: GeoJSON.LineString, lat: number, lon: number): number {
+  const line = turf.lineString(routeLine.coordinates);
+  const nearest = turf.nearestPointOnLine(line, turf.point([lon, lat]), { units: "kilometers" });
+  return nearest.properties.location ?? 0;
+}
+
+/**
+ * FR-13: 区間ジオメトリの重心を代表点として進行距離を求める。
+ * 区間は路線ライン・市区町村ポリゴンなど形状が一定でないため、
+ * 経路との厳密な交差計算はせず、重心と経路上の最近点で近似する
+ * （並び替え用の概算であり、距離表示そのものには使わない）。
+ */
+export function segmentRouteProgressKm(routeLine: GeoJSON.LineString, segment: EnforcementSegment): number {
+  const centroid = turf.centroid(turf.feature(segment.geometry));
+  const [lon, lat] = centroid.geometry.coordinates;
+  return routeProgressKm(routeLine, lat, lon);
+}
+
+export type { FixedCamera, MobilePoint };

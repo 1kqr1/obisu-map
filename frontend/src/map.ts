@@ -1,5 +1,5 @@
 import * as maplibregl from "maplibre-gl";
-import type { EnforcementSegment, EnforcementSchedule, FixedCamera } from "./types";
+import type { EnforcementSegment, EnforcementSchedule, FixedCamera, MobilePoint } from "./types";
 import { schedulesForSegment } from "./data";
 
 const YAMAGUCHI_CENTER: [number, number] = [131.47, 34.18];
@@ -19,6 +19,24 @@ const STYLE: maplibregl.StyleSpecification = {
   layers: [{ id: "gsi", type: "raster", source: "gsi" }],
 };
 
+export interface MapFilters {
+  prefectures: string[];
+  showFixed: boolean;
+  showMobileSegments: boolean;
+  showMobilePoints: boolean;
+}
+
+export const ALL_PREFECTURES = ["山口県", "長崎県", "大分県"];
+
+export function defaultFilters(): MapFilters {
+  return {
+    prefectures: [...ALL_PREFECTURES],
+    showFixed: true,
+    showMobileSegments: true,
+    showMobilePoints: true,
+  };
+}
+
 // MapLibreはGeoJSONソース内でPolygon/MultiPolygonとMultiLineStringが混在すると、
 // geometry-typeフィルタで出し分けようとしても一方のジオメトリが描画されない
 // （内部のタイル化処理がジオメトリ種別混在をうまく扱えない模様）。
@@ -34,7 +52,7 @@ function segmentsToFeatureCollections(segments: EnforcementSegment[]): {
       type: "Feature",
       id: seg.id,
       geometry: seg.geometry,
-      properties: { id: seg.id, accuracy: seg.jurisdiction_accuracy },
+      properties: { id: seg.id, accuracy: seg.jurisdiction_accuracy, prefecture: seg.prefecture },
     };
     if (seg.geometry.type === "LineString" || seg.geometry.type === "MultiLineString") {
       lines.push(feature);
@@ -55,8 +73,22 @@ function camerasToFeatureCollection(cameras: FixedCamera[]): GeoJSON.FeatureColl
       type: "Feature",
       id: cam.id,
       geometry: { type: "Point", coordinates: [cam.lon, cam.lat] },
-      properties: { id: cam.id },
+      properties: { id: cam.id, prefecture: cam.prefecture },
     })),
+  };
+}
+
+function mobilePointsToFeatureCollection(points: MobilePoint[]): GeoJSON.FeatureCollection {
+  return {
+    type: "FeatureCollection",
+    features: points
+      .filter((p) => p.lat != null && p.lon != null)
+      .map((p) => ({
+        type: "Feature",
+        id: p.id,
+        geometry: { type: "Point", coordinates: [p.lon as number, p.lat as number] },
+        properties: { id: p.id, prefecture: p.prefecture },
+      })),
   };
 }
 
@@ -65,6 +97,7 @@ export class ObisuMap {
   private segments: EnforcementSegment[] = [];
   private schedules: EnforcementSchedule[] = [];
   private cameras: FixedCamera[] = [];
+  private mobilePoints: MobilePoint[] = [];
   private popup = new maplibregl.Popup({ closeButton: true, maxWidth: "320px" });
 
   constructor(container: HTMLElement) {
@@ -89,15 +122,22 @@ export class ObisuMap {
     await new Promise<void>((resolve) => this.map.once("load", () => resolve()));
   }
 
-  setData(segments: EnforcementSegment[], schedules: EnforcementSchedule[], cameras: FixedCamera[]): void {
+  setData(
+    segments: EnforcementSegment[],
+    schedules: EnforcementSchedule[],
+    cameras: FixedCamera[],
+    mobilePoints: MobilePoint[],
+  ): void {
     this.segments = segments;
     this.schedules = schedules;
     this.cameras = cameras;
+    this.mobilePoints = mobilePoints;
 
     const { lines, polygons } = segmentsToFeatureCollections(segments);
     this.ensureSource("segments-lines", lines);
     this.ensureSource("segments-polygons", polygons);
     this.ensureSource("cameras", camerasToFeatureCollection(cameras));
+    this.ensureSource("mobile-points", mobilePointsToFeatureCollection(mobilePoints));
 
     if (!this.map.getLayer("segments-route-line")) {
       this.map.addLayer({
@@ -126,6 +166,19 @@ export class ObisuMap {
         "segments-route-line",
       );
     }
+    if (!this.map.getLayer("mobile-points-circle")) {
+      this.map.addLayer({
+        id: "mobile-points-circle",
+        type: "circle",
+        source: "mobile-points",
+        paint: {
+          "circle-radius": 6,
+          "circle-color": "#e76f51",
+          "circle-stroke-color": "#ffffff",
+          "circle-stroke-width": 2,
+        },
+      });
+    }
     if (!this.map.getLayer("cameras-point")) {
       this.map.addLayer({
         id: "cameras-point",
@@ -141,6 +194,33 @@ export class ObisuMap {
     }
 
     this.wireInteractions();
+  }
+
+  /** FR-05: 種別・県によるフィルタリング。 */
+  applyFilters(filters: MapFilters): void {
+    const prefFilter: maplibregl.FilterSpecification = [
+      "in",
+      ["get", "prefecture"],
+      ["literal", filters.prefectures],
+    ];
+    for (const layerId of ["segments-route-line", "segments-municipality-fill"]) {
+      if (this.map.getLayer(layerId)) {
+        this.map.setLayoutProperty(layerId, "visibility", filters.showMobileSegments ? "visible" : "none");
+        this.map.setFilter(layerId, prefFilter);
+      }
+    }
+    if (this.map.getLayer("mobile-points-circle")) {
+      this.map.setLayoutProperty(
+        "mobile-points-circle",
+        "visibility",
+        filters.showMobilePoints ? "visible" : "none",
+      );
+      this.map.setFilter("mobile-points-circle", prefFilter);
+    }
+    if (this.map.getLayer("cameras-point")) {
+      this.map.setLayoutProperty("cameras-point", "visibility", filters.showFixed ? "visible" : "none");
+      this.map.setFilter("cameras-point", prefFilter);
+    }
   }
 
   private ensureSource(id: string, data: GeoJSON.FeatureCollection): void {
@@ -177,6 +257,13 @@ export class ObisuMap {
       if (!feature) return;
       const camera = this.cameras.find((c) => c.id === feature.properties?.id);
       if (camera) this.showCameraPopup(camera, e.lngLat);
+    });
+
+    this.map.on("click", "mobile-points-circle", (e: maplibregl.MapLayerMouseEvent) => {
+      const feature = e.features?.[0];
+      if (!feature) return;
+      const point = this.mobilePoints.find((p) => p.id === feature.properties?.id);
+      if (point) this.showMobilePointPopup(point, e.lngLat);
     });
   }
 
@@ -215,6 +302,18 @@ export class ObisuMap {
     this.popup.setLngLat(lngLat).setHTML(html).addTo(this.map);
   }
 
+  private showMobilePointPopup(point: MobilePoint, lngLat: maplibregl.LngLatLike): void {
+    const html = `
+      <div class="popup">
+        <h3>可搬式オービス（${escapeHtml(point.prefecture)}）</h3>
+        <p>${escapeHtml(point.raw_location)}</p>
+        <p>${point.date}（${point.weekday}） ${timeBandLabel(point.time_band)}</p>
+        <p class="popup-accuracy">精度: 町丁レベル（住所文字列からのジオコーディング）</p>
+        <p class="popup-source">出典: <a href="${escapeHtml(point.source_url)}" target="_blank" rel="noopener">${escapeHtml(point.source)}</a></p>
+      </div>`;
+    this.popup.setLngLat(lngLat).setHTML(html).addTo(this.map);
+  }
+
   showRoute(line: GeoJSON.LineString): void {
     this.ensureSource("route", { type: "FeatureCollection", features: [{ type: "Feature", geometry: line, properties: {} }] });
     if (!this.map.getLayer("route-line")) {
@@ -243,8 +342,17 @@ function todayISO(): string {
   return new Date(d.getTime() - tzOffsetMs).toISOString().slice(0, 10);
 }
 
+const TIME_BAND_LABELS: Record<string, string> = {
+  day: "昼間(6:00-18:00)",
+  night_early: "早朝・夜間(18:00-翌6:00)",
+  morning: "午前",
+  afternoon: "午後",
+  night: "夜間",
+  unspecified: "時間帯不明",
+};
+
 function timeBandLabel(band: string): string {
-  return band === "day" ? "昼間(6:00-18:00)" : "早朝・夜間(18:00-翌6:00)";
+  return TIME_BAND_LABELS[band] ?? band;
 }
 
 function accuracyLabel(accuracy: string): string {

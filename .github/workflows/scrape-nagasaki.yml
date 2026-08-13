@@ -1,0 +1,32 @@
+name: 長崎県 データ取得
+
+on:
+  schedule:
+    # 06:05 JST = 21:05 UTC(前日)
+    - cron: "5 21 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  scrape-nagasaki:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - run: pip install -r requirements.txt
+
+      - name: 長崎県データ取得・パース
+        run: python scripts/scrape_nagasaki.py
+
+      - name: 差分があればコミット
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/processed/nagasaki_enforcement_raw.json
+          git diff --cached --quiet || git commit -m "data: 長崎県 取締り予定を更新 ($(date -u +%Y-%m-%d))"
+          git push

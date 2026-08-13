@@ -10,7 +10,14 @@ const REPO_ROOT = join(__dirname, "..", "..");
 const SRC_DIR = join(REPO_ROOT, "data", "processed");
 const DEST_DIR = join(__dirname, "..", "public", "data");
 
-const FILES = ["enforcement_segments.json", "yamaguchi_enforcement_raw.json", "fixed_cameras.json"];
+const FILES = [
+  "enforcement_segments_yamaguchi.json",
+  "enforcement_segments_nagasaki.json",
+  "yamaguchi_enforcement_raw.json",
+  "nagasaki_enforcement_raw.json",
+  "oita_enforcement_points.json",
+  "fixed_cameras.json",
+];
 
 mkdirSync(DEST_DIR, { recursive: true });
 

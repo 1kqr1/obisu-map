@@ -25,14 +25,33 @@ export interface EnforcementSegment {
   notes: string | null;
 }
 
+// time_bandは県ごとに区分の考え方が異なる（山口: day/night_early、大分: morning/afternoon等）。
+// 無理に統一せず、県別の生の値をそのまま保持する。
 export interface EnforcementSchedule {
   id: string;
   date: string;
   weekday: string;
   road: string;
-  time_band: "day" | "night_early";
+  time_band: string;
   police_station_raw: string;
   segment_id: string;
+  prefecture: string;
+  source: string;
+  source_url: string;
+  fetched_at: string;
+}
+
+// 大分県のように住所レベルで地名が特定できる県は、区間ハイライトではなく
+// 点＋座標（ジオコーディング結果）として扱う。
+export interface MobilePoint {
+  id: string;
+  date: string;
+  weekday: string;
+  time_band: string;
+  raw_location: string;
+  lat: number | null;
+  lon: number | null;
+  accuracy: "town_level" | "failed";
   prefecture: string;
   source: string;
   source_url: string;
@@ -43,5 +62,6 @@ export interface AppData {
   fixedCameras: FixedCamera[];
   segments: EnforcementSegment[];
   schedules: EnforcementSchedule[];
+  mobilePoints: MobilePoint[];
   lastUpdated: string | null;
 }

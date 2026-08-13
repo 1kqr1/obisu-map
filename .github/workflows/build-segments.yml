@@ -1,12 +1,16 @@
-name: 山口県 区間ジオメトリ再生成
+name: 区間ジオメトリ再生成
 
 # 道路網・市区町村境界はほぼ変化しないため、日次実行はしない。
-# 対応表（data/manual/police_station_jurisdiction.json）を更新した時などに手動実行する。
+# 対応表（data/manual/police_station_jurisdiction_*.json）を更新した時などに手動実行する。
 on:
   workflow_dispatch: {}
 
 jobs:
   build-segments:
+    strategy:
+      matrix:
+        prefecture: [yamaguchi, nagasaki]
+      fail-fast: false
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -19,13 +23,14 @@ jobs:
 
       - run: pip install -r requirements.txt
 
-      - name: 区間ジオメトリ生成
-        run: python scripts/build_segments.py
+      - name: 区間ジオメトリ生成（${{ matrix.prefecture }}）
+        run: python scripts/build_segments.py --prefecture ${{ matrix.prefecture }}
 
       - name: 差分があればコミット
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/processed/enforcement_segments.json
-          git diff --cached --quiet || git commit -m "data: 区間ジオメトリを再生成"
+          git add data/processed/enforcement_segments_${{ matrix.prefecture }}.json
+          git diff --cached --quiet || git commit -m "data: ${{ matrix.prefecture }} 区間ジオメトリを再生成"
+          git pull --rebase
           git push

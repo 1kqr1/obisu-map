@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>オービス情報マップ（山口県）</title>
+    <title>オービス情報マップ（山口県・長崎県・大分県）</title>
   </head>
   <body>
     <div id="app">
@@ -12,8 +12,24 @@
       <aside id="panel">
         <header>
           <h1>オービス情報マップ</h1>
-          <p class="subtitle">山口県 固定式・可搬式オービス情報（安全運転支援用）</p>
+          <p class="subtitle">山口県・長崎県・大分県 固定式・可搬式オービス情報（安全運転支援用）</p>
         </header>
+
+        <fieldset id="filters">
+          <legend>表示フィルタ</legend>
+          <div class="filter-group">
+            <span class="filter-group-label">種別</span>
+            <label><input type="checkbox" id="filter-fixed" checked /> 固定式</label>
+            <label><input type="checkbox" id="filter-mobile-segments" checked /> 可搬式（区間）</label>
+            <label><input type="checkbox" id="filter-mobile-points" checked /> 可搬式（地点）</label>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-label">県</span>
+            <label><input type="checkbox" class="filter-pref" value="山口県" checked /> 山口県</label>
+            <label><input type="checkbox" class="filter-pref" value="長崎県" checked /> 長崎県</label>
+            <label><input type="checkbox" class="filter-pref" value="大分県" checked /> 大分県</label>
+          </div>
+        </fieldset>
 
         <form id="route-form">
           <label>
@@ -42,6 +58,8 @@
             可搬式オービスの取締り区間は、警察署管轄を市区町村境界で近似したものであり、
             実際の取締り地点はこの区間内のどこかです（ピンポイントの位置ではありません）。
             本アプリは取締り回避ではなく、事前の速度抑制・安全運転支援を目的としています。
+            福岡県・佐賀県は、公式サイトに構造化された取締り予定データがなく
+            （主な告知手段がSNSであるため）、データ収集の対象外としています。
           </p>
           <p class="attribution">
             地図: 国土地理院タイル / 道路データ: © OpenStreetMap contributors (ODbL) /
