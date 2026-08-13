@@ -29,6 +29,82 @@ body,
 #map {
   flex: 1 1 auto;
   height: 100%;
+  position: relative;
+}
+
+#map-legend {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  max-width: 240px;
+  pointer-events: none;
+}
+
+#map-legend .legend-title {
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0 0 4px;
+}
+
+#map-legend p {
+  margin: 2px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-swatch {
+  flex: 0 0 auto;
+  display: inline-block;
+  width: 16px;
+  height: 10px;
+}
+
+.legend-line-red {
+  height: 3px;
+  background: #e63946;
+}
+
+.legend-fill-orange {
+  background: #f4a261;
+  opacity: 0.5;
+  border: 1px solid #f4a261;
+}
+
+.legend-dot-orange,
+.legend-dot-navy {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #ffffff;
+  outline: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.legend-dot-orange {
+  background: #e76f51;
+}
+
+.legend-dot-navy {
+  background: #1d3557;
+}
+
+.legend-line-teal {
+  height: 3px;
+  background: #2a9d8f;
+}
+
+@media (max-width: 768px) {
+  #map-legend {
+    font-size: 0.68rem;
+    max-width: 200px;
+  }
 }
 
 #panel {

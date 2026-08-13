@@ -58,14 +58,22 @@ export async function fetchRoute(from: GeocodeResult, to: GeocodeResult): Promis
   };
 }
 
+// 長距離ルートはOSRMから数千点のポリラインが返ることがあり、turf.bufferは
+// 頂点数に対して非常に重い（5,821点で約11秒かかることを実測）。
+// 許容誤差(ROUTE_MATCH_BUFFER_KM)より十分細かい間引きなら結果はほぼ変わらないため、
+// バッファ計算の直前で簡略化する（同条件で計測: 417点まで間引いて計33ms）。
+const ROUTE_SIMPLIFY_TOLERANCE_DEG = 0.0005; // 約50m
+
 /** FR-12: 区間（線・面）は、経路との交差（許容誤差付き）で抽出する。 */
 export function segmentsAlongRoute(
   routeLine: GeoJSON.LineString,
   segments: EnforcementSegment[],
 ): EnforcementSegment[] {
-  const routeBuffer = turf.buffer(turf.lineString(routeLine.coordinates), ROUTE_MATCH_BUFFER_KM, {
-    units: "kilometers",
+  const simplified = turf.simplify(turf.lineString(routeLine.coordinates), {
+    tolerance: ROUTE_SIMPLIFY_TOLERANCE_DEG,
+    highQuality: false,
   });
+  const routeBuffer = turf.buffer(simplified, ROUTE_MATCH_BUFFER_KM, { units: "kilometers" });
   if (!routeBuffer) return [];
   return segments.filter((seg) => {
     try {

@@ -7,7 +7,16 @@
   </head>
   <body>
     <div id="app">
-      <div id="map"></div>
+      <div id="map">
+        <div id="map-legend">
+          <p class="legend-title">地図の見方</p>
+          <p><span class="legend-swatch legend-line-red"></span> 可搬式オービス 取締り区間（国道特定できたもの）</p>
+          <p><span class="legend-swatch legend-fill-orange"></span> 可搬式オービス 取締り区間（国道不明・市区町村全体を表示）</p>
+          <p><span class="legend-swatch legend-dot-orange"></span> 可搬式オービス 取締り地点（大分県、住所からジオコーディング）</p>
+          <p><span class="legend-swatch legend-dot-navy"></span> 固定式オービス（現在データなし）</p>
+          <p><span class="legend-swatch legend-line-teal"></span> 検索した経路</p>
+        </div>
+      </div>
 
       <aside id="panel">
         <header>
