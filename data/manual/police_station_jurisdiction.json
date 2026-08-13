@@ -1,0 +1,121 @@
+{
+  "_meta": {
+    "description": "山口県警察 各警察署の管轄区域を市区町村単位で近似したもの。requirements.md 7.2 (jurisdiction_accuracy: municipality_approx) で使用。区市町村より細かい地区単位の分割（例: 山口市/下関市内の分割）は表現できないため、同一市内に複数警察署がある場合は複数署が同じ市区町村ポリゴンを共有する（既知の精度限界。requirements.md 参照）。municipalitiesは町村名から「〜郡」を除いた表記（OSMのname属性がこの形式のため。例: 「玖珂郡和木町」ではなく「和木町」）。",
+    "source": "山口県警察 各警察署紹介ページ（site/police/配下、2026-08-14取得）",
+    "verified_at": "2026-08-14"
+  },
+  "stations": [
+    {
+      "station_raw": "岩国",
+      "station_official": "岩国警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10139.html",
+      "municipalities": ["岩国市", "和木町"],
+      "sub_municipality_note": null
+    },
+    {
+      "station_raw": "柳井",
+      "station_official": "柳井警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10147.html",
+      "municipalities": ["柳井市", "田布施町", "平生町", "上関町", "周防大島町"],
+      "sub_municipality_note": null
+    },
+    {
+      "station_raw": "光",
+      "station_official": "光警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10148.html",
+      "municipalities": ["光市", "周南市"],
+      "sub_municipality_note": "周南市は光警察署と周南警察署で分割管轄。市区町村単位の近似では区別できない（既知の精度限界）。"
+    },
+    {
+      "station_raw": "下松",
+      "station_official": "下松警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10160.html",
+      "municipalities": ["下松市"],
+      "sub_municipality_note": null
+    },
+    {
+      "station_raw": "周南",
+      "station_official": "周南警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10166.html",
+      "municipalities": ["周南市"],
+      "sub_municipality_note": "周南市は光警察署と周南警察署で分割管轄。市区町村単位の近似では区別できない（既知の精度限界）。管内地図が画像のみで本文記載がなかったため、光警察署ページの記載から逆算した。"
+    },
+    {
+      "station_raw": "防府",
+      "station_official": "防府警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10167.html",
+      "municipalities": ["防府市"],
+      "sub_municipality_note": null
+    },
+    {
+      "station_raw": "山口",
+      "station_official": "山口警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10183.html",
+      "municipalities": ["山口市"],
+      "sub_municipality_note": "山口市は山口警察署と山口南警察署で分割管轄（小郡・秋穂・阿知須等11地区が山口南警察署）。市区町村単位の近似では区別できない（既知の精度限界）。"
+    },
+    {
+      "station_raw": "山口南",
+      "station_official": "山口南警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10184.html",
+      "municipalities": ["山口市"],
+      "sub_municipality_note": "山口市のうち小郡・秋穂・阿知須・鋳銭司・陶・名田島・秋穂二島・嘉川・江崎・深溝・佐山の11地区のみが管轄。市区町村単位の近似では山口警察署と区別できない（既知の精度限界）。"
+    },
+    {
+      "station_raw": "宇部",
+      "station_official": "宇部警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10188.html",
+      "municipalities": ["宇部市"],
+      "sub_municipality_note": null
+    },
+    {
+      "station_raw": "山陽小野田",
+      "station_official": "山陽小野田警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10199.html",
+      "municipalities": ["山陽小野田市"],
+      "sub_municipality_note": null
+    },
+    {
+      "station_raw": "小串",
+      "station_official": "小串警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10201.html",
+      "municipalities": ["下関市"],
+      "sub_municipality_note": "下関市のうち豊浦町・豊北町地区のみが管轄。下関市は下関/長府/小串の3署で分割管轄されており、市区町村単位の近似では区別できない（既知の精度限界）。"
+    },
+    {
+      "station_raw": "美祢",
+      "station_official": "美祢警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/171820.html",
+      "municipalities": ["美祢市"],
+      "sub_municipality_note": null
+    },
+    {
+      "station_raw": "長門",
+      "station_official": "長門警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10214.html",
+      "municipalities": ["長門市"],
+      "sub_municipality_note": null
+    },
+    {
+      "station_raw": "萩",
+      "station_official": "萩警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10220.html",
+      "municipalities": ["萩市", "阿武町"],
+      "sub_municipality_note": null
+    },
+    {
+      "station_raw": "下関",
+      "station_official": "下関警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10236.html",
+      "municipalities": ["下関市"],
+      "sub_municipality_note": "下関市のうち長府警察署・小串警察署の管轄地区を除く区域。下関市は3署で分割管轄されており、市区町村単位の近似では区別できない（既知の精度限界）。"
+    },
+    {
+      "station_raw": "長府",
+      "station_official": "長府警察署",
+      "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10238.html",
+      "municipalities": ["下関市"],
+      "sub_municipality_note": "下関市のうち小月・長府・豊田地区のみが管轄。下関市は3署で分割管轄されており、市区町村単位の近似では区別できない（既知の精度限界）。"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+
+# 県警サイトから毎回再取得可能なため、生PDFはコミットしない
+# （各レコードのsource_urlから再取得できる）
+data/raw/*.pdf
+# Overpass APIレスポンスのキャッシュ（build_segments.py）。再取得可能。
+data/raw/osm_cache/
+
+frontend/node_modules/
+frontend/dist/
+# data/processed/ からのコピー。ビルド時に自動生成される（frontend/scripts/copy-data.mjs）
+frontend/public/data/
