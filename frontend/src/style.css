@@ -32,6 +32,8 @@ body,
   position: relative;
 }
 
+/* 凡例はdetails/summaryで開閉式にする。地図が小さい端末で常時全開だと
+   凡例自体が地図を覆い隠してしまうため、既定では閉じておく。 */
 #map-legend {
   position: absolute;
   top: 12px;
@@ -40,17 +42,38 @@ body,
   background: rgba(255, 255, 255, 0.92);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 8px 10px;
+  padding: 6px 10px;
   font-size: 0.72rem;
   line-height: 1.5;
-  max-width: 240px;
-  pointer-events: none;
+  max-width: min(240px, calc(100% - 24px));
+  max-height: calc(100% - 24px);
+  overflow-y: auto;
 }
 
-#map-legend .legend-title {
+#map-legend summary {
   font-weight: 600;
-  color: var(--muted);
-  margin: 0 0 4px;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 2px 0;
+  list-style: none;
+}
+
+#map-legend summary::-webkit-details-marker {
+  display: none;
+}
+
+#map-legend summary::before {
+  content: "▸ ";
+}
+
+#map-legend[open] summary::before {
+  content: "▾ ";
+}
+
+#map-legend[open] summary {
+  margin-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 4px;
 }
 
 #map-legend p {
