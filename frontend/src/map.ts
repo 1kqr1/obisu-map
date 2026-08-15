@@ -2,6 +2,20 @@ import * as maplibregl from "maplibre-gl";
 import type { EnforcementSegment, EnforcementSchedule, FixedCamera, MobilePoint } from "./types";
 import { schedulesForSegment } from "./data";
 
+// maplibre-glは実行時にimport.meta.urlから自身のWorkerファイルのURLを逆算する
+// （sibling maplibre-gl-worker.mjsを探す）。Viteの本番ビルドは全体を1つのJSに
+// バンドルしてしまうため、import.meta.urlがバンドル本体のURLになり、
+// 存在しないパスを探しに行って失敗する（GeoJSONソースの処理が止まり、
+// 地図に何も描画されなくなる。エラーは出ないため気づきにくい）。
+// Worker本体は同ディレクトリのmaplibre-gl-shared.mjsをimportして依存するため、
+// `?url`で単体コピーすると依存先が欠けて壊れる（実際に踏んだ）。
+// scripts/copy-maplibre-worker.mjsで両ファイルをpublic/maplibre/に
+// セットでコピーし、固定パスで明示的に教える。
+maplibregl.setWorkerUrl(`${import.meta.env.BASE_URL}maplibre/maplibre-gl-worker.mjs`);
+console.log("DEBUG BASE_URL", import.meta.env.BASE_URL);
+console.log("DEBUG getWorkerUrl", (maplibregl as any).getWorkerUrl?.());
+console.log("DEBUG getWorkerCount", (maplibregl as any).getWorkerCount?.());
+
 const YAMAGUCHI_CENTER: [number, number] = [131.47, 34.18];
 
 const STYLE: maplibregl.StyleSpecification = {
@@ -114,7 +128,10 @@ export class ObisuMap {
       zoom: 9,
       attributionControl: false,
     });
-    this.map.on("error", (e) => console.error("MAP ERROR", e.error));
+    this.map.on("error", (e) => console.error("MAP ERROR", e.error, (e.error as any)?.stack));
+    for (const evt of ["styledata", "sourcedata", "idle", "load"]) {
+      (this.map as any).on(evt, () => console.log("MAP EVENT", evt, Date.now()));
+    }
     this.map.addControl(new maplibregl.NavigationControl(), "top-right");
     this.map.addControl(
       new maplibregl.AttributionControl({
