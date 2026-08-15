@@ -1,566 +1,6 @@
 [
   {
-    "id": "oita-2026-08-01-morning-0-2350207_4805589_misc",
-    "date": "2026-08-01",
-    "weekday": "土",
-    "time_band": "morning",
-    "raw_location": "大分市神崎",
-    "lat": 33.250095,
-    "lon": 131.554642,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-01-morning-1-2350207_4805589_misc",
-    "date": "2026-08-01",
-    "weekday": "土",
-    "time_band": "morning",
-    "raw_location": "日田市大山町",
-    "lat": 33.224724,
-    "lon": 130.964523,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-01-afternoon-2-2350207_4805589_misc",
-    "date": "2026-08-01",
-    "weekday": "土",
-    "time_band": "afternoon",
-    "raw_location": "佐伯市弥生",
-    "lat": 32.973133,
-    "lon": 131.848007,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-02-morning-3-2350207_4805589_misc",
-    "date": "2026-08-02",
-    "weekday": "日",
-    "time_band": "morning",
-    "raw_location": "豊後大野市三重町",
-    "lat": 32.995415,
-    "lon": 131.581146,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-02-morning-4-2350207_4805589_misc",
-    "date": "2026-08-02",
-    "weekday": "日",
-    "time_band": "morning",
-    "raw_location": "国東市国東町",
-    "lat": 33.560703,
-    "lon": 131.724274,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-03-morning-5-2350207_4805589_misc",
-    "date": "2026-08-03",
-    "weekday": "月",
-    "time_band": "morning",
-    "raw_location": "日出町豊岡",
-    "lat": 33.372597,
-    "lon": 131.49559,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-03-morning-6-2350207_4805589_misc",
-    "date": "2026-08-03",
-    "weekday": "月",
-    "time_band": "morning",
-    "raw_location": "由布市庄内町",
-    "lat": 33.158604,
-    "lon": 131.450958,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-03-afternoon-7-2350207_4805589_misc",
-    "date": "2026-08-03",
-    "weekday": "月",
-    "time_band": "afternoon",
-    "raw_location": "佐伯市弥生",
-    "lat": 32.973133,
-    "lon": 131.848007,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-04-morning-8-2350207_4805589_misc",
-    "date": "2026-08-04",
-    "weekday": "火",
-    "time_band": "morning",
-    "raw_location": "杵築市久木野尾",
-    "lat": 33.417038,
-    "lon": 131.616074,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-04-afternoon-9-2350207_4805589_misc",
-    "date": "2026-08-04",
-    "weekday": "火",
-    "time_band": "afternoon",
-    "raw_location": "中津市本耶馬渓町",
-    "lat": 33.50116,
-    "lon": 131.190048,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-04-afternoon-10-2350207_4805589_misc",
-    "date": "2026-08-04",
-    "weekday": "火",
-    "time_band": "afternoon",
-    "raw_location": "別府市鶴見",
-    "lat": 33.30183,
-    "lon": 131.485153,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-04-afternoon-11-2350207_4805589_misc",
-    "date": "2026-08-04",
-    "weekday": "火",
-    "time_band": "afternoon",
-    "raw_location": "由布市挾間町",
-    "lat": 33.219074,
-    "lon": 131.528381,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-05-morning-12-2350207_4805589_misc",
-    "date": "2026-08-05",
-    "weekday": "水",
-    "time_band": "morning",
-    "raw_location": "日田市花月",
-    "lat": 33.386669,
-    "lon": 130.98436,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-05-afternoon-13-2350207_4805589_misc",
-    "date": "2026-08-05",
-    "weekday": "水",
-    "time_band": "afternoon",
-    "raw_location": "臼杵市深田",
-    "lat": 33.082027,
-    "lon": 131.777695,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-06-morning-14-2350207_4805589_misc",
-    "date": "2026-08-06",
-    "weekday": "木",
-    "time_band": "morning",
-    "raw_location": "大分市下戸次",
-    "lat": 33.160633,
-    "lon": 131.690857,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-06-morning-15-2350207_4805589_misc",
-    "date": "2026-08-06",
-    "weekday": "木",
-    "time_band": "morning",
-    "raw_location": "別府市北中",
-    "lat": 33.312057,
-    "lon": 131.479675,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-06-afternoon-16-2350207_4805589_misc",
-    "date": "2026-08-06",
-    "weekday": "木",
-    "time_band": "afternoon",
-    "raw_location": "日田市友田",
-    "lat": 33.324516,
-    "lon": 130.911102,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-07-morning-17-2350207_4805589_misc",
-    "date": "2026-08-07",
-    "weekday": "金",
-    "time_band": "morning",
-    "raw_location": "日出町豊岡",
-    "lat": 33.372597,
-    "lon": 131.49559,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-07-afternoon-18-2350207_4805589_misc",
-    "date": "2026-08-07",
-    "weekday": "金",
-    "time_band": "afternoon",
-    "raw_location": "佐伯市蒲江",
-    "lat": 32.802284,
-    "lon": 131.905014,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-07-afternoon-19-2350207_4805589_misc",
-    "date": "2026-08-07",
-    "weekday": "金",
-    "time_band": "afternoon",
-    "raw_location": "大分市野津原",
-    "lat": 33.163826,
-    "lon": 131.527313,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-08-morning-20-2350207_4805589_misc",
-    "date": "2026-08-08",
-    "weekday": "土",
-    "time_band": "morning",
-    "raw_location": "日出町藤原",
-    "lat": 33.381088,
-    "lon": 131.541473,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-08-morning-21-2350207_4805589_misc",
-    "date": "2026-08-08",
-    "weekday": "土",
-    "time_band": "morning",
-    "raw_location": "九重町町田",
-    "lat": 33.189964,
-    "lon": 131.185135,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-08-morning-22-2350207_4805589_misc",
-    "date": "2026-08-08",
-    "weekday": "土",
-    "time_band": "morning",
-    "raw_location": "竹田市平田",
-    "lat": 32.982433,
-    "lon": 131.362198,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-08-morning-23-2350207_4805589_misc",
-    "date": "2026-08-08",
-    "weekday": "土",
-    "time_band": "morning",
-    "raw_location": "大分市佐野",
-    "lat": 33.198582,
-    "lon": 131.729553,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-09-morning-24-2350207_4805589_misc",
-    "date": "2026-08-09",
-    "weekday": "日",
-    "time_band": "morning",
-    "raw_location": "日田市大山町",
-    "lat": 33.224724,
-    "lon": 130.964523,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-09-morning-25-2350207_4805589_misc",
-    "date": "2026-08-09",
-    "weekday": "日",
-    "time_band": "morning",
-    "raw_location": "別府市亀川東町",
-    "lat": 33.324329,
-    "lon": 131.497406,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-09-afternoon-26-2350207_4805589_misc",
-    "date": "2026-08-09",
-    "weekday": "日",
-    "time_band": "afternoon",
-    "raw_location": "大分市神崎",
-    "lat": 33.250095,
-    "lon": 131.554642,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-10-morning-27-2350207_4805589_misc",
-    "date": "2026-08-10",
-    "weekday": "月",
-    "time_band": "morning",
-    "raw_location": "中津市三光臼木",
-    "lat": 33.526245,
-    "lon": 131.177567,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-11-morning-28-2350207_4805589_misc",
-    "date": "2026-08-11",
-    "weekday": "火",
-    "time_band": "morning",
-    "raw_location": "九重町町田",
-    "lat": 33.189964,
-    "lon": 131.185135,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-11-morning-29-2350207_4805589_misc",
-    "date": "2026-08-11",
-    "weekday": "火",
-    "time_band": "morning",
-    "raw_location": "豊後大野市朝地町",
-    "lat": 33.002827,
-    "lon": 131.459625,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-12-morning-30-2350207_4805589_misc",
-    "date": "2026-08-12",
-    "weekday": "水",
-    "time_band": "morning",
-    "raw_location": "臼杵市深田",
-    "lat": 33.082027,
-    "lon": 131.777695,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-12-afternoon-31-2350207_4805589_misc",
-    "date": "2026-08-12",
-    "weekday": "水",
-    "time_band": "afternoon",
-    "raw_location": "別府市鶴見",
-    "lat": 33.30183,
-    "lon": 131.485153,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-12-afternoon-32-2350207_4805589_misc",
-    "date": "2026-08-12",
-    "weekday": "水",
-    "time_band": "afternoon",
-    "raw_location": "佐伯市弥生",
-    "lat": 32.973133,
-    "lon": 131.848007,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-12-afternoon-33-2350207_4805589_misc",
-    "date": "2026-08-12",
-    "weekday": "水",
-    "time_band": "afternoon",
-    "raw_location": "大分市神崎",
-    "lat": 33.250095,
-    "lon": 131.554642,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-13-morning-34-2350207_4805589_misc",
-    "date": "2026-08-13",
-    "weekday": "木",
-    "time_band": "morning",
-    "raw_location": "臼杵市井村",
-    "lat": 33.139992,
-    "lon": 131.781677,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-13-afternoon-35-2350207_4805589_misc",
-    "date": "2026-08-13",
-    "weekday": "木",
-    "time_band": "afternoon",
-    "raw_location": "宇佐市江須賀",
-    "lat": 33.561878,
-    "lon": 131.360733,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-14-morning-36-2350207_4805589_misc",
-    "date": "2026-08-14",
-    "weekday": "金",
-    "time_band": "morning",
-    "raw_location": "別府市亀川東町",
-    "lat": 33.324329,
-    "lon": 131.497406,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-15-morning-37-2350207_4805589_misc",
-    "date": "2026-08-15",
-    "weekday": "土",
-    "time_band": "morning",
-    "raw_location": "大分市鶴瀬",
-    "lat": 33.203018,
-    "lon": 131.682205,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-15-morning-38-2350207_4805589_misc",
-    "date": "2026-08-15",
-    "weekday": "土",
-    "time_band": "morning",
-    "raw_location": "中津市耶馬溪町",
-    "lat": 33.415237,
-    "lon": 131.125168,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-15-afternoon-39-2350207_4805589_misc",
-    "date": "2026-08-15",
-    "weekday": "土",
-    "time_band": "afternoon",
-    "raw_location": "大分市神崎",
-    "lat": 33.250095,
-    "lon": 131.554642,
-    "accuracy": "town_level",
-    "prefecture": "大分県",
-    "source": "大分県警察",
-    "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
-  },
-  {
-    "id": "oita-2026-08-16-morning-0-2350207_4805591_misc",
+    "id": "oita-2026-08-16-morning-0-2350208_4805599_misc",
     "date": "2026-08-16",
     "weekday": "日",
     "time_band": "morning",
@@ -571,10 +11,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-16-afternoon-1-2350207_4805591_misc",
+    "id": "oita-2026-08-16-afternoon-1-2350208_4805599_misc",
     "date": "2026-08-16",
     "weekday": "日",
     "time_band": "afternoon",
@@ -585,10 +25,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-17-morning-2-2350207_4805591_misc",
+    "id": "oita-2026-08-17-morning-2-2350208_4805599_misc",
     "date": "2026-08-17",
     "weekday": "月",
     "time_band": "morning",
@@ -599,10 +39,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-17-afternoon-3-2350207_4805591_misc",
+    "id": "oita-2026-08-17-afternoon-3-2350208_4805599_misc",
     "date": "2026-08-17",
     "weekday": "月",
     "time_band": "afternoon",
@@ -613,10 +53,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-18-morning-4-2350207_4805591_misc",
+    "id": "oita-2026-08-18-morning-4-2350208_4805599_misc",
     "date": "2026-08-18",
     "weekday": "火",
     "time_band": "morning",
@@ -627,10 +67,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-18-afternoon-5-2350207_4805591_misc",
+    "id": "oita-2026-08-18-afternoon-5-2350208_4805599_misc",
     "date": "2026-08-18",
     "weekday": "火",
     "time_band": "afternoon",
@@ -641,10 +81,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-19-morning-6-2350207_4805591_misc",
+    "id": "oita-2026-08-19-morning-6-2350208_4805599_misc",
     "date": "2026-08-19",
     "weekday": "水",
     "time_band": "morning",
@@ -655,10 +95,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-19-afternoon-7-2350207_4805591_misc",
+    "id": "oita-2026-08-19-afternoon-7-2350208_4805599_misc",
     "date": "2026-08-19",
     "weekday": "水",
     "time_band": "afternoon",
@@ -669,10 +109,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-19-afternoon-8-2350207_4805591_misc",
+    "id": "oita-2026-08-19-afternoon-8-2350208_4805599_misc",
     "date": "2026-08-19",
     "weekday": "水",
     "time_band": "afternoon",
@@ -683,10 +123,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-19-afternoon-9-2350207_4805591_misc",
+    "id": "oita-2026-08-19-afternoon-9-2350208_4805599_misc",
     "date": "2026-08-19",
     "weekday": "水",
     "time_band": "afternoon",
@@ -697,10 +137,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-21-morning-10-2350207_4805591_misc",
+    "id": "oita-2026-08-21-morning-10-2350208_4805599_misc",
     "date": "2026-08-21",
     "weekday": "金",
     "time_band": "morning",
@@ -711,10 +151,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-21-morning-11-2350207_4805591_misc",
+    "id": "oita-2026-08-21-morning-11-2350208_4805599_misc",
     "date": "2026-08-21",
     "weekday": "金",
     "time_band": "morning",
@@ -725,10 +165,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-21-morning-12-2350207_4805591_misc",
+    "id": "oita-2026-08-21-morning-12-2350208_4805599_misc",
     "date": "2026-08-21",
     "weekday": "金",
     "time_band": "morning",
@@ -739,10 +179,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-21-afternoon-13-2350207_4805591_misc",
+    "id": "oita-2026-08-21-afternoon-13-2350208_4805599_misc",
     "date": "2026-08-21",
     "weekday": "金",
     "time_band": "afternoon",
@@ -753,10 +193,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-21-afternoon-14-2350207_4805591_misc",
+    "id": "oita-2026-08-21-afternoon-14-2350208_4805599_misc",
     "date": "2026-08-21",
     "weekday": "金",
     "time_band": "afternoon",
@@ -767,10 +207,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-22-morning-15-2350207_4805591_misc",
+    "id": "oita-2026-08-22-morning-15-2350208_4805599_misc",
     "date": "2026-08-22",
     "weekday": "土",
     "time_band": "morning",
@@ -781,10 +221,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-22-afternoon-16-2350207_4805591_misc",
+    "id": "oita-2026-08-22-afternoon-16-2350208_4805599_misc",
     "date": "2026-08-22",
     "weekday": "土",
     "time_band": "afternoon",
@@ -795,10 +235,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-23-morning-17-2350207_4805591_misc",
+    "id": "oita-2026-08-23-morning-17-2350208_4805599_misc",
     "date": "2026-08-23",
     "weekday": "日",
     "time_band": "morning",
@@ -809,10 +249,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-23-morning-18-2350207_4805591_misc",
+    "id": "oita-2026-08-23-morning-18-2350208_4805599_misc",
     "date": "2026-08-23",
     "weekday": "日",
     "time_band": "morning",
@@ -823,10 +263,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-23-afternoon-19-2350207_4805591_misc",
+    "id": "oita-2026-08-23-afternoon-19-2350208_4805599_misc",
     "date": "2026-08-23",
     "weekday": "日",
     "time_band": "afternoon",
@@ -837,10 +277,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-24-morning-20-2350207_4805591_misc",
+    "id": "oita-2026-08-24-morning-20-2350208_4805599_misc",
     "date": "2026-08-24",
     "weekday": "月",
     "time_band": "morning",
@@ -851,10 +291,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-25-morning-21-2350207_4805591_misc",
+    "id": "oita-2026-08-25-morning-21-2350208_4805599_misc",
     "date": "2026-08-25",
     "weekday": "火",
     "time_band": "morning",
@@ -865,10 +305,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-26-afternoon-22-2350207_4805591_misc",
+    "id": "oita-2026-08-26-afternoon-22-2350208_4805599_misc",
     "date": "2026-08-26",
     "weekday": "水",
     "time_band": "afternoon",
@@ -879,10 +319,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-27-morning-23-2350207_4805591_misc",
+    "id": "oita-2026-08-27-morning-23-2350208_4805599_misc",
     "date": "2026-08-27",
     "weekday": "木",
     "time_band": "morning",
@@ -893,10 +333,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-27-afternoon-24-2350207_4805591_misc",
+    "id": "oita-2026-08-27-afternoon-24-2350208_4805599_misc",
     "date": "2026-08-27",
     "weekday": "木",
     "time_band": "afternoon",
@@ -907,10 +347,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-27-afternoon-25-2350207_4805591_misc",
+    "id": "oita-2026-08-27-afternoon-25-2350208_4805599_misc",
     "date": "2026-08-27",
     "weekday": "木",
     "time_band": "afternoon",
@@ -921,10 +361,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-28-morning-26-2350207_4805591_misc",
+    "id": "oita-2026-08-28-morning-26-2350208_4805599_misc",
     "date": "2026-08-28",
     "weekday": "金",
     "time_band": "morning",
@@ -935,10 +375,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-28-afternoon-27-2350207_4805591_misc",
+    "id": "oita-2026-08-28-afternoon-27-2350208_4805599_misc",
     "date": "2026-08-28",
     "weekday": "金",
     "time_band": "afternoon",
@@ -949,10 +389,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-28-afternoon-28-2350207_4805591_misc",
+    "id": "oita-2026-08-28-afternoon-28-2350208_4805599_misc",
     "date": "2026-08-28",
     "weekday": "金",
     "time_band": "afternoon",
@@ -963,10 +403,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-29-morning-29-2350207_4805591_misc",
+    "id": "oita-2026-08-29-morning-29-2350208_4805599_misc",
     "date": "2026-08-29",
     "weekday": "土",
     "time_band": "morning",
@@ -977,10 +417,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-29-morning-30-2350207_4805591_misc",
+    "id": "oita-2026-08-29-morning-30-2350208_4805599_misc",
     "date": "2026-08-29",
     "weekday": "土",
     "time_band": "morning",
@@ -991,10 +431,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-30-morning-31-2350207_4805591_misc",
+    "id": "oita-2026-08-30-morning-31-2350208_4805599_misc",
     "date": "2026-08-30",
     "weekday": "日",
     "time_band": "morning",
@@ -1005,10 +445,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-30-afternoon-32-2350207_4805591_misc",
+    "id": "oita-2026-08-30-afternoon-32-2350208_4805599_misc",
     "date": "2026-08-30",
     "weekday": "日",
     "time_band": "afternoon",
@@ -1019,10 +459,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-31-morning-33-2350207_4805591_misc",
+    "id": "oita-2026-08-31-morning-33-2350208_4805599_misc",
     "date": "2026-08-31",
     "weekday": "月",
     "time_band": "morning",
@@ -1033,10 +473,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-31-afternoon-34-2350207_4805591_misc",
+    "id": "oita-2026-08-31-afternoon-34-2350208_4805599_misc",
     "date": "2026-08-31",
     "weekday": "月",
     "time_band": "afternoon",
@@ -1047,10 +487,10 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   },
   {
-    "id": "oita-2026-08-31-afternoon-35-2350207_4805591_misc",
+    "id": "oita-2026-08-31-afternoon-35-2350208_4805599_misc",
     "date": "2026-08-31",
     "weekday": "月",
     "time_band": "afternoon",
@@ -1061,6 +501,6 @@
     "prefecture": "大分県",
     "source": "大分県警察",
     "source_url": "https://www.pref.oita.jp/site/keisatu/torishimarijouhou2.html",
-    "fetched_at": "2026-08-15T06:37:07+09:00"
+    "fetched_at": "2026-08-16T06:33:06+09:00"
   }
 ]
