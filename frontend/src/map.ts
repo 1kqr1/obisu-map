@@ -9,7 +9,9 @@ const STYLE: maplibregl.StyleSpecification = {
   sources: {
     gsi: {
       type: "raster",
-      tiles: ["https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png"],
+      // 標準地図は国道=赤・高速道路=緑と、こちらのオーバーレイ色と丸かぶりして
+      // 見分けがつかなくなるため、オーバーレイ前提の淡色地図に変更。
+      tiles: ["https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png"],
       tileSize: 256,
       maxzoom: 18,
       attribution:
@@ -18,6 +20,10 @@ const STYLE: maplibregl.StyleSpecification = {
   },
   layers: [{ id: "gsi", type: "raster", source: "gsi" }],
 };
+
+// ルート検索でヒットした要素を「太い線で囲む」ためのハイライト色。
+// 基図にも他のレイヤーにも使っていない色にして、絶対に埋もれないようにする。
+const HIGHLIGHT_COLOR = "#d100d1";
 
 export interface MapFilters {
   prefectures: string[];
@@ -144,11 +150,7 @@ export class ObisuMap {
         id: "segments-route-line",
         type: "line",
         source: "segments-lines",
-        paint: {
-          "line-color": "#e63946",
-          "line-width": 4,
-          "line-opacity": 0.85,
-        },
+        paint: { "line-color": "#e63946", "line-width": 4, "line-opacity": 0.85 },
       });
     }
     if (!this.map.getLayer("segments-municipality-fill")) {
@@ -157,11 +159,7 @@ export class ObisuMap {
           id: "segments-municipality-fill",
           type: "fill",
           source: "segments-polygons",
-          paint: {
-            "fill-color": "#f4a261",
-            "fill-opacity": 0.12,
-            "fill-outline-color": "#f4a261",
-          },
+          paint: { "fill-color": "#f4a261", "fill-opacity": 0.12, "fill-outline-color": "#f4a261" },
         },
         "segments-route-line",
       );
@@ -193,7 +191,101 @@ export class ObisuMap {
       });
     }
 
+    this.ensureHighlightLayers();
     this.wireInteractions();
+  }
+
+  /**
+   * ルート検索でヒットした要素を「太い線で丸ごと囲む」ための専用レイヤー。
+   * feature-stateで色を出し分ける方式は、MapLibreのGeoJSONソースが
+   * 文字列idを内部で保持せず数値idにすり替えてしまうため機能しなかった
+   * （queryRenderedFeaturesで実測: 指定した文字列idが失われ0が返ってくる）。
+   * その回避として、ヒットした要素だけを別ソースに複製し最前面に重ねる。
+   * 正確な範囲より「ここを見ろ」という視認性を優先し、太さは大きめにしてある。
+   */
+  private ensureHighlightLayers(): void {
+    this.ensureSource("highlight-polygons", { type: "FeatureCollection", features: [] });
+    this.ensureSource("highlight-lines", { type: "FeatureCollection", features: [] });
+    this.ensureSource("highlight-points", { type: "FeatureCollection", features: [] });
+
+    if (!this.map.getLayer("highlight-polygon-fill")) {
+      this.map.addLayer({
+        id: "highlight-polygon-fill",
+        type: "fill",
+        source: "highlight-polygons",
+        paint: { "fill-color": HIGHLIGHT_COLOR, "fill-opacity": 0.25 },
+      });
+    }
+    if (!this.map.getLayer("highlight-polygon-outline")) {
+      this.map.addLayer({
+        id: "highlight-polygon-outline",
+        type: "line",
+        source: "highlight-polygons",
+        paint: { "line-color": HIGHLIGHT_COLOR, "line-width": 8, "line-opacity": 0.9 },
+      });
+    }
+    if (!this.map.getLayer("highlight-line")) {
+      this.map.addLayer({
+        id: "highlight-line",
+        type: "line",
+        source: "highlight-lines",
+        layout: { "line-cap": "round", "line-join": "round" },
+        paint: { "line-color": HIGHLIGHT_COLOR, "line-width": 16, "line-opacity": 0.5 },
+      });
+    }
+    if (!this.map.getLayer("highlight-point-halo")) {
+      this.map.addLayer({
+        id: "highlight-point-halo",
+        type: "circle",
+        source: "highlight-points",
+        paint: {
+          "circle-radius": 22,
+          "circle-color": HIGHLIGHT_COLOR,
+          "circle-opacity": 0.3,
+          "circle-stroke-color": HIGHLIGHT_COLOR,
+          "circle-stroke-width": 3,
+          "circle-stroke-opacity": 0.9,
+        },
+      });
+    }
+  }
+
+  /** FR-12/13: 直近のルート検索でヒットした要素を地図上で強調表示する。 */
+  setMatches(ids: { segmentIds?: string[]; cameraIds?: string[]; pointIds?: string[] }): void {
+    const segIdSet = new Set(ids.segmentIds ?? []);
+    const matchedSegments = this.segments.filter((s) => segIdSet.has(s.id));
+    const { lines, polygons } = segmentsToFeatureCollections(matchedSegments);
+    this.ensureSource("highlight-lines", lines);
+    this.ensureSource("highlight-polygons", polygons);
+
+    const camIdSet = new Set(ids.cameraIds ?? []);
+    const pointIdSet = new Set(ids.pointIds ?? []);
+    const highlightPoints: GeoJSON.FeatureCollection = {
+      type: "FeatureCollection",
+      features: [
+        ...this.cameras
+          .filter((c) => camIdSet.has(c.id))
+          .map((c) => ({
+            type: "Feature" as const,
+            geometry: { type: "Point" as const, coordinates: [c.lon, c.lat] },
+            properties: {},
+          })),
+        ...this.mobilePoints
+          .filter((p) => pointIdSet.has(p.id) && p.lat != null && p.lon != null)
+          .map((p) => ({
+            type: "Feature" as const,
+            geometry: { type: "Point" as const, coordinates: [p.lon as number, p.lat as number] },
+            properties: {},
+          })),
+      ],
+    };
+    this.ensureSource("highlight-points", highlightPoints);
+  }
+
+  clearMatches(): void {
+    this.ensureSource("highlight-lines", { type: "FeatureCollection", features: [] });
+    this.ensureSource("highlight-polygons", { type: "FeatureCollection", features: [] });
+    this.ensureSource("highlight-points", { type: "FeatureCollection", features: [] });
   }
 
   /** FR-05: 種別・県によるフィルタリング。 */
@@ -333,6 +425,7 @@ export class ObisuMap {
 
   clearRoute(): void {
     this.ensureSource("route", { type: "FeatureCollection", features: [] });
+    this.clearMatches();
   }
 }
 

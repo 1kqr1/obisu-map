@@ -123,6 +123,14 @@ body,
   background: #2a9d8f;
 }
 
+.legend-highlight {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #d100d1;
+  opacity: 0.6;
+}
+
 @media (max-width: 768px) {
   #map-legend {
     font-size: 0.68rem;

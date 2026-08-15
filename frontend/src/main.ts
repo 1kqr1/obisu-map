@@ -145,6 +145,12 @@ function renderMatches(routeLine: GeoJSON.LineString, data: AppData, targetDate:
     .sort((a, b) => a.progress - b.progress)
     .map((x) => x.p);
 
+  obisuMap.setMatches({
+    segmentIds: segmentsSorted.map((s) => s.id),
+    cameraIds: camerasSorted.map((c) => c.id),
+    pointIds: pointsSorted.map((p) => p.id),
+  });
+
   renderResults(segmentsSorted, camerasSorted, pointsSorted, data, targetDate);
 }
 
