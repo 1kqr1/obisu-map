@@ -12,9 +12,6 @@ import { schedulesForSegment } from "./data";
 // scripts/copy-maplibre-worker.mjsで両ファイルをpublic/maplibre/に
 // セットでコピーし、固定パスで明示的に教える。
 maplibregl.setWorkerUrl(`${import.meta.env.BASE_URL}maplibre/maplibre-gl-worker.mjs`);
-console.log("DEBUG BASE_URL", import.meta.env.BASE_URL);
-console.log("DEBUG getWorkerUrl", (maplibregl as any).getWorkerUrl?.());
-console.log("DEBUG getWorkerCount", (maplibregl as any).getWorkerCount?.());
 
 const YAMAGUCHI_CENTER: [number, number] = [131.47, 34.18];
 
@@ -128,10 +125,7 @@ export class ObisuMap {
       zoom: 9,
       attributionControl: false,
     });
-    this.map.on("error", (e) => console.error("MAP ERROR", e.error, (e.error as any)?.stack));
-    for (const evt of ["styledata", "sourcedata", "idle", "load"]) {
-      (this.map as any).on(evt, () => console.log("MAP EVENT", evt, Date.now()));
-    }
+    this.map.on("error", (e) => console.error("MAP ERROR", e.error));
     this.map.addControl(new maplibregl.NavigationControl(), "top-right");
     this.map.addControl(
       new maplibregl.AttributionControl({
@@ -141,8 +135,11 @@ export class ObisuMap {
   }
 
   async whenReady(): Promise<void> {
-    if (this.map.loaded()) return;
-    await new Promise<void>((resolve) => this.map.once("load", () => resolve()));
+    // "load" は全ソースの初期タイルが揃うまで待つため、ワーカー等の初期化が
+    // 少しでも遅いと発火が遅延・停止することがあった（実際に再現）。
+    // ソース・レイヤーを追加できるようになるだけなら "style.load" で十分。
+    if (this.map.isStyleLoaded()) return;
+    await new Promise<void>((resolve) => this.map.once("style.load" as "load", () => resolve()));
   }
 
   setData(

@@ -37,7 +37,6 @@ function toLocalISODate(d: Date): string {
 }
 
 const obisuMap = new ObisuMap(mapEl);
-(window as any).__debugMap = obisuMap;
 
 let appData: AppData | null = null;
 let lastRouteLine: GeoJSON.LineString | null = null;
