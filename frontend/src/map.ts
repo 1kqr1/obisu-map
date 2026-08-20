@@ -1,6 +1,6 @@
 import * as maplibregl from "maplibre-gl";
 import type { EnforcementSegment, EnforcementSchedule, FixedCamera, MobilePoint } from "./types";
-import { schedulesForSegment } from "./data";
+import { schedulesForSegment, timeBandLabel } from "./data";
 
 // maplibre-glは実行時にimport.meta.urlから自身のWorkerファイルのURLを逆算する
 // （sibling maplibre-gl-worker.mjsを探す）。Viteの本番ビルドは全体を1つのJSに
@@ -449,18 +449,6 @@ function todayISO(): string {
   return new Date(d.getTime() - tzOffsetMs).toISOString().slice(0, 10);
 }
 
-const TIME_BAND_LABELS: Record<string, string> = {
-  day: "昼間(6:00-18:00)",
-  night_early: "早朝・夜間(18:00-翌6:00)",
-  morning: "午前",
-  afternoon: "午後",
-  night: "夜間",
-  unspecified: "時間帯不明",
-};
-
-function timeBandLabel(band: string): string {
-  return TIME_BAND_LABELS[band] ?? band;
-}
 
 function accuracyLabel(accuracy: string): string {
   if (accuracy === "route_x_municipality_approx") {

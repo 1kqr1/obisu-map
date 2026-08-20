@@ -1,7 +1,13 @@
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./style.css";
 import { ObisuMap, defaultFilters, type MapFilters } from "./map";
-import { loadAppData, schedulesForSegment } from "./data";
+import {
+  loadAppData,
+  schedulesForSegment,
+  timeBandLabel,
+  timeBandMatchesFilter,
+  type TimeBandFilter,
+} from "./data";
 import {
   geocode,
   fetchRoute,
@@ -17,6 +23,7 @@ const form = document.getElementById("route-form") as HTMLFormElement;
 const fromInput = document.getElementById("from-input") as HTMLInputElement;
 const toInput = document.getElementById("to-input") as HTMLInputElement;
 const dateInput = document.getElementById("date-input") as HTMLInputElement;
+const timeBandInput = document.getElementById("time-band-input") as HTMLSelectElement;
 const statusEl = document.getElementById("route-status")!;
 const resultsEl = document.getElementById("route-results")!;
 const lastUpdatedEl = document.getElementById("last-updated")!;
@@ -53,13 +60,14 @@ function currentFilters(): MapFilters {
 function onFiltersChanged(): void {
   obisuMap.applyFilters(currentFilters());
   if (lastRouteLine && appData) {
-    renderMatches(lastRouteLine, appData, dateInput.value);
+    renderMatches(lastRouteLine, appData, dateInput.value, timeBandInput.value as TimeBandFilter);
   }
 }
 
 for (const el of [filterFixed, filterMobileSegments, filterMobilePoints, ...filterPrefCheckboxes]) {
   el.addEventListener("change", onFiltersChanged);
 }
+timeBandInput.addEventListener("change", onFiltersChanged);
 
 async function init(): Promise<void> {
   await obisuMap.whenReady();
@@ -95,7 +103,7 @@ form.addEventListener("submit", async (e) => {
       `${from.label} → ${to.label}（約${route.distanceKm.toFixed(1)}km, ${Math.round(route.durationMin)}分）`,
       false,
     );
-    renderMatches(route.line, appData, dateInput.value);
+    renderMatches(route.line, appData, dateInput.value, timeBandInput.value as TimeBandFilter);
   } catch (err) {
     setStatus(`検索に失敗しました: ${(err as Error).message}`, true);
   }
@@ -109,7 +117,12 @@ clearButton.addEventListener("click", () => {
   setStatus("", false);
 });
 
-function renderMatches(routeLine: GeoJSON.LineString, data: AppData, targetDate: string): void {
+function renderMatches(
+  routeLine: GeoJSON.LineString,
+  data: AppData,
+  targetDate: string,
+  targetTimeBand: TimeBandFilter,
+): void {
   const filters = currentFilters();
   const prefSet = new Set(filters.prefectures);
 
@@ -117,7 +130,9 @@ function renderMatches(routeLine: GeoJSON.LineString, data: AppData, targetDate:
     ? segmentsAlongRoute(routeLine, data.segments)
         .filter((seg) => prefSet.has(seg.prefecture))
         .filter((seg) =>
-          schedulesForSegment(data.schedules, seg.id).some((s) => !targetDate || s.date === targetDate),
+          schedulesForSegment(data.schedules, seg.id).some(
+            (s) => (!targetDate || s.date === targetDate) && timeBandMatchesFilter(s.time_band, targetTimeBand),
+          ),
         )
     : [];
 
@@ -129,6 +144,7 @@ function renderMatches(routeLine: GeoJSON.LineString, data: AppData, targetDate:
     ? pointsAlongRoute(routeLine, data.mobilePoints)
         .filter((p) => prefSet.has(p.prefecture))
         .filter((p) => !targetDate || p.date === targetDate)
+        .filter((p) => timeBandMatchesFilter(p.time_band, targetTimeBand))
     : [];
 
   // FR-13: 出発地からの経路上の順序で並べる。
@@ -151,7 +167,7 @@ function renderMatches(routeLine: GeoJSON.LineString, data: AppData, targetDate:
     pointIds: pointsSorted.map((p) => p.id),
   });
 
-  renderResults(segmentsSorted, camerasSorted, pointsSorted, data, targetDate);
+  renderResults(segmentsSorted, camerasSorted, pointsSorted, data, targetDate, targetTimeBand);
 }
 
 function renderResults(
@@ -160,6 +176,7 @@ function renderResults(
   points: MobilePoint[],
   data: AppData,
   targetDate: string,
+  targetTimeBand: TimeBandFilter,
 ): void {
   if (segments.length === 0 && cameras.length === 0 && points.length === 0) {
     resultsEl.innerHTML = "<p>経路沿いにオービス・取締り予定は見つかりませんでした。</p>";
@@ -179,7 +196,8 @@ function renderResults(
     for (const seg of segments) {
       const dates = schedulesForSegment(data.schedules, seg.id)
         .filter((s) => !targetDate || s.date === targetDate)
-        .map((s) => s.date)
+        .filter((s) => timeBandMatchesFilter(s.time_band, targetTimeBand))
+        .map((s) => `${s.date}(${timeBandLabel(s.time_band)})`)
         .join(", ");
       html += `<li>${escapeHtml(seg.road)} / ${escapeHtml(seg.police_station)}（${escapeHtml(seg.prefecture)}）${dates ? `（${escapeHtml(dates)}）` : ""}</li>`;
     }
@@ -188,7 +206,7 @@ function renderResults(
   if (points.length > 0) {
     html += `<h2>可搬式オービス 取締り地点（${points.length}件、出発地から近い順）</h2><ul>`;
     for (const p of points) {
-      html += `<li>${escapeHtml(p.raw_location)}（${escapeHtml(p.prefecture)}） ${p.date}</li>`;
+      html += `<li>${escapeHtml(p.raw_location)}（${escapeHtml(p.prefecture)}） ${p.date}(${escapeHtml(timeBandLabel(p.time_band))})</li>`;
     }
     html += "</ul>";
   }

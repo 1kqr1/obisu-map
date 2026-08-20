@@ -213,11 +213,13 @@ header h1 {
   gap: 4px;
 }
 
-#route-form input {
+#route-form input,
+#route-form select {
   font-size: 0.9rem;
   padding: 6px 8px;
   border: 1px solid var(--border);
   border-radius: 4px;
+  background: #fff;
 }
 
 #route-form button {

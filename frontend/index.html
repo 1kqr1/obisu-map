@@ -54,6 +54,14 @@
             出発予定日
             <input id="date-input" type="date" />
           </label>
+          <label>
+            出発時間帯
+            <select id="time-band-input">
+              <option value="all">指定なし（すべて表示）</option>
+              <option value="day">昼間（6:00〜18:00ごろ）</option>
+              <option value="night">早朝・夜間（18:00〜翌6:00ごろ）</option>
+            </select>
+          </label>
           <button type="submit">経路を検索</button>
           <button type="button" id="clear-route-button" hidden>経路をクリア</button>
         </form>
@@ -68,6 +76,7 @@
             可搬式オービスの取締り区間は、警察署管轄を市区町村境界で近似したものであり、
             実際の取締り地点はこの区間内のどこかです（ピンポイントの位置ではありません）。
             本アプリは取締り回避ではなく、事前の速度抑制・安全運転支援を目的としています。
+            出発時間帯の絞り込みは県により精度が異なります（大分県は午前/午後、長崎県は時間帯の記載自体がなく常に表示されます）。
             福岡県・佐賀県は、公式サイトに構造化された取締り予定データがなく
             （主な告知手段がSNSであるため）、データ収集の対象外としています。
           </p>
