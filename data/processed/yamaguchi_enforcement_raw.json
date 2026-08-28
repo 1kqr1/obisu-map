@@ -1,2020 +1,5 @@
 [
   {
-    "id": "yamaguchi-2026-08-01-r2-岩国-day",
-    "date": "2026-08-01",
-    "weekday": "土曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r2-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-01-r191-下関-day",
-    "date": "2026-08-01",
-    "weekday": "土曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-r191-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-01-kokudo-other-小串-day",
-    "date": "2026-08-01",
-    "weekday": "土曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "小串",
-    "segment_id": "yamaguchi-kokudo-other-小串",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-01-other-road-宇部-day",
-    "date": "2026-08-01",
-    "weekday": "土曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-other-road-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-01-other-road-長門-day",
-    "date": "2026-08-01",
-    "weekday": "土曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-other-road-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-02-r191-下関-day",
-    "date": "2026-08-02",
-    "weekday": "日曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-r191-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-02-kokudo-other-宇部-day",
-    "date": "2026-08-02",
-    "weekday": "日曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-kokudo-other-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-02-kokudo-other-美祢-day",
-    "date": "2026-08-02",
-    "weekday": "日曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "美祢",
-    "segment_id": "yamaguchi-kokudo-other-美祢",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-02-other-road-防府-day",
-    "date": "2026-08-02",
-    "weekday": "日曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "防府",
-    "segment_id": "yamaguchi-other-road-防府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-02-other-road-宇部-day",
-    "date": "2026-08-02",
-    "weekday": "日曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-other-road-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-r2-下松-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "下松",
-    "segment_id": "yamaguchi-r2-下松",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-r2-周南-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "周南",
-    "segment_id": "yamaguchi-r2-周南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-r2-山口南-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-r2-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-r2-長府-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "長府",
-    "segment_id": "yamaguchi-r2-長府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-r188-光-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "国道188号",
-    "time_band": "day",
-    "police_station_raw": "光",
-    "segment_id": "yamaguchi-r188-光",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-r191-長門-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-r191-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-r262-山口-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "国道262号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r262-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-kokudo-other-美祢-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "美祢",
-    "segment_id": "yamaguchi-kokudo-other-美祢",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-other-road-岩国-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-other-road-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-other-road-柳井-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-other-road-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-other-road-防府-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "防府",
-    "segment_id": "yamaguchi-other-road-防府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-other-road-宇部-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-other-road-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-other-road-下関-day",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-other-road-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-03-other-road-山陽小野田-night_early",
-    "date": "2026-08-03",
-    "weekday": "月曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "山陽小野田",
-    "segment_id": "yamaguchi-other-road-山陽小野田",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-r2-岩国-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r2-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-r2-光-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "光",
-    "segment_id": "yamaguchi-r2-光",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-r2-下松-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "下松",
-    "segment_id": "yamaguchi-r2-下松",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-r2-周南-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "周南",
-    "segment_id": "yamaguchi-r2-周南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-r9-山口-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道9号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r9-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-r9-長府-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道9号",
-    "time_band": "day",
-    "police_station_raw": "長府",
-    "segment_id": "yamaguchi-r9-長府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-r191-長門-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-r191-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-r191-萩-night_early",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道191号",
-    "time_band": "night_early",
-    "police_station_raw": "萩",
-    "segment_id": "yamaguchi-r191-萩",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-r262-山口-night_early",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道262号",
-    "time_band": "night_early",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r262-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-kokudo-other-周南-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "周南",
-    "segment_id": "yamaguchi-kokudo-other-周南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-kokudo-other-小串-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "小串",
-    "segment_id": "yamaguchi-kokudo-other-小串",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-other-road-柳井-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-other-road-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-other-road-山口南-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-other-road-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-other-road-萩-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "萩",
-    "segment_id": "yamaguchi-other-road-萩",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-04-other-road-下関-day",
-    "date": "2026-08-04",
-    "weekday": "火曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-other-road-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-r9-山口-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "国道9号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r9-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-r188-岩国-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "国道188号",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r188-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-r188-光-night_early",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "国道188号",
-    "time_band": "night_early",
-    "police_station_raw": "光",
-    "segment_id": "yamaguchi-r188-光",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-r191-長門-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-r191-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-r191-萩-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "萩",
-    "segment_id": "yamaguchi-r191-萩",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-r262-萩-night_early",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "国道262号",
-    "time_band": "night_early",
-    "police_station_raw": "萩",
-    "segment_id": "yamaguchi-r262-萩",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-kokudo-other-美祢-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "美祢",
-    "segment_id": "yamaguchi-kokudo-other-美祢",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-other-road-防府-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "防府",
-    "segment_id": "yamaguchi-other-road-防府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-other-road-山口南-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-other-road-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-other-road-宇部-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-other-road-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-other-road-美祢-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "美祢",
-    "segment_id": "yamaguchi-other-road-美祢",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-05-other-road-長府-day",
-    "date": "2026-08-05",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "長府",
-    "segment_id": "yamaguchi-other-road-長府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-r2-下松-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "下松",
-    "segment_id": "yamaguchi-r2-下松",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-r2-周南-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "周南",
-    "segment_id": "yamaguchi-r2-周南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-r2-長府-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "長府",
-    "segment_id": "yamaguchi-r2-長府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-r9-山口-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道9号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r9-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-r188-岩国-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道188号",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r188-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-r191-下関-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-r191-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-r191-長門-night_early",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道191号",
-    "time_band": "night_early",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-r191-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-r262-山口-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道262号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r262-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-kokudo-other-岩国-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-kokudo-other-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-kokudo-other-宇部-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-kokudo-other-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-other-road-岩国-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-other-road-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-other-road-柳井-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-other-road-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-other-road-光-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "光",
-    "segment_id": "yamaguchi-other-road-光",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-other-road-防府-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "防府",
-    "segment_id": "yamaguchi-other-road-防府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-other-road-山陽小野田-day",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "山陽小野田",
-    "segment_id": "yamaguchi-other-road-山陽小野田",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-other-road-柳井-night_early",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-other-road-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-other-road-美祢-night_early",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "美祢",
-    "segment_id": "yamaguchi-other-road-美祢",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-06-other-road-萩-night_early",
-    "date": "2026-08-06",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "萩",
-    "segment_id": "yamaguchi-other-road-萩",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-r2-下松-day",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "下松",
-    "segment_id": "yamaguchi-r2-下松",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-r2-山口南-day",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-r2-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-r2-岩国-night_early",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "国道2号",
-    "time_band": "night_early",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r2-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-r191-萩-night_early",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "国道191号",
-    "time_band": "night_early",
-    "police_station_raw": "萩",
-    "segment_id": "yamaguchi-r191-萩",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-r262-山口-day",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "国道262号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r262-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-kokudo-other-小串-night_early",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "国道その他",
-    "time_band": "night_early",
-    "police_station_raw": "小串",
-    "segment_id": "yamaguchi-kokudo-other-小串",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-other-road-岩国-day",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-other-road-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-other-road-萩-day",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "萩",
-    "segment_id": "yamaguchi-other-road-萩",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-other-road-柳井-night_early",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-other-road-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-other-road-防府-night_early",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "防府",
-    "segment_id": "yamaguchi-other-road-防府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-other-road-長門-night_early",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-other-road-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-07-other-road-長府-night_early",
-    "date": "2026-08-07",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "長府",
-    "segment_id": "yamaguchi-other-road-長府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-08-r191-下関-day",
-    "date": "2026-08-08",
-    "weekday": "土曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-r191-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-08-kokudo-other-小串-day",
-    "date": "2026-08-08",
-    "weekday": "土曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "小串",
-    "segment_id": "yamaguchi-kokudo-other-小串",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-08-other-road-柳井-day",
-    "date": "2026-08-08",
-    "weekday": "土曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-other-road-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-08-other-road-防府-day",
-    "date": "2026-08-08",
-    "weekday": "土曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "防府",
-    "segment_id": "yamaguchi-other-road-防府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-08-other-road-山陽小野田-day",
-    "date": "2026-08-08",
-    "weekday": "土曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "山陽小野田",
-    "segment_id": "yamaguchi-other-road-山陽小野田",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-08-other-road-長門-day",
-    "date": "2026-08-08",
-    "weekday": "土曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-other-road-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-09-r2-岩国-day",
-    "date": "2026-08-09",
-    "weekday": "日曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r2-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-09-r191-下関-day",
-    "date": "2026-08-09",
-    "weekday": "日曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-r191-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-09-kokudo-other-美祢-day",
-    "date": "2026-08-09",
-    "weekday": "日曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "美祢",
-    "segment_id": "yamaguchi-kokudo-other-美祢",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-09-other-road-防府-day",
-    "date": "2026-08-09",
-    "weekday": "日曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "防府",
-    "segment_id": "yamaguchi-other-road-防府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-r2-下松-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "下松",
-    "segment_id": "yamaguchi-r2-下松",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-r2-山口南-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-r2-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-r2-山陽小野田-night_early",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道2号",
-    "time_band": "night_early",
-    "police_station_raw": "山陽小野田",
-    "segment_id": "yamaguchi-r2-山陽小野田",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-r2-長府-night_early",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道2号",
-    "time_band": "night_early",
-    "police_station_raw": "長府",
-    "segment_id": "yamaguchi-r2-長府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-r9-山口-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道9号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r9-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-r188-光-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道188号",
-    "time_band": "day",
-    "police_station_raw": "光",
-    "segment_id": "yamaguchi-r188-光",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-r191-長門-night_early",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道191号",
-    "time_band": "night_early",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-r191-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-r191-萩-night_early",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道191号",
-    "time_band": "night_early",
-    "police_station_raw": "萩",
-    "segment_id": "yamaguchi-r191-萩",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-kokudo-other-岩国-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-kokudo-other-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-kokudo-other-周南-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "周南",
-    "segment_id": "yamaguchi-kokudo-other-周南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-kokudo-other-小串-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "小串",
-    "segment_id": "yamaguchi-kokudo-other-小串",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-kokudo-other-美祢-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "美祢",
-    "segment_id": "yamaguchi-kokudo-other-美祢",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-other-road-柳井-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-other-road-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-10-other-road-下関-day",
-    "date": "2026-08-10",
-    "weekday": "月曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-other-road-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-r2-光-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "光",
-    "segment_id": "yamaguchi-r2-光",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-r9-山口-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "国道9号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r9-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-r9-長府-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "国道9号",
-    "time_band": "day",
-    "police_station_raw": "長府",
-    "segment_id": "yamaguchi-r9-長府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-r188-岩国-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "国道188号",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r188-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-r188-下松-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "国道188号",
-    "time_band": "day",
-    "police_station_raw": "下松",
-    "segment_id": "yamaguchi-r188-下松",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-r191-長門-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-r191-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-kokudo-other-周南-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "周南",
-    "segment_id": "yamaguchi-kokudo-other-周南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-kokudo-other-美祢-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "美祢",
-    "segment_id": "yamaguchi-kokudo-other-美祢",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-other-road-防府-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "防府",
-    "segment_id": "yamaguchi-other-road-防府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-other-road-山口南-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-other-road-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-other-road-宇部-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-other-road-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-other-road-小串-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "小串",
-    "segment_id": "yamaguchi-other-road-小串",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-12-other-road-下関-day",
-    "date": "2026-08-12",
-    "weekday": "水曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-other-road-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r2-岩国-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r2-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r2-光-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "光",
-    "segment_id": "yamaguchi-r2-光",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r2-下松-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "下松",
-    "segment_id": "yamaguchi-r2-下松",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r2-周南-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "周南",
-    "segment_id": "yamaguchi-r2-周南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r2-山口南-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-r2-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r2-長府-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "長府",
-    "segment_id": "yamaguchi-r2-長府",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r188-柳井-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道188号",
-    "time_band": "day",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-r188-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r190-山陽小野田-night_early",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道190号",
-    "time_band": "night_early",
-    "police_station_raw": "山陽小野田",
-    "segment_id": "yamaguchi-r190-山陽小野田",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r191-長門-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-r191-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-r262-山口-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道262号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r262-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-kokudo-other-宇部-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-kokudo-other-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-kokudo-other-小串-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道その他",
-    "time_band": "day",
-    "police_station_raw": "小串",
-    "segment_id": "yamaguchi-kokudo-other-小串",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-kokudo-other-美祢-night_early",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "国道その他",
-    "time_band": "night_early",
-    "police_station_raw": "美祢",
-    "segment_id": "yamaguchi-kokudo-other-美祢",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-other-road-岩国-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-other-road-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-other-road-山口南-day",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-other-road-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-13-other-road-宇部-night_early",
-    "date": "2026-08-13",
-    "weekday": "木曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-other-road-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-r2-周南-day",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "周南",
-    "segment_id": "yamaguchi-r2-周南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-r2-山口南-day",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-r2-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-r2-岩国-night_early",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道2号",
-    "time_band": "night_early",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r2-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-r2-周南-night_early",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道2号",
-    "time_band": "night_early",
-    "police_station_raw": "周南",
-    "segment_id": "yamaguchi-r2-周南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-r188-光-day",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道188号",
-    "time_band": "day",
-    "police_station_raw": "光",
-    "segment_id": "yamaguchi-r188-光",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-r190-宇部-day",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道190号",
-    "time_band": "day",
-    "police_station_raw": "宇部",
-    "segment_id": "yamaguchi-r190-宇部",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-r191-長門-night_early",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道191号",
-    "time_band": "night_early",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-r191-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-r262-山口-day",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道262号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r262-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-kokudo-other-柳井-night_early",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道その他",
-    "time_band": "night_early",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-kokudo-other-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-kokudo-other-小串-night_early",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "国道その他",
-    "time_band": "night_early",
-    "police_station_raw": "小串",
-    "segment_id": "yamaguchi-kokudo-other-小串",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-other-road-岩国-day",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-other-road-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-other-road-柳井-day",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-other-road-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-other-road-山口-day",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-other-road-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-other-road-下関-day",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-other-road-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-14-other-road-山口南-night_early",
-    "date": "2026-08-14",
-    "weekday": "金曜日",
-    "road": "その他道路",
-    "time_band": "night_early",
-    "police_station_raw": "山口南",
-    "segment_id": "yamaguchi-other-road-山口南",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-15-r2-岩国-day",
-    "date": "2026-08-15",
-    "weekday": "土曜日",
-    "road": "国道2号",
-    "time_band": "day",
-    "police_station_raw": "岩国",
-    "segment_id": "yamaguchi-r2-岩国",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-15-r9-山口-day",
-    "date": "2026-08-15",
-    "weekday": "土曜日",
-    "road": "国道9号",
-    "time_band": "day",
-    "police_station_raw": "山口",
-    "segment_id": "yamaguchi-r9-山口",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-15-r190-山陽小野田-day",
-    "date": "2026-08-15",
-    "weekday": "土曜日",
-    "road": "国道190号",
-    "time_band": "day",
-    "police_station_raw": "山陽小野田",
-    "segment_id": "yamaguchi-r190-山陽小野田",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-15-r191-下関-day",
-    "date": "2026-08-15",
-    "weekday": "土曜日",
-    "road": "国道191号",
-    "time_band": "day",
-    "police_station_raw": "下関",
-    "segment_id": "yamaguchi-r191-下関",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-15-other-road-柳井-day",
-    "date": "2026-08-15",
-    "weekday": "土曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "柳井",
-    "segment_id": "yamaguchi-other-road-柳井",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
-    "id": "yamaguchi-2026-08-15-other-road-長門-day",
-    "date": "2026-08-15",
-    "weekday": "土曜日",
-    "road": "その他道路",
-    "time_band": "day",
-    "police_station_raw": "長門",
-    "segment_id": "yamaguchi-other-road-長門",
-    "prefecture": "山口県",
-    "source": "山口県警察",
-    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
-  },
-  {
     "id": "yamaguchi-2026-08-16-r191-下関-day",
     "date": "2026-08-16",
     "weekday": "日曜日",
@@ -2025,7 +10,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-16-r262-山口-day",
@@ -2038,7 +23,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-16-kokudo-other-山口-day",
@@ -2051,7 +36,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-16-kokudo-other-小串-day",
@@ -2064,7 +49,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-16-kokudo-other-美祢-day",
@@ -2077,7 +62,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-16-other-road-周南-night_early",
@@ -2090,7 +75,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-r2-下松-day",
@@ -2103,7 +88,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-r2-周南-day",
@@ -2116,7 +101,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-r2-長府-day",
@@ -2129,7 +114,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-r188-光-day",
@@ -2142,7 +127,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-r191-下関-day",
@@ -2155,7 +140,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-r191-長門-night_early",
@@ -2168,7 +153,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-kokudo-other-周南-day",
@@ -2181,7 +166,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-other-road-岩国-day",
@@ -2194,7 +179,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-other-road-山口南-day",
@@ -2207,7 +192,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-other-road-山陽小野田-day",
@@ -2220,7 +205,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-other-road-小串-day",
@@ -2233,7 +218,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-other-road-美祢-day",
@@ -2246,7 +231,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-17-other-road-萩-night_early",
@@ -2259,7 +244,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-r2-下松-day",
@@ -2272,7 +257,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-r2-長府-day",
@@ -2285,7 +270,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-r191-長門-night_early",
@@ -2298,7 +283,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-r262-山口-day",
@@ -2311,7 +296,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-kokudo-other-岩国-day",
@@ -2324,7 +309,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-kokudo-other-周南-day",
@@ -2337,7 +322,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-other-road-岩国-day",
@@ -2350,7 +335,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-other-road-光-day",
@@ -2363,7 +348,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-other-road-山陽小野田-day",
@@ -2376,7 +361,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-other-road-萩-day",
@@ -2389,7 +374,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-18-other-road-下関-day",
@@ -2402,7 +387,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-r2-岩国-day",
@@ -2415,7 +400,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-r2-下松-day",
@@ -2428,7 +413,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-r2-周南-day",
@@ -2441,7 +426,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-r2-山口南-day",
@@ -2454,7 +439,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-r9-山口-day",
@@ -2467,7 +452,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-r9-下関-night_early",
@@ -2480,7 +465,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-r190-山陽小野田-night_early",
@@ -2493,7 +478,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-kokudo-other-宇部-day",
@@ -2506,7 +491,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-other-road-柳井-day",
@@ -2519,7 +504,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-other-road-萩-day",
@@ -2532,7 +517,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-other-road-長府-day",
@@ -2545,7 +530,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-other-road-光-night_early",
@@ -2558,7 +543,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-19-other-road-長門-night_early",
@@ -2571,7 +556,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-r2-周南-day",
@@ -2584,7 +569,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-r2-長府-night_early",
@@ -2597,7 +582,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-r188-光-day",
@@ -2610,7 +595,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-r188-下松-day",
@@ -2623,7 +608,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-r191-長門-day",
@@ -2636,7 +621,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-r191-下関-day",
@@ -2649,7 +634,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-r262-山口-day",
@@ -2662,7 +647,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-kokudo-other-周南-day",
@@ -2675,7 +660,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-kokudo-other-山口-day",
@@ -2688,7 +673,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-other-road-柳井-day",
@@ -2701,7 +686,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-other-road-防府-day",
@@ -2714,7 +699,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-other-road-山陽小野田-day",
@@ -2727,7 +712,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-other-road-小串-day",
@@ -2740,7 +725,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-20-other-road-美祢-day",
@@ -2753,7 +738,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r2-周南-day",
@@ -2766,7 +751,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r2-山口南-day",
@@ -2779,7 +764,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r2-下松-night_early",
@@ -2792,7 +777,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r2-山口南-night_early",
@@ -2805,7 +790,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r9-山口-day",
@@ -2818,7 +803,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r191-萩-day",
@@ -2831,7 +816,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r191-下関-day",
@@ -2844,7 +829,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r191-長門-night_early",
@@ -2857,7 +842,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r262-山口-day",
@@ -2870,7 +855,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-r262-山口-night_early",
@@ -2883,7 +868,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-other-road-岩国-day",
@@ -2896,7 +881,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-other-road-柳井-day",
@@ -2909,7 +894,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-other-road-防府-day",
@@ -2922,7 +907,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-other-road-岩国-night_early",
@@ -2935,7 +920,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-other-road-小串-night_early",
@@ -2948,7 +933,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-other-road-美祢-night_early",
@@ -2961,7 +946,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-21-other-road-長府-night_early",
@@ -2974,7 +959,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-22-r9-山口-day",
@@ -2987,7 +972,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-22-r188-岩国-day",
@@ -3000,7 +985,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-22-r191-下関-day",
@@ -3013,7 +998,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-22-other-road-宇部-day",
@@ -3026,7 +1011,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-22-other-road-山陽小野田-day",
@@ -3039,7 +1024,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-22-other-road-長門-day",
@@ -3052,7 +1037,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-22-other-road-下関-day",
@@ -3065,7 +1050,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-23-r2-岩国-day",
@@ -3078,7 +1063,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-23-r191-下関-day",
@@ -3091,7 +1076,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-23-r262-山口-day",
@@ -3104,7 +1089,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-23-kokudo-other-小串-day",
@@ -3117,7 +1102,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-23-kokudo-other-美祢-day",
@@ -3130,7 +1115,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-23-other-road-防府-night_early",
@@ -3143,7 +1128,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r2-岩国-day",
@@ -3156,7 +1141,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r2-下松-day",
@@ -3169,7 +1154,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r2-周南-day",
@@ -3182,7 +1167,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r2-山口南-day",
@@ -3195,7 +1180,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r2-長府-day",
@@ -3208,7 +1193,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r9-山口-day",
@@ -3221,7 +1206,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r188-光-day",
@@ -3234,7 +1219,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r191-長門-day",
@@ -3247,7 +1232,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r191-下関-day",
@@ -3260,7 +1245,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-r262-萩-night_early",
@@ -3273,7 +1258,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-kokudo-other-周南-day",
@@ -3286,7 +1271,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-other-road-防府-day",
@@ -3299,7 +1284,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-other-road-宇部-day",
@@ -3312,7 +1297,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-24-other-road-山陽小野田-night_early",
@@ -3325,7 +1310,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-r2-周南-day",
@@ -3338,7 +1323,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-r2-長府-day",
@@ -3351,7 +1336,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-r188-岩国-day",
@@ -3364,7 +1349,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-r188-下松-day",
@@ -3377,7 +1362,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-r191-萩-night_early",
@@ -3390,7 +1375,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-r262-山口-day",
@@ -3403,7 +1388,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-kokudo-other-山口-day",
@@ -3416,7 +1401,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-kokudo-other-宇部-day",
@@ -3429,7 +1414,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-kokudo-other-小串-day",
@@ -3442,7 +1427,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-kokudo-other-美祢-day",
@@ -3455,7 +1440,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-other-road-柳井-day",
@@ -3468,7 +1453,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-other-road-光-day",
@@ -3481,7 +1466,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-other-road-防府-day",
@@ -3494,7 +1479,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-other-road-下関-day",
@@ -3507,7 +1492,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-25-other-road-萩-night_early",
@@ -3520,7 +1505,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-r2-山口南-day",
@@ -3533,7 +1518,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-r2-山陽小野田-day",
@@ -3546,7 +1531,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-r2-長府-day",
@@ -3559,7 +1544,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-r2-岩国-night_early",
@@ -3572,7 +1557,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-r2-下松-night_early",
@@ -3585,7 +1570,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-r191-下関-day",
@@ -3598,7 +1583,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-r191-長門-night_early",
@@ -3611,7 +1596,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-r262-山口-day",
@@ -3624,7 +1609,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-kokudo-other-岩国-day",
@@ -3637,7 +1622,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-other-road-光-day",
@@ -3650,7 +1635,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-other-road-周南-day",
@@ -3663,7 +1648,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-other-road-防府-day",
@@ -3676,7 +1661,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-other-road-宇部-day",
@@ -3689,7 +1674,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-other-road-小串-day",
@@ -3702,7 +1687,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-26-other-road-下関-night_early",
@@ -3715,7 +1700,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-r2-岩国-day",
@@ -3728,7 +1713,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-r2-下松-day",
@@ -3741,7 +1726,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-r2-周南-day",
@@ -3754,7 +1739,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-r2-長府-day",
@@ -3767,7 +1752,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-r9-山口-day",
@@ -3780,7 +1765,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-r188-光-day",
@@ -3793,7 +1778,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-r191-長門-day",
@@ -3806,7 +1791,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-r262-山口-day",
@@ -3819,7 +1804,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-r262-山口-night_early",
@@ -3832,7 +1817,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-kokudo-other-萩-day",
@@ -3845,7 +1830,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-other-road-柳井-day",
@@ -3858,7 +1843,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-other-road-山口南-day",
@@ -3871,7 +1856,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-27-other-road-山陽小野田-day",
@@ -3884,7 +1869,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-28-r2-長府-night_early",
@@ -3897,7 +1882,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-28-r9-山口-day",
@@ -3910,7 +1895,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-28-r9-山口-night_early",
@@ -3923,7 +1908,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-28-r9-下関-night_early",
@@ -3936,7 +1921,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-28-r188-岩国-night_early",
@@ -3949,7 +1934,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-28-kokudo-other-小串-night_early",
@@ -3962,7 +1947,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-28-kokudo-other-美祢-night_early",
@@ -3975,7 +1960,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-28-other-road-岩国-day",
@@ -3988,7 +1973,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-28-other-road-萩-night_early",
@@ -4001,7 +1986,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-29-r2-岩国-day",
@@ -4014,7 +1999,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-29-r190-宇部-day",
@@ -4027,7 +2012,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-29-r191-下関-day",
@@ -4040,7 +2025,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-29-other-road-宇部-day",
@@ -4053,7 +2038,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-29-other-road-山陽小野田-day",
@@ -4066,7 +2051,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-29-other-road-長門-day",
@@ -4079,7 +2064,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-30-kokudo-other-山口-day",
@@ -4092,7 +2077,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-30-other-road-岩国-day",
@@ -4105,7 +2090,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-30-other-road-柳井-day",
@@ -4118,7 +2103,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-30-other-road-宇部-day",
@@ -4131,7 +2116,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-r2-岩国-day",
@@ -4144,7 +2129,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-r2-下松-day",
@@ -4157,7 +2142,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-r9-山口-day",
@@ -4170,7 +2155,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-r190-宇部-day",
@@ -4183,7 +2168,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-r262-山口-day",
@@ -4196,7 +2181,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-other-road-光-day",
@@ -4209,7 +2194,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-other-road-山口南-day",
@@ -4222,7 +2207,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-other-road-宇部-day",
@@ -4235,7 +2220,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-other-road-下関-day",
@@ -4248,7 +2233,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-other-road-山陽小野田-night_early",
@@ -4261,7 +2246,7 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   },
   {
     "id": "yamaguchi-2026-08-31-other-road-長門-night_early",
@@ -4274,6 +2259,2541 @@
     "prefecture": "山口県",
     "source": "山口県警察",
     "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-    "fetched_at": "2026-08-27T09:34:13+09:00"
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-r2-岩国-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r2-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-r2-下松-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-r2-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-r2-周南-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-r2-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-r188-光-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-r188-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-r190-山陽小野田-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道190号",
+    "time_band": "day",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-r190-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-r191-長門-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-r191-下関-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-r262-山口-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道262号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-r262-山口-night_early",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道262号",
+    "time_band": "night_early",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-kokudo-other-小串-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "小串",
+    "segment_id": "yamaguchi-kokudo-other-小串",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-kokudo-other-美祢-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "美祢",
+    "segment_id": "yamaguchi-kokudo-other-美祢",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-other-road-岩国-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-other-road-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-other-road-柳井-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-other-road-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-other-road-防府-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-other-road-山口南-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-other-road-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-other-road-宇部-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-01-other-road-萩-day",
+    "date": "2026-09-01",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-other-road-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-r2-岩国-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r2-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-r2-山口南-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-r2-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-r2-長府-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "長府",
+    "segment_id": "yamaguchi-r2-長府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-r9-山口-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-r188-岩国-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r188-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-r191-長門-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-r191-萩-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-r191-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-r191-下関-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-r262-山口-night_early",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道262号",
+    "time_band": "night_early",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-kokudo-other-周南-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-kokudo-other-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-other-road-柳井-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-other-road-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-other-road-光-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-other-road-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-other-road-防府-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-other-road-山口-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-other-road-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-other-road-宇部-day",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-other-road-山口南-night_early",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "night_early",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-other-road-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-02-other-road-山陽小野田-night_early",
+    "date": "2026-09-02",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "night_early",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-other-road-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r2-岩国-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r2-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r2-周南-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-r2-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r2-長府-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "長府",
+    "segment_id": "yamaguchi-r2-長府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r2-山陽小野田-night_early",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道2号",
+    "time_band": "night_early",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-r2-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r9-山口-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r9-下関-night_early",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道9号",
+    "time_band": "night_early",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r9-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r188-下松-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-r188-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r191-長門-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r191-萩-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-r191-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-r262-山口-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道262号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-kokudo-other-柳井-night_early",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道その他",
+    "time_band": "night_early",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-kokudo-other-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-kokudo-other-山口-night_early",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道その他",
+    "time_band": "night_early",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-kokudo-other-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-kokudo-other-美祢-night_early",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "国道その他",
+    "time_band": "night_early",
+    "police_station_raw": "美祢",
+    "segment_id": "yamaguchi-kokudo-other-美祢",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-other-road-光-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-other-road-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-other-road-防府-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-other-road-山口南-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-other-road-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-other-road-宇部-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-other-road-小串-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "小串",
+    "segment_id": "yamaguchi-other-road-小串",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-03-other-road-下関-day",
+    "date": "2026-09-03",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-other-road-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r2-岩国-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r2-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r2-下松-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-r2-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r2-周南-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-r2-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r2-岩国-night_early",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道2号",
+    "time_band": "night_early",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r2-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r2-長府-night_early",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道2号",
+    "time_band": "night_early",
+    "police_station_raw": "長府",
+    "segment_id": "yamaguchi-r2-長府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r9-山口-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r188-光-night_early",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道188号",
+    "time_band": "night_early",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-r188-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r191-長門-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r191-萩-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-r191-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r191-下関-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-r262-山口-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道262号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-kokudo-other-小串-night_early",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "国道その他",
+    "time_band": "night_early",
+    "police_station_raw": "小串",
+    "segment_id": "yamaguchi-kokudo-other-小串",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-other-road-防府-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-other-road-宇部-day",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-04-other-road-柳井-night_early",
+    "date": "2026-09-04",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "night_early",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-other-road-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-05-r2-下松-day",
+    "date": "2026-09-05",
+    "weekday": "土曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-r2-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-05-r188-岩国-day",
+    "date": "2026-09-05",
+    "weekday": "土曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r188-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-05-r262-山口-day",
+    "date": "2026-09-05",
+    "weekday": "土曜日",
+    "road": "国道262号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-05-other-road-山陽小野田-day",
+    "date": "2026-09-05",
+    "weekday": "土曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-other-road-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-05-other-road-長門-day",
+    "date": "2026-09-05",
+    "weekday": "土曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-other-road-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-05-other-road-下関-day",
+    "date": "2026-09-05",
+    "weekday": "土曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-other-road-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-06-r191-下関-day",
+    "date": "2026-09-06",
+    "weekday": "日曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-06-kokudo-other-小串-day",
+    "date": "2026-09-06",
+    "weekday": "日曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "小串",
+    "segment_id": "yamaguchi-kokudo-other-小串",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-06-kokudo-other-美祢-day",
+    "date": "2026-09-06",
+    "weekday": "日曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "美祢",
+    "segment_id": "yamaguchi-kokudo-other-美祢",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-06-other-road-宇部-day",
+    "date": "2026-09-06",
+    "weekday": "日曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r2-岩国-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r2-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r2-周南-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-r2-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r2-山口南-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-r2-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r2-長府-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "長府",
+    "segment_id": "yamaguchi-r2-長府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r2-下松-night_early",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道2号",
+    "time_band": "night_early",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-r2-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r9-山口-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r188-光-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-r188-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r190-宇部-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道190号",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-r190-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r191-長門-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r262-山口-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道262号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-r262-萩-night_early",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "国道262号",
+    "time_band": "night_early",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-r262-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-other-road-柳井-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-other-road-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-other-road-防府-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-other-road-山陽小野田-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-other-road-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-other-road-小串-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "小串",
+    "segment_id": "yamaguchi-other-road-小串",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-07-other-road-下関-day",
+    "date": "2026-09-07",
+    "weekday": "月曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-other-road-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-r2-下松-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-r2-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-r2-周南-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-r2-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-r9-山口-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-r9-山口-night_early",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道9号",
+    "time_band": "night_early",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-r9-下関-night_early",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道9号",
+    "time_band": "night_early",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r9-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-r188-岩国-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r188-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-r190-山陽小野田-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道190号",
+    "time_band": "day",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-r190-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-r191-長門-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-r262-山口-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道262号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-kokudo-other-美祢-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "美祢",
+    "segment_id": "yamaguchi-kokudo-other-美祢",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-other-road-柳井-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-other-road-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-other-road-光-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-other-road-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-other-road-周南-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-other-road-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-other-road-防府-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-08-other-road-長府-day",
+    "date": "2026-09-08",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "長府",
+    "segment_id": "yamaguchi-other-road-長府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-r2-岩国-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r2-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-r2-下松-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-r2-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-r2-周南-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-r2-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-r9-山口-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-r191-小串-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "小串",
+    "segment_id": "yamaguchi-r191-小串",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-r191-長門-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-r191-萩-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-r191-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-r191-下関-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-r262-山口-night_early",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "国道262号",
+    "time_band": "night_early",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-other-road-柳井-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-other-road-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-other-road-光-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-other-road-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-other-road-防府-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-other-road-山口南-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-other-road-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-other-road-宇部-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-other-road-山陽小野田-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-other-road-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-other-road-萩-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-other-road-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-other-road-長府-day",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "長府",
+    "segment_id": "yamaguchi-other-road-長府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-09-other-road-山口南-night_early",
+    "date": "2026-09-09",
+    "weekday": "水曜日",
+    "road": "その他道路",
+    "time_band": "night_early",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-other-road-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-r2-山口南-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-r2-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-r9-山口-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-r188-光-night_early",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道188号",
+    "time_band": "night_early",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-r188-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-r190-宇部-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道190号",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-r190-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-r191-長門-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-r191-下関-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-r191-下関-night_early",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道191号",
+    "time_band": "night_early",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-kokudo-other-岩国-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-kokudo-other-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-kokudo-other-周南-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-kokudo-other-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-kokudo-other-美祢-night_early",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "国道その他",
+    "time_band": "night_early",
+    "police_station_raw": "美祢",
+    "segment_id": "yamaguchi-kokudo-other-美祢",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-other-road-柳井-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-other-road-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-other-road-防府-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-other-road-宇部-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-other-road-山陽小野田-day",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-other-road-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-10-other-road-萩-night_early",
+    "date": "2026-09-10",
+    "weekday": "木曜日",
+    "road": "その他道路",
+    "time_band": "night_early",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-other-road-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-r2-周南-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-r2-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-r2-長府-night_early",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "国道2号",
+    "time_band": "night_early",
+    "police_station_raw": "長府",
+    "segment_id": "yamaguchi-r2-長府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-r9-山口-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-r188-光-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-r188-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-r188-岩国-night_early",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "国道188号",
+    "time_band": "night_early",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r188-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-r262-萩-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "国道262号",
+    "time_band": "day",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-r262-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-other-road-岩国-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-other-road-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-other-road-柳井-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-other-road-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-other-road-周南-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-other-road-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-other-road-防府-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-other-road-宇部-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-other-road-美祢-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "美祢",
+    "segment_id": "yamaguchi-other-road-美祢",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-other-road-長門-day",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-other-road-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-11-other-road-小串-night_early",
+    "date": "2026-09-11",
+    "weekday": "金曜日",
+    "road": "その他道路",
+    "time_band": "night_early",
+    "police_station_raw": "小串",
+    "segment_id": "yamaguchi-other-road-小串",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-12-r2-岩国-day",
+    "date": "2026-09-12",
+    "weekday": "土曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r2-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-12-r191-下関-day",
+    "date": "2026-09-12",
+    "weekday": "土曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-12-other-road-下松-day",
+    "date": "2026-09-12",
+    "weekday": "土曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-other-road-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-12-other-road-山陽小野田-day",
+    "date": "2026-09-12",
+    "weekday": "土曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-other-road-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-12-other-road-長門-day",
+    "date": "2026-09-12",
+    "weekday": "土曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-other-road-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-13-r191-下関-day",
+    "date": "2026-09-13",
+    "weekday": "日曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-13-r262-山口-day",
+    "date": "2026-09-13",
+    "weekday": "日曜日",
+    "road": "国道262号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r262-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-13-kokudo-other-小串-day",
+    "date": "2026-09-13",
+    "weekday": "日曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "小串",
+    "segment_id": "yamaguchi-kokudo-other-小串",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-13-kokudo-other-美祢-day",
+    "date": "2026-09-13",
+    "weekday": "日曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "美祢",
+    "segment_id": "yamaguchi-kokudo-other-美祢",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-13-other-road-下関-day",
+    "date": "2026-09-13",
+    "weekday": "日曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-other-road-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-r2-岩国-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r2-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-r2-下松-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-r2-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-r2-周南-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-r2-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-r9-山口-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-r9-長府-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "長府",
+    "segment_id": "yamaguchi-r9-長府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-r188-光-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-r188-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-r190-宇部-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "国道190号",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-r190-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-r191-長門-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-r191-下関-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "下関",
+    "segment_id": "yamaguchi-r191-下関",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-other-road-山口南-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-other-road-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-14-other-road-山陽小野田-day",
+    "date": "2026-09-14",
+    "weekday": "月曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "山陽小野田",
+    "segment_id": "yamaguchi-other-road-山陽小野田",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r2-光-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "光",
+    "segment_id": "yamaguchi-r2-光",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r2-周南-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-r2-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r2-山口南-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "山口南",
+    "segment_id": "yamaguchi-r2-山口南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r2-長府-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道2号",
+    "time_band": "day",
+    "police_station_raw": "長府",
+    "segment_id": "yamaguchi-r2-長府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r9-山口-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道9号",
+    "time_band": "day",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r9-山口-night_early",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道9号",
+    "time_band": "night_early",
+    "police_station_raw": "山口",
+    "segment_id": "yamaguchi-r9-山口",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r188-岩国-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-r188-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r188-下松-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道188号",
+    "time_band": "day",
+    "police_station_raw": "下松",
+    "segment_id": "yamaguchi-r188-下松",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r191-長門-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "長門",
+    "segment_id": "yamaguchi-r191-長門",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-r191-萩-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道191号",
+    "time_band": "day",
+    "police_station_raw": "萩",
+    "segment_id": "yamaguchi-r191-萩",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-kokudo-other-周南-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "周南",
+    "segment_id": "yamaguchi-kokudo-other-周南",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-kokudo-other-小串-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "国道その他",
+    "time_band": "day",
+    "police_station_raw": "小串",
+    "segment_id": "yamaguchi-kokudo-other-小串",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-other-road-岩国-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "岩国",
+    "segment_id": "yamaguchi-other-road-岩国",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-other-road-柳井-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "柳井",
+    "segment_id": "yamaguchi-other-road-柳井",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-other-road-防府-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "防府",
+    "segment_id": "yamaguchi-other-road-防府",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-other-road-宇部-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-other-road-美祢-day",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "day",
+    "police_station_raw": "美祢",
+    "segment_id": "yamaguchi-other-road-美祢",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
+  },
+  {
+    "id": "yamaguchi-2026-09-15-other-road-宇部-night_early",
+    "date": "2026-09-15",
+    "weekday": "火曜日",
+    "road": "その他道路",
+    "time_band": "night_early",
+    "police_station_raw": "宇部",
+    "segment_id": "yamaguchi-other-road-宇部",
+    "prefecture": "山口県",
+    "source": "山口県警察",
+    "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+    "fetched_at": "2026-08-28T14:09:46+09:00"
   }
 ]
