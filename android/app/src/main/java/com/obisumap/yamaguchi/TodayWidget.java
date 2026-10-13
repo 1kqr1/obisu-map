@@ -55,7 +55,8 @@ public final class TodayWidget extends AppWidgetProvider {
         views.setViewVisibility(R.id.widget_message, model != null && model.covered ? View.GONE : View.VISIBLE);
         views.setTextViewText(R.id.widget_empty, model == null ? "情報を未取得です" : model.emptyMessage());
         String xLabel = model == null ? "" : "manual_snapshot".equals(model.xStatus) ? " · X確認済み分" : "api".equals(model.xStatus) ? " · X取得済み" : " · X未取得";
-        views.setTextViewText(R.id.widget_freshness, FeedStore.status(context) + xLabel);
+        views.setTextViewText(R.id.widget_freshness, (compact ? FeedStore.compactStatus(context) : FeedStore.status(context)) + xLabel);
+        views.setTextViewText(R.id.widget_disclaimer, compact ? "公表外の取締り・変更あり" : "公表外の取締り・予定変更があります");
         views.setTextViewText(R.id.widget_sources, model == null ? "" : model.sourceLabel());
         views.setViewVisibility(R.id.widget_sources, size == 2 ? View.VISIBLE : View.GONE);
         boolean hasItems = model != null && !model.items.isEmpty();

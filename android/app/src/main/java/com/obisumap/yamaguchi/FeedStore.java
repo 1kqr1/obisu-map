@@ -33,6 +33,12 @@ public final class FeedStore {
         String checked = prefs(context).getString("checked", "未取得");
         return prefs(context).getBoolean("failed", false) ? "通信エラー・前回確認 " + checked : "端末確認 " + checked;
     }
+    public static String compactStatus(Context context) {
+        if (prefs(context).getBoolean("failed", false)) return "通信エラー";
+        String checked = prefs(context).getString("checked", "未取得");
+        int space = checked.indexOf(' ');
+        return space < 0 ? "確認 " + checked : "確認 " + checked.substring(space + 1);
+    }
     public static void refresh(Context context) {
         HttpURLConnection connection = null;
         try {

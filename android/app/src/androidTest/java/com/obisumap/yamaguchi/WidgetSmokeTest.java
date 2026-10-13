@@ -44,6 +44,14 @@ public class WidgetSmokeTest {
             if (ready[0]) return;
             Thread.sleep(250);
         }
+        screenshot("widget-failed-mode.png");
+        instrumentation.runOnMainSync(() -> {
+            TextView heading = host.widgetView.findViewById(R.id.widget_title);
+            TextView number = host.widgetView.findViewById(R.id.road_badge_number);
+            System.out.println("Resize diagnostics: title=" + (heading == null ? "null" : heading.getText())
+                    + " badge=" + (number == null ? "null" : number.getText())
+                    + " host=" + host.widgetView.getWidth() + "x" + host.widgetView.getHeight());
+        });
         fail("Widget size switch must render the title and road badge: " + title);
     }
     @Test public void nativeScreenAndActualWidgetRender() throws Exception {

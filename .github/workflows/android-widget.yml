@@ -64,12 +64,8 @@ jobs:
             adb shell appwidget grantbind --package com.obisumap.yamaguchi
             adb shell appwidget grantbind --package com.obisumap.yamaguchi.test
             adb shell am instrument -w com.obisumap.yamaguchi.test/androidx.test.runner.AndroidJUnitRunner | tee android/app/build/instrumentation-result.txt
+            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files android/app/build/widget-captures
             grep -q 'OK (1 test)' android/app/build/instrumentation-result.txt
-            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/native-screen.png android/app/build/native-screen.png
-            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/widget-screen.png android/app/build/widget-screen.png
-            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/widget-compact.png android/app/build/widget-compact.png
-            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/widget-expanded.png android/app/build/widget-expanded.png
-            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/widget-restored.png android/app/build/widget-restored.png
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -77,7 +73,7 @@ jobs:
           path: |
             android/app/build/outputs/apk/release/*.apk
             android/app/build/reports/
-            android/app/build/*.png
+            android/app/build/widget-captures/
             android/app/build/instrumentation-result.txt
       - name: 検証済みAPKを配布
         env:

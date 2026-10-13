@@ -18,9 +18,9 @@
     <TextView android:id="@+id/widget_empty" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
         android:text="情報を読み込み中です" android:gravity="center" android:textSize="13sp" android:textColor="#525B68" />
     <TextView android:id="@+id/widget_freshness" android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:textSize="10sp" android:textColor="#525B68" android:layout_marginTop="6dp" />
+        android:textSize="10sp" android:textColor="#525B68" android:layout_marginTop="6dp" android:maxLines="1" android:ellipsize="end" />
     <TextView android:id="@+id/widget_sources" android:layout_width="match_parent" android:layout_height="wrap_content"
         android:textSize="10sp" android:textColor="#525B68" android:visibility="gone" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+    <TextView android:id="@+id/widget_disclaimer" android:layout_width="match_parent" android:layout_height="wrap_content"
         android:text="公表外の取締り・予定変更があります" android:textSize="9sp" android:textColor="#525B68" />
 </LinearLayout>
