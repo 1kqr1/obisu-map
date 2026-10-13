@@ -23,7 +23,7 @@
 <ol><li>上のボタンでコードをコピーします。</li><li>Scriptableを開き、<strong>＋</strong>で新しいスクリプトを作ります。</li><li>編集欄にコードを全部貼り付けます。</li><li>名前を <code>山口県警取り締まり情報</code> にして保存します。</li><li><strong>▶</strong>で実行し、サイズを選んで表示を確認します。</li></ol>
 <a class="action secondary" href="scriptable:///add">Scriptableで新しいスクリプトを作る</a>
 <p class="hint">位置情報・連絡先・写真へのアクセスは使いません。</p>
-<details id="manual"><summary>コピーできない場合／コードを見る</summary><p class="hint">下の欄を長押しして「すべてを選択」→「コピー」で、全体をコピーしてください。</p><textarea id="code" readonly aria-label="Scriptableへ貼り付けるコード" spellcheck="false"></textarea><p><a href="/downloads/yamaguchi-iphone-1.0.0.js" download="山口県警取り締まり情報.js">スクリプトをファイルでダウンロード</a></p></details>
+<details id="manual"><summary>コピーできない場合／コードを見る</summary><p class="hint">下の欄を長押しして「すべてを選択」→「コピー」で、全体をコピーしてください。</p><textarea id="code" readonly aria-label="Scriptableへ貼り付けるコード" spellcheck="false"></textarea><p><a href="/downloads/yamaguchi-iphone-1.0.1.js" download="山口県警取り締まり情報.js">スクリプトをファイルでダウンロード</a></p></details>
 </section>
 <section><h2>3. ホーム画面に追加する</h2>
 <ol><li>ホーム画面の空いているところを長押しします。</li><li><strong>ウィジェットを追加</strong>から <strong>Scriptable</strong> を選びます。</li><li>小・中・大からサイズを選んで追加します。最初は<strong>中サイズ</strong>がおすすめです。</li><li>追加したウィジェットを長押しして<strong>ウィジェットを編集</strong>を開きます。</li><li><strong>Script</strong>で <strong>山口県警取り締まり情報</strong> を選びます。</li></ol>
@@ -32,16 +32,16 @@
 <section><h2>表示の意味と更新</h2>
 <p><strong>🚨</strong> 公表予定の時間帯内　<strong>予定</strong> 開始前　<strong>終</strong> 予定時間終了　<strong>告</strong> 時間未公表の告知</p>
 <p>🚨は実際の取り締まりを確認した意味ではありません。山口県警の公表情報を利用する<strong>非公式</strong>ウィジェットです。</p>
-<p>小は最大2件、中は最大4件、大は最大8件。未取得の注意がある場合は表示件数を減らします。残りの予定はウィジェットをタップして地図で確認できます。</p>
+<p>小は最大2件、中は最大4件、大は最大8件。小さな画面では件数を減らします。未取得の注意がある場合は表示件数を減らします。残りの予定はウィジェットをタップして地図で確認できます。</p>
 <p>右上の<strong>↻</strong>はScriptableを開いて最新データを取得・プレビューします。ホーム画面の更新時刻はiOSが管理するため、30分ごとの更新や時刻どおりの切り替えは保証されません。画面下の基準時刻を確認してください。</p>
 <p>通信エラーのときは前回データを使います。「本日のHP計画は未取得」は、予定がないという意味ではありません。公表外の取り締まりや予定変更もあります。Xの追加投稿は確認済み分を反映しており、全投稿の自動取得ではありません。</p>
 <p class="hint">ホーム画面を単色・色付きにする設定では、状態の色や🚨の見え方が変わる場合があります。</p>
 </section>
-<p class="hint">Scriptable版 1.0.0 · 更新時はこのページから新しいコードをコピーして置き換えてください。</p>
+<p class="hint">Scriptable版 1.0.1 · 更新時はこのページから新しいコードをコピーして置き換えてください。</p>
 </main>
 <script type="module">
 const button=document.querySelector('#copy'),status=document.querySelector('#copy-status'),code=document.querySelector('#code');
-try{const response=await fetch('/downloads/yamaguchi-iphone-1.0.0.js');if(!response.ok)throw new Error('download');code.value=await response.text();button.disabled=false;button.textContent='ウィジェット用コードをコピー';}catch{button.textContent='コードを取得できませんでした';status.textContent='通信状況を確認して、このページを開き直してください。';}
+try{const response=await fetch('/downloads/yamaguchi-iphone-1.0.1.js');if(!response.ok)throw new Error('download');code.value=await response.text();button.disabled=false;button.textContent='ウィジェット用コードをコピー';}catch{button.textContent='コードを取得できませんでした';status.textContent='通信状況を確認して、このページを開き直してください。';}
 button.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(code.value);status.textContent='コピーしました。Scriptableの＋で新しいスクリプトを作り、貼り付けてください。';button.textContent='コピー済み（もう一度コピー）';}catch{document.querySelector('#manual').open=true;code.focus();code.select();code.setSelectionRange(0,code.value.length);status.textContent='下のコード欄から、すべてを選択してコピーしてください。';}});
 </script>
 </body></html>

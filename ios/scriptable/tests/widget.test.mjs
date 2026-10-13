@@ -95,3 +95,11 @@ test('All widget sizes use official API, dynamic colors and bounded rows',async(
     assert.equal(widget.url,'https://orbis.1kqr1.com/');
   }
 });
+test('Narrow iPhone screens reduce row counts and column widths instead of shrinking fonts',async()=>{
+  const h=await helpers({ListWidget,Color,Size,Font,Device:{screenSize:()=>({width:320,height:568})},URLScheme:{forRunningScript:()=> 'scriptable:///run?scriptName=widget'}});
+  for(const [family,count] of [['small',1],['medium',2],['large',8]]) {
+    const widget=h.makeWidget({feed:realFeed,failed:false},new Date('2026-10-13T20:00:00+09:00'),family);
+    assert.equal(flatten(widget).filter(n=>n.size?.height===44 && n.children?.some(c=>c.size?.width===3)).length,count);
+    assert(flatten(widget).filter(n=>n.text && n.font).every(n=>n.font>=11));
+  }
+});

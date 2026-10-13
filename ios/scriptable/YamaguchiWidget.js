@@ -1,7 +1,7 @@
-// 山口県警取り締まり情報 — Scriptable版 1.0.0
+// 山口県警取り締まり情報 — Scriptable版 1.0.1
 // ホーム画面のScriptableウィジェットから、このスクリプトを選んでください。
 // 公表情報を利用する非公式ウィジェット。🚨は予定時間内であり、実施確認ではありません。
-const WIDGET_VERSION = "1.0.0";
+const WIDGET_VERSION = "1.0.1";
 const WIDGET_NAME = "山口県警取り締まり情報";
 const SITE_URL = "https://orbis.1kqr1.com/";
 const FEED_URL = SITE_URL + "data/widget_yamaguchi.json";
@@ -102,7 +102,7 @@ function label(stack, value, font, color) {
   text.font = font; text.textColor = color; text.lineLimit = 1; text.minimumScaleFactor = 1;
   return text;
 }
-function rowView(parent, data, first, p, small) {
+function rowView(parent, data, first, p, small, narrow) {
   const row = parent.addStack(); row.layoutHorizontally(); row.centerAlignContent(); row.size = new Size(0, 44);
   if (!small) row.url = sourceURL(data.item.source_url);
   if (first && data.state === "within") row.backgroundColor = p.highlightWithin;
@@ -115,7 +115,7 @@ function rowView(parent, data, first, p, small) {
   badge.centerAlignContent(); badge.addSpacer();
   label(badge, data.badge, Font.boldSystemFont(13), Color.white()); badge.addSpacer();
   row.addSpacer(5);
-  const body = row.addStack(); body.layoutVertically(); body.size = new Size(small ? 52 : 66, 32);
+  const body = row.addStack(); body.layoutVertically(); body.size = new Size(narrow ? small ? 39 : 48 : small ? 52 : 66, 32);
   const ink = data.state === "ended" ? p.ended : p.text;
   label(body, data.road, Font.boldSystemFont(13), ink);
   body.addSpacer(3);
@@ -134,8 +134,10 @@ function makeWidget(result, now, family) {
   const widget = new ListWidget(); widget.backgroundColor = p.surface; widget.setPadding(8, 8, 8, 8);
   widget.url = SITE_URL; widget.refreshAfterDate = nextRefresh(now);
   const small = family === "small";
+  const narrow = typeof Device !== "undefined" && Device.screenSize().width < 375;
+  if (narrow) widget.setPadding(6, 6, 6, 6);
   const columns = small ? 1 : 2;
-  const limit = small ? 2 : family === "medium" ? 4 : 8;
+  const limit = small ? narrow ? 1 : 2 : family === "medium" ? narrow ? 2 : 4 : 8;
   const head = widget.addStack(); head.layoutHorizontally(); head.centerAlignContent();
   const heading = head.addStack(); heading.layoutVertically();
   label(heading, WIDGET_NAME, Font.boldSystemFont(small ? 11 : 13), p.text);
@@ -155,13 +157,13 @@ function makeWidget(result, now, family) {
     const shown = model.rows.slice(0, visibleLimit);
     for (let i = 0; i < shown.length; i += columns) {
       const line = widget.addStack(); line.layoutHorizontally();
-      const left = line.addStack(); left.layoutVertically(); left.size = new Size(small ? 138 : 152, 0); rowView(left, shown[i], i === 0, p, small);
+      const left = line.addStack(); left.layoutVertically(); left.size = new Size(narrow ? small ? 125 : 134 : small ? 138 : 152, 0); rowView(left, shown[i], i === 0, p, small, narrow);
       if (columns === 2) {
         line.addSpacer(4);
         const rule = line.addStack(); rule.size = new Size(1, 44); rule.backgroundColor = p.divider;
         line.addSpacer(4);
-        const right = line.addStack(); right.layoutVertically(); right.size = new Size(152, 0);
-        if (shown[i + 1]) rowView(right, shown[i + 1], false, p, small);
+        const right = line.addStack(); right.layoutVertically(); right.size = new Size(narrow ? 134 : 152, 0);
+        if (shown[i + 1]) rowView(right, shown[i + 1], false, p, small, narrow);
       }
       if (i + columns < shown.length) { const rule = widget.addStack(); rule.size = new Size(0, 1); rule.backgroundColor = p.divider; }
     }
