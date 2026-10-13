@@ -13,6 +13,7 @@ import android.os.Build;
 import androidx.core.content.ContextCompat;
 import android.os.Bundle;
 import android.view.WindowInsets;
+import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -83,13 +84,17 @@ public final class MainActivity extends Activity {
             if (!model.covered) text(model.coverageMessage(), 14, true);
             if (model.items.isEmpty()) text(model.emptyMessage(), 14, false);
             for (FeedModel.Item item : model.items) {
-                text(item.title, 16, true); text(item.detail, 13, false);
-                if (FeedModel.allowedSourceUrl(item.sourceUrl)) button("県警の原情報を見る", () -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(item.sourceUrl))));
+                View row = getLayoutInflater().inflate(R.layout.widget_row, content, false);
+                RoadViews.bind(row, item);
+                LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(-1, -2); params.bottomMargin = dp(8);
+                content.addView(row, params);
+                if (FeedModel.allowedSourceUrl(item.sourceUrl)) row.setOnClickListener(v -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(item.sourceUrl))));
             }
             text(model.sourceLabel(), 12, false);
         }
         text(FeedStore.status(this), 12, false);
         button("地図を開く", () -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://orbis.1kqr1.com/"))));
+        text("サイズ変更：ホーム画面のウィジェットを長押しし、枠の丸い持ち手を動かしてください。小さい表示でも一覧は上下にスクロールできます。", 13, false);
         text("公表予定以外にも取締りが行われ、予定は変更される場合があります。\n\nウィジェットは約30分ごとに更新を試みます。省電力設定などで遅れる場合は更新ボタンを押してください。\n\n位置情報・連絡先・アカウント登録は不要です。", 12, false);
     }
 }

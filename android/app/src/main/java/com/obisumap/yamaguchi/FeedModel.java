@@ -22,9 +22,19 @@ public final class FeedModel {
     public final String xVerifiedAt;
 
     public static final class Item {
-        public final String id, title, detail, sourceUrl;
-        public Item(String id, String title, String detail, String sourceUrl) {
+        public final String id, title, detail, sourceUrl, kind, road, stations, timeBand;
+        public Item(String id, String title, String detail, String sourceUrl, String kind, String road, String stations, String timeBand) {
             this.id = id; this.title = title; this.detail = detail; this.sourceUrl = sourceUrl;
+            this.kind = kind; this.road = road; this.stations = stations; this.timeBand = timeBand;
+        }
+        public String timeLabel(boolean compact) {
+            if (!"speed".equals(kind)) return detail;
+            switch (timeBand) {
+                case "day": return compact ? "昼間 6〜18時" : "昼間 6:00〜18:00";
+                case "night_early": return compact ? "夜間 18〜翌6時" : "夜間 18:00〜翌6:00";
+                case "early": return compact ? "早朝 0〜6時・前日夜から" : "早朝 0:00〜6:00（前日夜から）";
+                default: return detail;
+            }
         }
     }
 
@@ -44,9 +54,14 @@ public final class FeedModel {
         if (records != null) {
             for (int i = 0; i < records.length(); i++) {
                 JSONObject record = records.getJSONObject(i);
-                items.add(new Item(record.getString("id"), record.getString("title"), record.getString("detail"), record.getString("source_url")));
+                JSONArray stationNames = record.optJSONArray("police_stations");
+                List<String> names = new ArrayList<>();
+                if (stationNames != null) for (int n = 0; n < stationNames.length(); n++) names.add(stationNames.getString(n));
+                items.add(new Item(record.getString("id"), record.getString("title"), record.getString("detail"), record.getString("source_url"),
+                        record.optString("kind", "speed"), record.optString("road", ""), String.join("・", names), record.optString("time_band", "unspecified")));
             }
         }
+        items.sort(java.util.Comparator.comparingInt(i -> new RoadPresentation(i).order));
         boolean covered = false;
         JSONArray dates = json.getJSONArray("hp_coverage_dates");
         for (int i = 0; i < dates.length(); i++) covered |= targetDate.equals(dates.getString(i));

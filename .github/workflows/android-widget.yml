@@ -14,6 +14,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: アプリのバージョンを取得
+        id: version
+        run: |
+          python3 - <<'PY_VERSION' >> "$GITHUB_OUTPUT"
+          import re
+          from pathlib import Path
+          version = re.search(r"versionName '([0-9]+\.[0-9]+\.[0-9]+)'", Path('android/app/build.gradle').read_text()).group(1)
+          print('version=' + version)
+          PY_VERSION
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
@@ -45,6 +54,12 @@ jobs:
           profile: pixel_7
           disable-animations: true
           script: |
+            signer=$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -n 1)
+            "$signer" verify --verbose android/app/build/outputs/apk/release/app-release.apk
+            adb install -r frontend/public/downloads/yamaguchi-today-1.0.0.apk
+            adb install -r android/app/build/outputs/apk/release/app-release.apk
+            adb shell am start -W -n com.obisumap.yamaguchi/.MainActivity
+            adb uninstall com.obisumap.yamaguchi
             adb install -r android/app/build/outputs/apk/debug/app-debug.apk
             adb install -r android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
             adb shell appwidget grantbind --package com.obisumap.yamaguchi
@@ -53,6 +68,9 @@ jobs:
             grep -q 'OK (1 test)' android/app/build/instrumentation-result.txt
             adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/native-screen.png android/app/build/native-screen.png
             adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/widget-screen.png android/app/build/widget-screen.png
+            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/widget-compact.png android/app/build/widget-compact.png
+            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/widget-expanded.png android/app/build/widget-expanded.png
+            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/widget-restored.png android/app/build/widget-restored.png
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -60,18 +78,48 @@ jobs:
           path: |
             android/app/build/outputs/apk/release/*.apk
             android/app/build/reports/
-            android/app/build/*screen.png
+            android/app/build/*.png
             android/app/build/instrumentation-result.txt
       - name: 検証済みAPKを配布
         env:
           GH_TOKEN: ${{ github.token }}
+          APK_VERSION: ${{ steps.version.outputs.version }}
         run: |
-          cp android/app/build/outputs/apk/release/app-release.apk yamaguchi-today-1.0.0.apk
-          sha256sum yamaguchi-today-1.0.0.apk > yamaguchi-today-1.0.0.apk.sha256
-          if ! gh release view android-v1.0.0 >/dev/null 2>&1; then
-            gh release create android-v1.0.0 --target "$GITHUB_SHA" --title "山口 きょうの取締り Android 1.0.0" --notes-file android/RELEASE_NOTES.md
+          apk_name="yamaguchi-today-$APK_VERSION.apk"
+          tag="android-v$APK_VERSION"
+          cp android/app/build/outputs/apk/release/app-release.apk "$apk_name"
+          sha256sum "$apk_name" > "$apk_name.sha256"
+          if ! gh release view "$tag" >/dev/null 2>&1; then
+            gh release create "$tag" --target "$GITHUB_SHA" --title "山口 きょうの取締り Android $APK_VERSION" --notes-file android/RELEASE_NOTES.md
           fi
-          gh release upload android-v1.0.0 yamaguchi-today-1.0.0.apk yamaguchi-today-1.0.0.apk.sha256 --clobber
+          gh release upload "$tag" "$apk_name" "$apk_name.sha256" --clobber
+      - name: サイトにも同じ署名付きAPKを配置
+        env:
+          APK_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          python3 - <<'PY_PUBLISH'
+          import os, re, shutil
+          from pathlib import Path
+          version = os.environ['APK_VERSION']
+          name = 'yamaguchi-today-' + version + '.apk'
+          destination = Path('frontend/public/downloads')
+          destination.mkdir(parents=True, exist_ok=True)
+          shutil.copyfile(name, destination / name)
+          shutil.copyfile(name + '.sha256', destination / (name + '.sha256'))
+          index = Path('frontend/index.html')
+          html = re.sub(r'yamaguchi-today-[0-9]+\.[0-9]+\.[0-9]+\.apk', name, index.read_text())
+          html = re.sub(r'Androidウィジェットをダウンロード（[0-9.]+MB）', f'Androidウィジェットをダウンロード（{Path(name).stat().st_size / 1_000_000:.2f}MB）', html)
+          index.write_text(html)
+          PY_PUBLISH
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/downloads frontend/index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Publish signed Android $APK_VERSION APK on website"
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
+          fi
       - name: 一時署名鍵を削除
         if: always()
         run: rm -f "$RUNNER_TEMP/widget-signing.jks"

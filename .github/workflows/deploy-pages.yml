@@ -11,7 +11,7 @@ on:
   # GITHUB_TOKENによるデータ更新コミットはpushイベントを起動しないため、
   # 取得ワークフローの成功完了で公開データをビルドする。
   workflow_run:
-    workflows: ["山口県 データ取得"]
+    workflows: ["山口県 データ取得", "Androidウィジェットをビルド"]
     types: [completed]
 
 permissions:

@@ -1,23 +1,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical" android:padding="14dp" android:background="@drawable/widget_background">
-    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
-        <TextView android:id="@+id/widget_title" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
-            android:text="山口 きょうの取締り" android:textSize="16sp" android:textStyle="bold" android:textColor="#1D3557" />
-        <TextView android:id="@+id/widget_refresh" android:layout_width="52dp" android:layout_height="48dp" android:gravity="center"
-            android:text="更新" android:contentDescription="取締り情報を更新" android:textColor="#FFFFFF" android:textSize="12sp"
-            android:background="@drawable/pill_background" />
+    android:orientation="vertical" android:padding="12dp" android:background="@drawable/widget_background">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical" android:layout_marginBottom="6dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:layout_marginEnd="6dp">
+            <TextView android:id="@+id/widget_title" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="山口 きょうの取締り" android:textSize="15sp" android:textStyle="bold" android:textColor="#1D3557" />
+            <TextView android:id="@+id/widget_date" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="11sp" android:textColor="#525B68" android:layout_marginTop="3dp" />
+        </LinearLayout>
+        <TextView android:id="@+id/widget_refresh" android:layout_width="48dp" android:layout_height="48dp" android:gravity="center"
+            android:text="更新" android:contentDescription="取締り情報を更新" android:textColor="#FFFFFF" android:textSize="11sp" android:background="@drawable/pill_background" />
     </LinearLayout>
-    <TextView android:id="@+id/widget_date" android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:textSize="12sp" android:textColor="#525B68" android:layout_marginBottom="8dp" />
     <TextView android:id="@+id/widget_message" android:layout_width="match_parent" android:layout_height="wrap_content"
         android:textColor="#8B4513" android:textSize="12sp" android:paddingBottom="6dp" />
     <ListView android:id="@+id/widget_list" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
-        android:divider="#E5E7EB" android:dividerHeight="1dp" />
+        android:divider="@android:color/transparent" android:dividerHeight="6dp" />
     <TextView android:id="@+id/widget_empty" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
         android:text="情報を読み込み中です" android:gravity="center" android:textSize="13sp" android:textColor="#525B68" />
     <TextView android:id="@+id/widget_freshness" android:layout_width="match_parent" android:layout_height="wrap_content"
         android:textSize="10sp" android:textColor="#525B68" android:layout_marginTop="6dp" />
+    <TextView android:id="@+id/widget_sources" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:textSize="10sp" android:textColor="#525B68" android:visibility="gone" />
     <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:text="予定外の取締り・予定変更があります" android:textSize="10sp" android:textColor="#525B68" />
+        android:text="公表外の取締り・予定変更があります" android:textSize="9sp" android:textColor="#525B68" />
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.app.Instrumentation;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.appwidget.AppWidgetProviderInfo;
 import android.widget.TextView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +30,22 @@ public class WidgetSmokeTest {
         File output = new File(instrumentation.getTargetContext().getExternalFilesDir(null), name);
         try (FileOutputStream file = new FileOutputStream(output)) { bitmap.compress(Bitmap.CompressFormat.PNG, 100, file); }
     }
+    private void waitForMode(WidgetHostTestActivity host, boolean compact, FeedModel model) throws Exception {
+        Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
+        String title = compact ? "山口 取締り" : "山口 きょうの取締り";
+        for (int attempt = 0; attempt < 80; attempt++) {
+            final boolean[] ready = {false};
+            instrumentation.runOnMainSync(() -> {
+                TextView heading = host.widgetView.findViewById(R.id.widget_title);
+                TextView number = host.widgetView.findViewById(R.id.road_badge_number);
+                ready[0] = heading != null && title.equals(heading.getText().toString())
+                        && (model.items.isEmpty() || number != null && new RoadPresentation(model.items.get(0)).badgeMain.equals(number.getText().toString()));
+            });
+            if (ready[0]) return;
+            Thread.sleep(250);
+        }
+        fail("Widget size switch must render the title and road badge: " + title);
+    }
     @Test public void nativeScreenAndActualWidgetRender() throws Exception {
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
         Context context = instrumentation.getTargetContext();
@@ -47,13 +64,24 @@ public class WidgetSmokeTest {
         for (int i = 0; i < 80; i++) {
             final boolean[] shown = {false};
             instrumentation.runOnMainSync(() -> shown[0] = hasText(host.getWindow().getDecorView(), model.dateLabel())
-                    && (model.items.isEmpty() || hasText(host.getWindow().getDecorView(), model.items.get(0).title)));
+                    && (model.items.isEmpty() || hasText(host.getWindow().getDecorView(), new RoadPresentation(model.items.get(0)).roadLabel())));
             if (shown[0]) break;
             Thread.sleep(250);
         }
         assertTrue("Actual data date must be rendered", hasText(host.getWindow().getDecorView(), model.dateLabel()));
-        if (!model.items.isEmpty()) assertTrue("First enforcement item must be rendered", hasText(host.getWindow().getDecorView(), model.items.get(0).title));
+        if (!model.items.isEmpty()) assertTrue("First enforcement item must be rendered", hasText(host.getWindow().getDecorView(), new RoadPresentation(model.items.get(0)).roadLabel()));
         screenshot("widget-screen.png");
+        AppWidgetProviderInfo info = host.widgetView.getAppWidgetInfo();
+        assertEquals("Both resize directions must be supported", AppWidgetProviderInfo.RESIZE_BOTH, info.resizeMode);
+        instrumentation.runOnMainSync(() -> host.resize(180, 180));
+        waitForMode(host, true, model);
+        screenshot("widget-compact.png");
+        instrumentation.runOnMainSync(() -> host.resize(360, 480));
+        waitForMode(host, false, model);
+        screenshot("widget-expanded.png");
+        instrumentation.runOnMainSync(() -> host.resize(280, 340));
+        waitForMode(host, false, model);
+        screenshot("widget-restored.png");
         instrumentation.runOnMainSync(host::finish);
     }
 }

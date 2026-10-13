@@ -30,6 +30,7 @@ def build_feed(hp: list[dict], x: dict) -> dict:
         days.setdefault(day, []).append({
             "id": f"{day}-{band}-{road}", "kind": "speed",
             "title": road + " / " + "・".join(stations),
+            "road": road, "police_stations": stations,
             "detail": TIME_LABELS.get(band, band) + "　実施署管内",
             "time_band": band, "source_url": records[0]["source_url"],
             "record_count": len(records),
@@ -40,6 +41,7 @@ def build_feed(hp: list[dict], x: dict) -> dict:
             days.setdefault(next_day, []).append({
                 "id": f"{next_day}-early-{road}", "kind": "speed",
                 "title": road + " / " + "・".join(stations),
+                "road": road, "police_stations": stations,
                 "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
                 "time_band": "early", "source_url": records[0]["source_url"], "record_count": len(records),
             })
