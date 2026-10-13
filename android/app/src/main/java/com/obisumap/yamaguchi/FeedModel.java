@@ -81,7 +81,7 @@ public final class FeedModel {
     }
     public String sourceLabel() {
         String hp = hpUpdatedAt.length() >= 16 ? hpUpdatedAt.substring(5, 16).replace('T', ' ') : "未取得";
-        String x = "manual_snapshot".equals(xStatus) ? "Xは確認済み投稿（自動更新準備中）"
+        String x = "manual_snapshot".equals(xStatus) ? "Xは確認済み投稿"
                 : "api".equals(xStatus) ? "X確認 " + (xVerifiedAt.length() >= 10 ? xVerifiedAt.substring(0, 10) : "不明") : "X未取得";
         return "HP更新 " + hp + " / " + x;
     }
