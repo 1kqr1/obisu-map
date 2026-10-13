@@ -87,7 +87,7 @@ function renderXInformation(): void {
   const prefSet = new Set(currentFilters().prefectures);
   const geometryIds = new Set(appData.segments.map((s) => s.id));
   // 新しい路線・未知の管轄でジオメトリを作れなくても、予定自体は落とさない。
-  const unmapped = appData.schedules.filter((s) => !geometryIds.has(s.segment_id) && prefSet.has(s.prefecture))
+  const unmapped = appData.schedules.filter((s) => s.prefecture === "山口県" && !geometryIds.has(s.segment_id) && prefSet.has(s.prefecture))
     .filter((s) => !xSelectedDateOnly.checked || !dateInput.value || s.date === dateInput.value)
     .filter((s) => timeBandMatchesFilter(s.time_band, timeBandInput.value as TimeBandFilter));
   const unmappedHtml = unmapped.length ? `<details class="x-notice"><summary>地図に表示できない予定（${unmapped.length}件）</summary><ul>${unmapped.map((s) =>
