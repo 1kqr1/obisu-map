@@ -38,14 +38,18 @@ public class WidgetSmokeTest {
         WidgetHostTestActivity host = (WidgetHostTestActivity) instrumentation.startActivitySync(hostIntent);
         instrumentation.waitForIdleSync();
         assertTrue("Widget binding must succeed", host.bound);
-        // AppWidgetHostへのRemoteViews配送を待つ。エミュレータだけで実施。
-        for (int i = 0; i < 40; i++) {
+        FeedModel model = FeedStore.cached(context);
+        assertNotNull("Bootstrap or fetched feed must be present", model);
+        // 初期レイアウトにもタイトルはあるので、日付とデータ行の配送まで待つ。
+        for (int i = 0; i < 80; i++) {
             final boolean[] shown = {false};
-            instrumentation.runOnMainSync(() -> shown[0] = hasText(host.getWindow().getDecorView(), "山口 きょうの取締り"));
+            instrumentation.runOnMainSync(() -> shown[0] = hasText(host.getWindow().getDecorView(), model.dateLabel())
+                    && (model.items.isEmpty() || hasText(host.getWindow().getDecorView(), model.items.get(0).title)));
             if (shown[0]) break;
             Thread.sleep(250);
         }
-        assertTrue(hasText(host.getWindow().getDecorView(), "山口 きょうの取締り"));
+        assertTrue("Actual data date must be rendered", hasText(host.getWindow().getDecorView(), model.dateLabel()));
+        if (!model.items.isEmpty()) assertTrue("First enforcement item must be rendered", hasText(host.getWindow().getDecorView(), model.items.get(0).title));
         screenshot("widget-screen.png");
         instrumentation.runOnMainSync(host::finish);
     }
