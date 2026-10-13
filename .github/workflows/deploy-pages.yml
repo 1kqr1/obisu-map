@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "frontend/**"
+      - "ios/**"
       - "data/processed/**"
       - ".github/workflows/deploy-pages.yml"
   workflow_dispatch: {}
@@ -38,6 +39,9 @@ jobs:
 
       - run: npm ci
         working-directory: frontend
+
+      - name: iPhoneウィジェットのデータ・APIを検証
+        run: node --test ios/scriptable/tests/*.test.mjs
 
       - run: npm run build
         working-directory: frontend

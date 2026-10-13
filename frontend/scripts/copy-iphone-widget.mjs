@@ -1,0 +1,11 @@
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+const source = new URL('../../ios/scriptable/YamaguchiWidget.js', import.meta.url);
+const content = readFileSync(source);
+const version = content.toString().match(/const WIDGET_VERSION = "([0-9]+\.[0-9]+\.[0-9]+)"/)[1];
+const directory = new URL('../public/downloads/', import.meta.url);
+mkdirSync(directory, { recursive: true });
+const name = `yamaguchi-iphone-${version}.js`;
+writeFileSync(new URL(name, directory), content);
+writeFileSync(new URL(name + '.sha256', directory), createHash('sha256').update(content).digest('hex') + '  ' + name + '\n');
+console.log('[copy-iphone-widget] ' + name);

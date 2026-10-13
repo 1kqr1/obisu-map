@@ -61,7 +61,7 @@ Galaxy S24実機、Android 12〜14実機での検証は未実施。エミュレ�
 
 ウィジェット表示部分をSwiftUI / WidgetKitで実装し、このJSONフィードを共用する。
 友人へのテスト配布はTestFlight、継続的な一般配布はApp Storeを想定。
-iPhone版はまだ実装していない。
+無料のScriptable版を `ios/scriptable/` に実装した。導入案内は `https://orbis.1kqr1.com/iphone/`。専用アプリ/WidgetKit版は未実装。
 
 ## 1.3.0の密度・予定状態
 
