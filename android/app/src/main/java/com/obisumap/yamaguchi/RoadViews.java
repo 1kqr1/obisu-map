@@ -18,7 +18,7 @@ public final class RoadViews {
                 ? Color.rgb(67, 56, 138) : Color.rgb(143, 81, 14);
     }
     private static float numberSize(RoadPresentation road, boolean compact) {
-        return road.numbered ? (compact ? (road.number.length() == 3 ? 18 : 21) : (road.number.length() == 3 ? 24 : 28)) : (compact ? 11 : 15);
+        return road.numbered ? (compact ? (road.number.length() == 3 ? 15 : 21) : (road.number.length() == 3 ? 20 : 28)) : (compact ? 11 : 15);
     }
     public static void bind(RemoteViews row, FeedModel.Item item, boolean compact) {
         RoadPresentation road = new RoadPresentation(item);

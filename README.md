@@ -79,7 +79,7 @@ npm run dev
 
 ## 重要な注意
 
-- APKの直接配布: `https://orbis.1kqr1.com/downloads/yamaguchi-today-1.1.0.apk`。GitHubからダウンロードが完了しない場合の代替。GitHub Releasesの署名済みAPKと同一のファイルを`frontend/public/downloads/`に配置し、SHA-256も併記する。更新時は署名・テストを済ませた新しいバージョンのファイルを配置してサイトのリンクを更新する。
+- APKの直接配布: `https://orbis.1kqr1.com/downloads/yamaguchi-today-1.1.1.apk`。GitHubからダウンロードが完了しない場合の代替。GitHub Releasesの署名済みAPKと同一のファイルを`frontend/public/downloads/`に配置し、SHA-256も併記する。更新時は署名・テストを済ませた新しいバージョンのファイルを配置してサイトのリンクを更新する。
 
 - Android向けに「山口 きょうの取締り」ホーム画面ウィジェットを追加。山口県限定・日本時間の今日の予定を表示する。配布とインストールの案内は [android/README.md](./android/README.md)。iPhone版でも利用できる共通フィードは `data/processed/widget_yamaguchi.json`。
 
