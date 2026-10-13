@@ -24,3 +24,6 @@ android/**/build/
 android/local.properties
 *.jks
 *.keystore
+
+# デザイン用のローカル分析・キャンバスの再開状態
+.superdesign/

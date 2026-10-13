@@ -1,6 +1,8 @@
 import * as maplibregl from "maplibre-gl";
-import type { EnforcementSegment, EnforcementSchedule, FixedCamera, MobilePoint } from "./types";
+import type { AppData, EnforcementSegment, EnforcementSchedule, FixedCamera, MobilePoint } from "./types";
 import { schedulesForSegment, timeBandLabel } from "./data";
+import { dailySchedules, activeSegments, type DailyTimeFilter } from "./daily";
+import { bbox, pointOnFeature, feature, featureCollection } from "@turf/turf";
 
 // maplibre-glは実行時にimport.meta.urlから自身のWorkerファイルのURLを逆算する
 // （sibling maplibre-gl-worker.mjsを探す）。Viteの本番ビルドは全体を1つのJSに
@@ -43,7 +45,7 @@ export interface MapFilters {
   showMobilePoints: boolean;
 }
 
-export const ALL_PREFECTURES = ["山口県", "長崎県", "大分県"];
+export const ALL_PREFECTURES = ["山口県"];
 
 export function defaultFilters(): MapFilters {
   return {
@@ -115,6 +117,11 @@ export class ObisuMap {
   private schedules: EnforcementSchedule[] = [];
   private cameras: FixedCamera[] = [];
   private mobilePoints: MobilePoint[] = [];
+  private selectedSchedules: EnforcementSchedule[] = [];
+  private labels: { marker: maplibregl.Marker; element: HTMLButtonElement; position: [number, number] }[] = [];
+  private labelLines: SVGSVGElement;
+  private labelAnchors: AppData["labelAnchors"] = {};
+  private overview = true;
   private popup = new maplibregl.Popup({ closeButton: true, maxWidth: "320px" });
 
   constructor(container: HTMLElement) {
@@ -125,6 +132,13 @@ export class ObisuMap {
       zoom: 9,
       attributionControl: false,
     });
+    this.labelLines = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    this.labelLines.classList.add("map-label-lines");
+    this.labelLines.setAttribute("aria-hidden", "true");
+    container.append(this.labelLines);
+    this.map.on("move", () => this.placeLabels());
+    this.map.on("resize", () => { if (this.overview) this.showPrefecture(); this.placeLabels(); });
+    this.map.on("dragstart", () => { this.overview = false; });
     this.map.on("error", (e) => console.error("MAP ERROR", e.error));
     this.map.addControl(new maplibregl.NavigationControl(), "top-right");
     this.map.addControl(
@@ -264,6 +278,113 @@ export class ObisuMap {
     }
   }
 
+  /** Only the selected Japan-calendar day's schedules supply map geometry. */
+  selectDate(date: string, filter: DailyTimeFilter, anchors = this.labelAnchors): void {
+    this.labelAnchors = anchors;
+    this.popup.remove();
+    this.clearMatches();
+    this.selectedSchedules = dailySchedules(this.schedules, date, filter);
+    const segments = activeSegments(this.segments, this.selectedSchedules);
+    const { lines, polygons } = segmentsToFeatureCollections(segments);
+    this.ensureSource("segments-lines", lines);
+    this.ensureSource("segments-polygons", polygons);
+    this.ensureSource("mobile-points", mobilePointsToFeatureCollection(this.mobilePoints.filter(p => p.date === date)));
+    for (const label of this.labels) label.marker.remove();
+    this.labels = [];
+    const groups = new Map<string, EnforcementSegment[]>();
+    for (const segment of segments) groups.set(segment.police_station_raw, [...(groups.get(segment.police_station_raw) ?? []), segment]);
+    for (const [station, rows] of groups) {
+      const position = anchors[station]?.coordinates ?? pointOnFeature(featureCollection(rows.map(row => feature(row.geometry)))).geometry.coordinates as [number, number];
+      const element = document.createElement("button");
+      element.type = "button";
+      element.className = "enforcement-label";
+      const roads = [...new Set(rows.map(row => row.road))];
+      const bands = [...new Set(this.selectedSchedules.filter(row => rows.some(s => s.id === row.segment_id)).map(row => row.time_band))];
+      const roadLabel = roads.join("・").replace(/国道(\d+)号/g, "R$1");
+      element.innerHTML = `<strong>${escapeHtml(station)}署管内</strong><span>${escapeHtml(roadLabel)}</span><small>${bands.map(band => band === "day" ? "昼間" : band === "early" ? "早朝" : "夜間").join("・")}</small>`;
+      element.setAttribute("aria-label", `${station}署管内 ${roads.join("・")} ${bands.map(timeBandLabel).join("・")}。案内表示、正確な地点ではありません。詳細を見る`);
+      element.addEventListener("click", e => { e.stopPropagation(); this.showGroupPopup(rows, position); });
+      const marker = new maplibregl.Marker({ element, anchor: "center" }).setLngLat(position).addTo(this.map);
+      this.labels.push({ marker, element, position });
+    }
+    this.placeLabels();
+  }
+
+  /** Displace overlapping guide labels without changing their geographic anchors. */
+  private placeLabels(): void {
+    const width = this.map.getContainer().clientWidth, height = this.map.getContainer().clientHeight;
+    if (!width || !height) return;
+    const occupied: { x: number; y: number; w: number; h: number }[] = [];
+    this.labelLines.replaceChildren();
+    const sorted = this.labels.map(label => ({ ...label, anchor: this.map.project(label.position) }))
+      .sort((a, b) => a.anchor.x - b.anchor.x || a.anchor.y - b.anchor.y);
+    for (const label of sorted) {
+      const { x, y } = label.anchor;
+      const outside = x < 0 || y < 0 || x > width || y > height;
+      label.element.hidden = outside;
+      if (outside) continue;
+      const w = label.element.offsetWidth || 96, h = label.element.offsetHeight || 50;
+      const offsets: [number, number][] = [];
+      const dense = this.labels.length * (w + 8) * (h + 8) > width * height * .3;
+      if (dense) {
+        const columns = Math.max(1, Math.floor((width - 16) / (w + 8)));
+        const rows = Math.max(1, Math.floor((height - 128) / (h + 8)));
+        for (let row = 0; row < rows; row++) for (let col = 0; col < columns; col++) {
+          offsets.push([(col + .5) * (width - 16) / columns + 8 - x, (row + .5) * (height - 128) / rows + 74 - y]);
+        }
+      } else {
+        for (let row = -4; row <= 4; row++) for (let col = -4; col <= 4; col++) offsets.push([col * (w + 6), row * (h + 6)]);
+      }
+      offsets.sort((a, b) => Math.hypot(...a) - Math.hypot(...b));
+      let chosen = { x: Math.max(w / 2 + 8, Math.min(width - w / 2 - 8, x)), y: Math.max(h / 2 + 74, Math.min(height - h / 2 - 54, y)), w, h };
+      for (const [dx, dy] of offsets) {
+        const cx = Math.max(w / 2 + 8, Math.min(width - w / 2 - 8, x + dx));
+        const cy = Math.max(h / 2 + 74, Math.min(height - h / 2 - 54, y + dy));
+        if (!occupied.some(r => Math.abs(cx - r.x) < (w + r.w) / 2 + 4 && Math.abs(cy - r.y) < (h + r.h) / 2 + 4)) {
+          chosen = { x: cx, y: cy, w, h }; break;
+        }
+      }
+      occupied.push(chosen);
+      label.marker.setOffset([chosen.x - x, chosen.y - y]);
+      if (Math.hypot(chosen.x - x, chosen.y - y) > 12) {
+        const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        for (const [key, value] of Object.entries({ x1: x, y1: y, x2: chosen.x, y2: chosen.y })) line.setAttribute(key, String(value));
+        this.labelLines.append(line);
+      }
+    }
+  }
+
+  showPrefecture(): void {
+    this.overview = true;
+    this.popup.remove();
+    if (this.map.getSource("highlight-lines")) this.clearMatches();
+    this.map.fitBounds([[130.76, 33.70], [132.50, 34.80]], { padding: { top: 60, bottom: 60, left: 45, right: 45 }, duration: 0 });
+  }
+
+  focusSegment(id: string): void {
+    const segment = activeSegments(this.segments, this.selectedSchedules).find(s => s.id === id);
+    if (!segment) return;
+    this.overview = false;
+    const bounds = bbox(feature(segment.geometry));
+    this.map.fitBounds([[bounds[0], bounds[1]], [bounds[2], bounds[3]]], { padding: 75, maxZoom: 12, duration: 0 });
+    const position = this.labelAnchors[segment.police_station_raw]?.coordinates ?? pointOnFeature(feature(segment.geometry)).geometry.coordinates as [number, number];
+    this.setMatches({ segmentIds: [id] });
+    this.showSegmentPopup(segment, position);
+    if (window.innerWidth <= 768) this.map.getContainer().scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  private showGroupPopup(segments: EnforcementSegment[], position: maplibregl.LngLatLike): void {
+    const ids = new Set(segments.map(s => s.id));
+    const rows = this.selectedSchedules.filter(s => ids.has(s.segment_id));
+    const html = `<div class="popup"><h3>${escapeHtml(segments[0].police_station_raw)}署管内</h3>
+      <p class="popup-accuracy">管内の案内表示です。正確な取締り地点は未公表です。</p>
+      <ul>${rows.map(s => `<li>${escapeHtml(s.road)}<br>${escapeHtml(timeBandLabel(s.time_band))}</li>`).join("")}</ul>
+      <p>${[...new Set(segments.map(s => escapeHtml(s.notes ?? "")).filter(Boolean))].join("<br>")}</p>
+      <p>${scheduleSources(rows)}</p></div>`;
+    this.setMatches({ segmentIds: [...ids] });
+    this.popup.setLngLat(position).setHTML(html).addTo(this.map);
+  }
+
   /** FR-12/13: 直近のルート検索でヒットした要素を地図上で強調表示する。 */
   setMatches(ids: { segmentIds?: string[]; cameraIds?: string[]; pointIds?: string[] }): void {
     const segIdSet = new Set(ids.segmentIds ?? []);
@@ -374,9 +495,7 @@ export class ObisuMap {
   }
 
   private showSegmentPopup(segment: EnforcementSegment, lngLat: maplibregl.LngLatLike): void {
-    const upcoming = schedulesForSegment(this.schedules, segment.id).filter(
-      (s) => s.date >= todayISO(),
-    );
+    const upcoming = schedulesForSegment(this.selectedSchedules, segment.id);
     const scheduleRows = upcoming
       .slice(0, 8)
       .map((s) => {
@@ -395,8 +514,8 @@ export class ObisuMap {
         <p class="popup-source">出典: ${escapeHtml(segment.geometry_source)}</p>
         ${
           scheduleRows
-            ? `<p class="popup-label">今後の取締り予定日:</p><ul>${scheduleRows}</ul>`
-            : `<p class="popup-note">今後の予定データはありません</p>`
+            ? `<p class="popup-label">選択日の取締り予定:</p><ul>${scheduleRows}</ul>`
+            : `<p class="popup-note">選択日の予定データはありません</p>`
         }
       </div>`;
     this.popup.setLngLat(lngLat).setHTML(html).addTo(this.map);
@@ -426,6 +545,7 @@ export class ObisuMap {
   }
 
   showRoute(line: GeoJSON.LineString): void {
+    this.overview = false;
     this.ensureSource("route", { type: "FeatureCollection", features: [{ type: "Feature", geometry: line, properties: {} }] });
     if (!this.map.getLayer("route-line")) {
       this.map.addLayer({
@@ -448,10 +568,13 @@ export class ObisuMap {
   }
 }
 
-function todayISO(): string {
-  const d = new Date();
-  const tzOffsetMs = d.getTimezoneOffset() * 60_000;
-  return new Date(d.getTime() - tzOffsetMs).toISOString().slice(0, 10);
+function scheduleSources(rows: EnforcementSchedule[]): string {
+  const sources = new Map<string, string>();
+  for (const row of rows) for (const source of [row, ...(row.additional_sources ?? [])]) {
+    if (/^https:\/\/(?:www\.pref\.yamaguchi\.lg\.jp\/|x\.com\/YamaguchiPolice\/status\/\d+$)/.test(source.source_url))
+      sources.set(source.source_url, source.source_url.includes("x.com") ? "公式X" : "県警HP");
+  }
+  return [...sources].map(([url, label]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`).join(" · ");
 }
 
 

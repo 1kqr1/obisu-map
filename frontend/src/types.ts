@@ -90,4 +90,6 @@ export interface AppData {
   mobilePoints: MobilePoint[];
   lastUpdated: string | null;
   xInformation: XInformation;
+  hpCoverageDates: string[];
+  labelAnchors: Record<string, { coordinates: [number, number]; label: string }>;
 }

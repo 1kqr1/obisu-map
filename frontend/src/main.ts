@@ -1,6 +1,7 @@
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./style.css";
 import { ObisuMap, defaultFilters, type MapFilters } from "./map";
+import { dailySchedules, todayInJapan } from "./daily";
 import {
   loadAppData,
   schedulesForSegment,
@@ -30,50 +31,83 @@ const lastUpdatedEl = document.getElementById("last-updated")!;
 const clearButton = document.getElementById("clear-route-button") as HTMLButtonElement;
 const xStatusEl = document.getElementById("x-information-status")!;
 const xNoticesEl = document.getElementById("x-notices")!;
-const xSelectedDateOnly = document.getElementById("x-selected-date-only") as HTMLInputElement;
-
-const filterFixed = document.getElementById("filter-fixed") as HTMLInputElement;
-const filterMobileSegments = document.getElementById("filter-mobile-segments") as HTMLInputElement;
-const filterMobilePoints = document.getElementById("filter-mobile-points") as HTMLInputElement;
-const filterPrefCheckboxes = Array.from(
-  document.querySelectorAll<HTMLInputElement>(".filter-pref"),
-);
-
-dateInput.value = toLocalISODate(new Date());
-
-function toLocalISODate(d: Date): string {
-  const tzOffsetMs = d.getTimezoneOffset() * 60_000;
-  return new Date(d.getTime() - tzOffsetMs).toISOString().slice(0, 10);
-}
+const dailyResultsEl = document.getElementById("daily-results")!;
+const dailyStatusEl = document.getElementById("daily-status")!;
+const dailyHeadingEl = document.getElementById("daily-heading")!;
+const mapSummaryEl = document.getElementById("map-summary")!;
+dateInput.value = todayInJapan();
+let followingToday = true;
 
 const obisuMap = new ObisuMap(mapEl);
 
 let appData: AppData | null = null;
 let lastRouteLine: GeoJSON.LineString | null = null;
 
-function currentFilters(): MapFilters {
-  return {
-    prefectures: filterPrefCheckboxes.filter((c) => c.checked).map((c) => c.value),
-    showFixed: filterFixed.checked,
-    showMobileSegments: filterMobileSegments.checked,
-    showMobilePoints: filterMobilePoints.checked,
-  };
-}
+function currentFilters(): MapFilters { return defaultFilters(); }
 
 function onFiltersChanged(): void {
-  obisuMap.applyFilters(currentFilters());
+  if (!appData || !dateInput.value) return;
+  obisuMap.selectDate(dateInput.value, timeBandInput.value as TimeBandFilter, appData.labelAnchors);
+  renderDailyInformation();
   renderXInformation();
-  if (lastRouteLine && appData) {
-    renderMatches(lastRouteLine, appData, dateInput.value, timeBandInput.value as TimeBandFilter);
-  }
-}
-
-for (const el of [filterFixed, filterMobileSegments, filterMobilePoints, ...filterPrefCheckboxes]) {
-  el.addEventListener("change", onFiltersChanged);
+  if (lastRouteLine) renderMatches(lastRouteLine, appData, dateInput.value, timeBandInput.value as TimeBandFilter);
 }
 timeBandInput.addEventListener("change", onFiltersChanged);
-dateInput.addEventListener("change", onFiltersChanged);
-xSelectedDateOnly.addEventListener("change", renderXInformation);
+dateInput.addEventListener("change", () => {
+  if (!dateInput.value) dateInput.value = todayInJapan();
+  followingToday = dateInput.value === todayInJapan();
+  onFiltersChanged();
+});
+document.getElementById("today-button")!.addEventListener("click", () => {
+  dateInput.value = todayInJapan(); followingToday = true; onFiltersChanged(); obisuMap.showPrefecture();
+});
+document.getElementById("reset-map-button")!.addEventListener("click", () => obisuMap.showPrefecture());
+function refreshToday(): void {
+  if (followingToday && dateInput.value !== todayInJapan()) {
+    dateInput.value = todayInJapan(); onFiltersChanged();
+  }
+}
+setInterval(refreshToday, 60_000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshToday(); });
+
+function renderDailyInformation(): void {
+  if (!appData) return;
+  const schedules = dailySchedules(appData.schedules, dateInput.value, timeBandInput.value as TimeBandFilter);
+  const groups = new Map<string, typeof schedules>();
+  for (const s of schedules) groups.set(s.segment_id, [...(groups.get(s.segment_id) ?? []), s]);
+  const mapped = new Set(appData.segments.map(s => s.id));
+  const heading = dateInput.value === todayInJapan() ? "今日の公表予定" : `${dateInput.value.replaceAll("-", "/")}の公表予定`;
+  dailyHeadingEl.textContent = heading;
+  const coverage = appData.hpCoverageDates.includes(dateInput.value);
+  dailyStatusEl.textContent = coverage
+    ? `${groups.size}区間・管内 / ${schedules.length}件の予定（時間帯別）`
+    : "この日のHP予定は未取得です。確認できた情報だけを表示しています。";
+  mapSummaryEl.innerHTML = `${escapeHtml(dateInput.value.slice(5).replace("-", "/"))} ${groups.size}区間・管内${coverage ? "" : " · HP未取得"}<small>管内の目安 · 正確な地点は未公表</small>`;
+  if (!schedules.length) {
+    dailyResultsEl.innerHTML = `<p>${coverage ? "この条件に該当する公表予定はありません。" : "確認できた予定がありません。"}</p>`;
+    return;
+  }
+  dailyResultsEl.innerHTML = [...groups].sort((a, b) => a[1][0].police_station_raw.localeCompare(b[1][0].police_station_raw, "ja"))
+    .map(([id, rows]) => `<article class="daily-card">
+      <button class="schedule-focus" type="button" data-segment-id="${escapeHtml(id)}" ${mapped.has(id) ? "" : "disabled"}>
+        <strong>${escapeHtml(rows[0].police_station_raw)}署管内</strong><span>${escapeHtml(rows[0].road)}</span>
+        <small>${mapped.has(id) ? "地図で見る ↗" : "地図の位置は未取得"}</small>
+      </button>
+      <p>${rows.map(s => escapeHtml(timeBandLabel(s.time_band))).join("<br>")}</p>
+      <p class="source-links">${sourceLinks(rows)}</p>
+    </article>`).join("");
+  for (const button of dailyResultsEl.querySelectorAll<HTMLButtonElement>(".schedule-focus")) {
+    button.addEventListener("click", () => obisuMap.focusSegment(button.dataset.segmentId!));
+  }
+}
+function sourceLinks(rows: AppData["schedules"]): string {
+  const sources = new Map<string, string>();
+  for (const row of rows) for (const source of [row, ...(row.additional_sources ?? [])]) {
+    if (/^https:\/\/(?:www\.pref\.yamaguchi\.lg\.jp\/|x\.com\/YamaguchiPolice\/status\/\d+$)/.test(source.source_url))
+      sources.set(source.source_url, source.source_url.includes("x.com") ? "公式X" : "県警HP");
+  }
+  return [...sources].map(([url, label]) => `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`).join(" · ");
+}
 
 function renderXInformation(): void {
   if (!appData) return;
@@ -88,21 +122,21 @@ function renderXInformation(): void {
   const geometryIds = new Set(appData.segments.map((s) => s.id));
   // 新しい路線・未知の管轄でジオメトリを作れなくても、予定自体は落とさない。
   const unmapped = appData.schedules.filter((s) => s.prefecture === "山口県" && !geometryIds.has(s.segment_id) && prefSet.has(s.prefecture))
-    .filter((s) => !xSelectedDateOnly.checked || !dateInput.value || s.date === dateInput.value)
+    .filter((s) => s.date === dateInput.value)
     .filter((s) => timeBandMatchesFilter(s.time_band, timeBandInput.value as TimeBandFilter));
   const unmappedHtml = unmapped.length ? `<details class="x-notice"><summary>地図に表示できない予定（${unmapped.length}件）</summary><ul>${unmapped.map((s) =>
     `<li>${escapeHtml(s.date)} ${escapeHtml(timeBandLabel(s.time_band))} ${escapeHtml(s.road)} / ${escapeHtml(s.police_station_raw)}</li>`
   ).join("")}</ul><p>場所は各県警の原情報を確認してください。</p></details>` : "";
   const notices = info.notices
     .filter((n) => prefSet.has(n.prefecture))
-    .filter((n) => !xSelectedDateOnly.checked || !dateInput.value || n.dates.length === 0 || n.dates.includes(dateInput.value))
+    .filter((n) => n.dates.length === 0 || n.dates.includes(dateInput.value))
     .filter((n) => timeBandMatchesFilter(n.time_band, timeBandInput.value as TimeBandFilter))
     .sort((a, b) => b.published_at.localeCompare(a.published_at));
   if (!notices.length) {
     xNoticesEl.innerHTML = "<p>この条件に該当する追加情報はありません。</p>" + unmappedHtml;
     return;
   }
-  const today = toLocalISODate(new Date());
+  const today = todayInJapan();
   xNoticesEl.innerHTML = notices.map((n) => {
     const past = n.dates.length > 0 && n.dates.every((d) => d < today);
     const dateLabel = n.dates.length ? n.dates.map((d) => d.slice(5).replace("-", "/")).join("・") : "日付は原投稿を確認";
@@ -125,12 +159,15 @@ async function init(): Promise<void> {
     appData = await loadAppData();
     obisuMap.setData(appData.segments, appData.schedules, appData.fixedCameras, appData.mobilePoints);
     obisuMap.applyFilters(defaultFilters());
-    renderXInformation();
+    onFiltersChanged();
+    obisuMap.showPrefecture();
     if (appData.lastUpdated) {
       const d = new Date(appData.lastUpdated);
-      lastUpdatedEl.textContent = `データ最終更新: ${d.toLocaleString("ja-JP")}`;
+      lastUpdatedEl.textContent = `データ最終更新: ${d.toLocaleString("ja-JP", { timeZone: "Asia/Tokyo" })}（日本時間）`;
     }
   } catch (err) {
+    dailyStatusEl.textContent = "データを読み込めませんでした。ページを再読み込みしてください。";
+    mapSummaryEl.textContent = "データの読み込みに失敗";
     setStatus(`データの読み込みに失敗しました: ${(err as Error).message}`, true);
   }
 }
@@ -181,7 +218,7 @@ function renderMatches(
     ? segmentsAlongRoute(routeLine, data.segments)
         .filter((seg) => prefSet.has(seg.prefecture))
         .filter((seg) =>
-          schedulesForSegment(data.schedules, seg.id).some(
+          schedulesForSegment(dailySchedules(data.schedules, targetDate, targetTimeBand), seg.id).some(
             (s) => (!targetDate || s.date === targetDate) && timeBandMatchesFilter(s.time_band, targetTimeBand),
           ),
         )
@@ -245,7 +282,7 @@ function renderResults(
   if (segments.length > 0) {
     html += `<h2>速度取締り予定の区間（${segments.length}件、出発地から近い順）</h2><ul>`;
     for (const seg of segments) {
-      const dates = schedulesForSegment(data.schedules, seg.id)
+      const dates = schedulesForSegment(dailySchedules(data.schedules, targetDate, targetTimeBand), seg.id)
         .filter((s) => !targetDate || s.date === targetDate)
         .filter((s) => timeBandMatchesFilter(s.time_band, targetTimeBand))
         .map((s) => `${s.date}(${timeBandLabel(s.time_band)})`)

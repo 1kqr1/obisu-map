@@ -1,0 +1,151 @@
+{
+  "description": "地図ラベルを置くための市町村・地区の代表位置。取締り地点でも警察署の位置でもない。",
+  "source": "国土地理院 住所検索",
+  "verified_at": "2026-10-13",
+  "anchors": {
+    "岩国": {
+      "coordinates": [
+        132.218842,
+        34.166595
+      ],
+      "label": "山口県岩国市",
+      "query": "山口県岩国市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%B2%A9%E5%9B%BD%E5%B8%82"
+    },
+    "柳井": {
+      "coordinates": [
+        132.101669,
+        33.96389
+      ],
+      "label": "山口県柳井市",
+      "query": "山口県柳井市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E6%9F%B3%E4%BA%95%E5%B8%82"
+    },
+    "光": {
+      "coordinates": [
+        131.942123,
+        33.961895
+      ],
+      "label": "山口県光市",
+      "query": "山口県光市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%85%89%E5%B8%82"
+    },
+    "下松": {
+      "coordinates": [
+        131.870285,
+        34.014999
+      ],
+      "label": "山口県下松市",
+      "query": "山口県下松市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E4%B8%8B%E6%9D%BE%E5%B8%82"
+    },
+    "周南": {
+      "coordinates": [
+        131.806595,
+        34.055725
+      ],
+      "label": "山口県周南市",
+      "query": "山口県周南市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%91%A8%E5%8D%97%E5%B8%82"
+    },
+    "防府": {
+      "coordinates": [
+        131.562775,
+        34.05143
+      ],
+      "label": "山口県防府市",
+      "query": "山口県防府市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E9%98%B2%E5%BA%9C%E5%B8%82"
+    },
+    "山口": {
+      "coordinates": [
+        131.473022,
+        34.177845
+      ],
+      "label": "山口県山口市",
+      "query": "山口県山口市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%B1%B1%E5%8F%A3%E5%B8%82"
+    },
+    "山口南": {
+      "coordinates": [
+        131.394684,
+        34.098232
+      ],
+      "label": "山口県山口市小郡下郷",
+      "query": "山口県山口市小郡下郷",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%B1%B1%E5%8F%A3%E5%B8%82%E5%B0%8F%E9%83%A1%E4%B8%8B%E9%83%B7"
+    },
+    "宇部": {
+      "coordinates": [
+        131.247314,
+        33.951824
+      ],
+      "label": "山口県宇部市",
+      "query": "山口県宇部市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%AE%87%E9%83%A8%E5%B8%82"
+    },
+    "山陽小野田": {
+      "coordinates": [
+        131.181808,
+        34.003166
+      ],
+      "label": "山口県山陽小野田市",
+      "query": "山口県山陽小野田市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E5%B1%B1%E9%99%BD%E5%B0%8F%E9%87%8E%E7%94%B0%E5%B8%82"
+    },
+    "小串": {
+      "coordinates": [
+        130.937637,
+        34.176769
+      ],
+      "label": "山口県下関市豊浦町小串",
+      "query": "山口県下関市豊浦町小串",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E4%B8%8B%E9%96%A2%E5%B8%82%E8%B1%8A%E6%B5%A6%E7%94%BA%E5%B0%8F%E4%B8%B2"
+    },
+    "美祢": {
+      "coordinates": [
+        131.206207,
+        34.166714
+      ],
+      "label": "山口県美祢市",
+      "query": "山口県美祢市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E7%BE%8E%E7%A5%A2%E5%B8%82"
+    },
+    "長門": {
+      "coordinates": [
+        131.182617,
+        34.37056
+      ],
+      "label": "山口県長門市",
+      "query": "山口県長門市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E9%95%B7%E9%96%80%E5%B8%82"
+    },
+    "萩": {
+      "coordinates": [
+        131.39917,
+        34.408054
+      ],
+      "label": "山口県萩市",
+      "query": "山口県萩市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E8%90%A9%E5%B8%82"
+    },
+    "下関": {
+      "coordinates": [
+        130.940964,
+        33.957287
+      ],
+      "label": "山口県下関市",
+      "query": "山口県下関市",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E4%B8%8B%E9%96%A2%E5%B8%82"
+    },
+    "長府": {
+      "coordinates": [
+        130.999496,
+        34.017586
+      ],
+      "label": "山口県下関市長府松小田本町",
+      "query": "山口県下関市長府松小田本町",
+      "source_url": "https://msearch.gsi.go.jp/address-search/AddressSearch?q=%E5%B1%B1%E5%8F%A3%E7%9C%8C%E4%B8%8B%E9%96%A2%E5%B8%82%E9%95%B7%E5%BA%9C%E6%9D%BE%E5%B0%8F%E7%94%B0%E6%9C%AC%E7%94%BA"
+    }
+  }
+}

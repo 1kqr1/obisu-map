@@ -10,17 +10,14 @@ import { mergeSchedules } from "./schedules";
 
 const DATA_BASE = `${import.meta.env.BASE_URL}data`;
 
-// 区間ベースの県（山口・長崎）のスケジュール・区間ファイル一覧。
-// 県ごとに独立したファイルにしているのは、1県のデータ更新失敗が
-// 他県の表示に影響しないようにするため（NFR-06と同じ考え方）。
+// サイトで取得・表示するのは山口県の公表情報のみ。
 const SEGMENT_SOURCES = [
   { schedules: "yamaguchi_enforcement_raw.json", segments: "enforcement_segments_yamaguchi.json" },
-  { schedules: "nagasaki_enforcement_raw.json", segments: "enforcement_segments_nagasaki.json" },
 ];
-const MOBILE_POINT_SOURCES = ["oita_enforcement_points.json"];
+const MOBILE_POINT_SOURCES: string[] = [];
 
 export async function loadAppData(): Promise<AppData> {
-  const [fixedCameras, segmentSourceResults, mobilePointResults, xInformation] = await Promise.all([
+  const [fixedCameras, segmentSourceResults, mobilePointResults, xInformation, coverage, guides] = await Promise.all([
     fetchJson<FixedCamera[]>(`${DATA_BASE}/fixed_cameras.json`),
     Promise.all(
       SEGMENT_SOURCES.map(async (src) => ({
@@ -32,6 +29,8 @@ export async function loadAppData(): Promise<AppData> {
     fetchJson<XInformation>(`${DATA_BASE}/yamaguchi_x_information.json`).catch(() => ({
       status: "unavailable" as const, verified_at: null, schedules: [], notices: [],
     })),
+    fetchJson<{ hp_coverage_dates: string[] }>(`${DATA_BASE}/widget_yamaguchi.json`).catch(() => null),
+    fetchJson<{ anchors: AppData["labelAnchors"] }>(`${DATA_BASE}/yamaguchi_label_anchors.json`).catch(() => ({ anchors: {} })),
   ]);
 
   const schedules = mergeSchedules(segmentSourceResults.flatMap((r) => r.schedules), xInformation.schedules);
@@ -44,7 +43,14 @@ export async function loadAppData(): Promise<AppData> {
   ].filter(Boolean);
   const lastUpdated = timestamps.length > 0 ? timestamps.sort().at(-1)! : null;
 
-  return { fixedCameras, segments, schedules, mobilePoints, lastUpdated, xInformation };
+  return {
+    fixedCameras: fixedCameras.filter(c => c.prefecture === "山口県"),
+    segments: segments.filter(s => s.prefecture === "山口県"),
+    schedules: schedules.filter(s => s.prefecture === "山口県"),
+    mobilePoints, lastUpdated, xInformation,
+    hpCoverageDates: coverage?.hp_coverage_dates ?? segmentSourceResults.flatMap(r => r.schedules.map(s => s.date)),
+    labelAnchors: guides.anchors,
+  };
 }
 
 async function fetchJson<T>(url: string): Promise<T> {
@@ -72,8 +78,9 @@ export function schedulesForDate(
 }
 
 const TIME_BAND_LABELS: Record<string, string> = {
-  day: "昼間(6:00-18:00)",
-  night_early: "早朝・夜間(18:00-翌6:00)",
+  day: "昼間 6:00〜18:00",
+  night_early: "夜間 18:00〜翌6:00",
+  early: "早朝 0:00〜6:00（前日夜から）",
   morning: "午前",
   afternoon: "午後",
   night: "夜間",
@@ -94,5 +101,5 @@ export function timeBandMatchesFilter(band: string, filter: TimeBandFilter): boo
   if (filter === "all") return true;
   if (band === "unspecified") return true;
   if (filter === "day") return band === "day" || band === "morning" || band === "afternoon";
-  return band === "night_early" || band === "night";
+  return band === "night_early" || band === "night" || band === "early";
 }

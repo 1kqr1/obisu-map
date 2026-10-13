@@ -3,97 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>オービス情報マップ（山口県・長崎県・大分県）</title>
+    <meta name="description" content="山口県警の公表情報から、今日の取締り予定を地図と一覧で確認できます。地点の入力は不要です。" />
+    <title>山口県 きょうの取締りマップ</title>
     <link rel="icon" type="image/png" href="/favicon.png" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   </head>
   <body>
     <div id="app">
+      <header id="page-header">
+        <div><p class="eyebrow">山口県限定</p><h1>きょうの取締りマップ</h1></div>
+        <button id="today-button" type="button">今日に戻る</button>
+        <div id="date-controls">
+          <label>表示日<input id="date-input" type="date" required /></label>
+          <label>時間帯<select id="time-band-input"><option value="all">すべて</option><option value="day">昼間 6〜18時</option><option value="night">早朝・夜間</option></select></label>
+        </div>
+      </header>
       <div id="map">
+        <div id="map-summary" role="status">今日の予定を読み込み中…</div>
         <details id="map-legend">
           <summary>地図の見方</summary>
-          <p><span class="legend-swatch legend-line-red"></span> 速度取締り予定の区間（国道特定できたもの）</p>
-          <p><span class="legend-swatch legend-fill-orange"></span> 速度取締り予定の範囲（国道不明・市区町村全体を表示）</p>
-          <p><span class="legend-swatch legend-dot-orange"></span> 可搬式オービス 取締り地点（大分県、住所からジオコーディング）</p>
-          <p><span class="legend-swatch legend-dot-navy"></span> 固定式オービス（現在データなし）</p>
-          <p><span class="legend-swatch legend-line-teal"></span> 検索した経路</p>
-          <p><span class="legend-swatch legend-highlight"></span> 経路検索でヒットした箇所（太い紫の丸で囲んで強調）</p>
+          <p><span class="legend-swatch legend-line-red"></span>公表路線の近似区間</p>
+          <p><span class="legend-swatch legend-fill-orange"></span>市町村で近似した管内</p>
+          <p>ラベルは管内の案内表示です。正確な取締り地点は公表されていません。</p>
+          <p>同じ市を複数署が管轄する場合、表示範囲が重なります。</p>
         </details>
+        <button id="reset-map-button" type="button">山口県全体</button>
       </div>
-
       <aside id="panel">
-        <header>
-          <h1>オービス情報マップ</h1>
-          <p class="subtitle">山口県・長崎県・大分県 固定式・可搬式オービス情報（安全運転支援用）</p>
-        </header>
-
-        <fieldset id="filters">
-          <legend>表示フィルタ</legend>
-          <div class="filter-group">
-            <span class="filter-group-label">種別</span>
-            <label><input type="checkbox" id="filter-fixed" checked /> 固定式</label>
-            <label><input type="checkbox" id="filter-mobile-segments" checked /> 速度取締り（区間）</label>
-            <label><input type="checkbox" id="filter-mobile-points" checked /> 可搬式（地点）</label>
-          </div>
-          <div class="filter-group">
-            <span class="filter-group-label">県</span>
-            <label><input type="checkbox" class="filter-pref" value="山口県" checked /> 山口県</label>
-            <label><input type="checkbox" class="filter-pref" value="長崎県" checked /> 長崎県</label>
-            <label><input type="checkbox" class="filter-pref" value="大分県" checked /> 大分県</label>
-          </div>
-        </fieldset>
-
-        <form id="route-form">
-          <label>
-            出発地
-            <input id="from-input" type="text" placeholder="例: 周南市徳山" required />
-          </label>
-          <label>
-            目的地
-            <input id="to-input" type="text" placeholder="例: 下関市長府" required />
-          </label>
-          <label>
-            出発予定日
-            <input id="date-input" type="date" />
-          </label>
-          <label>
-            出発時間帯
-            <select id="time-band-input">
-              <option value="all">指定なし（すべて表示）</option>
-              <option value="day">昼間（6:00〜18:00ごろ）</option>
-              <option value="night">早朝・夜間（18:00〜翌6:00ごろ）</option>
-            </select>
-          </label>
-          <button type="submit">経路を検索</button>
-          <button type="button" id="clear-route-button" hidden>経路をクリア</button>
-        </form>
-
-        <div id="route-status" role="status"></div>
-        <div id="route-results"></div>
-
+        <section id="daily-information" aria-labelledby="daily-heading">
+          <h2 id="daily-heading">今日の公表予定</h2>
+          <p id="daily-status" role="status"></p>
+          <p class="map-note">管内・路線の目安を地図に表示しています。ラベルや一覧をタップすると詳細を確認できます。</p>
+          <div id="daily-results"></div>
+        </section>
         <section id="x-information" aria-labelledby="x-information-heading">
-          <h2 id="x-information-heading">山口県警 公式Xの追加情報</h2>
+          <h2 id="x-information-heading">公式Xの追加情報</h2>
           <p id="x-information-status" role="status"></p>
-          <label><input type="checkbox" id="x-selected-date-only" /> 出発予定日の情報のみ</label>
           <div id="x-notices"></div>
         </section>
-
+        <details id="route-tools">
+          <summary>経路沿いの予定を調べる</summary>
+          <form id="route-form">
+            <label>出発地<input id="from-input" type="text" placeholder="例: 周南市徳山" required /></label>
+            <label>目的地<input id="to-input" type="text" placeholder="例: 下関市長府" required /></label>
+            <button type="submit">経路を検索</button>
+            <button type="button" id="clear-route-button" hidden>経路をクリア</button>
+          </form>
+          <div id="route-status" role="status"></div>
+          <div id="route-results"></div>
+        </details>
         <footer id="app-footer">
           <p id="last-updated"></p>
-          <p class="disclaimer">
-            取締り予定は各県警の公表情報に基づきますが、<strong>予告なく変更・中止される場合があります</strong>。
-            可搬式オービスの取締り区間は、警察署管轄を市区町村境界で近似したものであり、
-            実際の取締り地点はこの区間内のどこかです（ピンポイントの位置ではありません）。
-            本アプリは取締り回避ではなく、事前の速度抑制・安全運転支援を目的としています。
-            出発時間帯の絞り込みは県により精度が異なります（大分県は午前/午後、長崎県は時間帯の記載自体がなく常に表示されます）。
-            福岡県・佐賀県は、公式サイトに構造化された取締り予定データがなく
-            （主な告知手段がSNSであるため）、データ収集の対象外としています。
-          </p>
-          <p class="attribution">
-            地図: 国土地理院タイル / 道路データ: © OpenStreetMap contributors (ODbL) /
-            住所検索: 国土地理院 / 経路検索: OSRM
-          </p>
+          <p>出典: 山口県警のHP・公式X。公表予定は変更・中止される場合があり、公表外の取締りもあります。</p>
+          <p>管内は市町村境界で近似しています。正確な地点・警察署の管轄境界を示すものではありません。</p>
+          <p class="attribution">地図: 国土地理院 / 道路・行政界: © OpenStreetMap contributors (ODbL) / 住所検索: 国土地理院 / 経路検索: OSRM</p>
         </footer>
       </aside>
     </div>
