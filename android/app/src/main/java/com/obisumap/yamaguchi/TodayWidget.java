@@ -58,13 +58,13 @@ public final class TodayWidget extends AppWidgetProvider {
         if (requested != null && !requested.isEmpty()) {
             for (SizeF size : requested) sizes.put(size, sizedViews(context, widgetId, model, schedule, size));
         } else {
-            for (SizeF size : new SizeF[]{new SizeF(160, 140), new SizeF(250, 240), new SizeF(360, 180), new SizeF(320, 360)})
+            for (SizeF size : new SizeF[]{new SizeF(160, 140), new SizeF(250, 240), new SizeF(330, 180), new SizeF(320, 360)})
                 sizes.put(size, sizedViews(context, widgetId, model, schedule, size));
         }
         return sizes.size() == 1 ? sizes.values().iterator().next() : new RemoteViews(sizes);
     }
     private static RemoteViews sizedViews(Context context, int widgetId, FeedModel model, WidgetSchedule schedule, SizeF size) {
-        boolean pair = size.getWidth() >= 360 && size.getWidth() / size.getHeight() >= 1.5f;
+        boolean pair = size.getWidth() >= 330 && size.getWidth() / size.getHeight() >= 1.4f;
         boolean compact = size.getWidth() < 250 || pair;
         boolean aggregateTime = !compact && !schedule.commonTime.isEmpty();
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.today_widget);
