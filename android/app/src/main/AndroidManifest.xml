@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <application android:allowBackup="false" android:label="山口 きょうの取締り"
+    <application android:allowBackup="false" android:label="@string/app_name"
         android:icon="@drawable/ic_app" android:roundIcon="@drawable/ic_app"
         android:theme="@style/AppTheme" android:usesCleartextTraffic="false"
         android:supportsRtl="true">

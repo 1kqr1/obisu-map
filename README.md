@@ -1,4 +1,4 @@
-# 山口県 きょうの取締りマップ
+# 山口県警取り締まり情報
 
 山口県警のHP・公式Xの公表予定を収集し、当日の路線・警察署管内を地図と一覧で確認するWebアプリ。2026-10-13からサイトは山口県限定。初期表示は日本時間の今日で、地点入力は不要。
 
@@ -79,9 +79,9 @@ npm run dev
 
 ## 重要な注意
 
-- APKの直接配布: `https://orbis.1kqr1.com/downloads/yamaguchi-today-1.2.0.apk`。GitHubからダウンロードが完了しない場合の代替。GitHub Releasesの署名済みAPKと同一のファイルを`frontend/public/downloads/`に配置し、SHA-256も併記する。更新時は署名・テストを済ませた新しいバージョンのファイルを配置してサイトのリンクを更新する。
+- APKの直接配布: `https://orbis.1kqr1.com/downloads/yamaguchi-today-1.3.0.apk`。GitHubからダウンロードが完了しない場合の代替。GitHub Releasesの署名済みAPKと同一のファイルを`frontend/public/downloads/`に配置し、SHA-256も併記する。更新時は署名・テストを済ませた新しいバージョンのファイルを配置してサイトのリンクを更新する。
 
-- Android向けに「山口 きょうの取締り」ホーム画面ウィジェットを追加。山口県限定・日本時間の今日の予定を表示する。配布とインストールの案内は [android/README.md](./android/README.md)。iPhone版でも利用できる共通フィードは `data/processed/widget_yamaguchi.json`。
+- Android向けに「山口県警取り締まり情報」ホーム画面ウィジェットを追加。山口県限定・日本時間の今日の予定を表示する。配布とインストールの案内は [android/README.md](./android/README.md)。iPhone版でも利用できる共通フィードは `data/processed/widget_yamaguchi.json`。
 
 - 山口県はHPを基本データにし、公式Xの速度取締り本文、可搬式オービスの市内予告、飲酒運転強化日を補足する。重複した予定は1件にまとめ、HPにのみある予定は保持する。市内予告を特定地点・特定国道に変換しない。解析できない取締り投稿も原文とリンクを追加情報欄に表示する。添付画像・動画のOCRは未実装。
 - X自動取得にはGitHubの **Settings → Secrets and variables → Actions** に `X_BEARER_TOKEN` の設定が必要。現在は未設定のため、2026-10-13に確認した16投稿（速度取締り14投稿、可搬式オービス1投稿、飲酒運転1投稿）の転記データを表示する。認証情報はPython取得処理だけで使用し、フロントエンド・リポジトリへ保存しない。

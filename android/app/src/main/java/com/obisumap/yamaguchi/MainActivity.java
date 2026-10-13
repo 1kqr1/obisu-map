@@ -33,6 +33,7 @@ public final class MainActivity extends Activity {
         super.onCreate(state);
         ScrollView scroll = new ScrollView(this);
         content = new LinearLayout(this); content.setOrientation(LinearLayout.VERTICAL);
+        scroll.setBackgroundColor(getColor(R.color.app_background));
         scroll.addView(content); setContentView(scroll);
         scroll.setOnApplyWindowInsetsListener((view, insets) -> {
             Insets bars = insets.getInsets(WindowInsets.Type.systemBars());
@@ -60,7 +61,7 @@ public final class MainActivity extends Activity {
     }
     private int dp(int value) { return Math.round(value * getResources().getDisplayMetrics().density); }
     private TextView text(String value, int size, boolean bold) {
-        TextView view = new TextView(this); view.setText(value); view.setTextSize(size); view.setTextColor(0xff1d3557);
+        TextView view = new TextView(this); view.setText(value); view.setTextSize(size); view.setTextColor(getColor(R.color.text_primary));
         if (bold) view.setTypeface(null, android.graphics.Typeface.BOLD);
         view.setPadding(0, dp(8), 0, dp(8)); content.addView(view); return view;
     }
@@ -71,8 +72,8 @@ public final class MainActivity extends Activity {
     private void render() {
         if (content == null || isFinishing()) return;
         content.removeAllViews(); FeedModel model = FeedStore.cached(this);
-        text("山口 きょうの取締り", 23, true);
-        text((model == null ? FeedModel.today() : model.dateLabel()) + " / 山口県全域", 15, false);
+        text(getString(R.string.app_name), 23, true);
+        text((model == null ? FeedModel.today() : model.dateLabel()) + " / 山口県全域・非公式", 15, false);
         button("ホーム画面にウィジェットを追加", () -> {
             AppWidgetManager manager = getSystemService(AppWidgetManager.class);
             if (manager.isRequestPinAppWidgetSupported()) manager.requestPinAppWidget(new ComponentName(this, TodayWidget.class), null, null);
@@ -92,6 +93,7 @@ public final class MainActivity extends Activity {
             }
             text(model.sourceLabel(), 12, false);
         }
+        text("🚨=公表予定の時間帯内 / 予定=開始前 / 終=予定時間終了。実施確認ではありません。", 12, false);
         text(FeedStore.status(this), 12, false);
         button("地図を開く", () -> startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://orbis.1kqr1.com/"))));
         text("サイズ変更：ホーム画面のウィジェットを長押しし、枠の丸い持ち手を動かしてください。小さい表示でも一覧は上下にスクロールできます。", 13, false);

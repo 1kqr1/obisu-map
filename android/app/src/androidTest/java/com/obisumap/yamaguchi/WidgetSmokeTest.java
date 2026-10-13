@@ -53,18 +53,34 @@ public class WidgetSmokeTest {
             assertTrue("Fully visible rows: " + fullyVisibleRows(list, clip), fullyVisibleRows(list, clip) >= minimum);
         });
     }
+    private boolean darkMode() { return "dark".equals(InstrumentationRegistry.getArguments().getString("theme", "light")); }
+    private void assertWidgetTheme(WidgetHostTestActivity host, FeedModel model) {
+        InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
+            View root = findById(host.widgetView, R.id.widget_root);
+            android.graphics.drawable.GradientDrawable background = (android.graphics.drawable.GradientDrawable) root.getBackground();
+            assertEquals("Widget surface must follow system theme", darkMode() ? 0xFF161B22 : 0xFFFFFFFF, background.getColor().getDefaultColor());
+            if (!model.items.isEmpty()) {
+                WidgetSchedule.Row first = new WidgetSchedule(model, java.time.ZonedDateTime.now(FeedModel.JAPAN)).rows.get(0);
+                TextView status = (TextView) findById(host.widgetView, R.id.row_state);
+                assertEquals(first.state.mark, status.getText().toString());
+                TextView title = (TextView) findById(host.widgetView, R.id.row_title);
+                boolean ended = first.state == WidgetSchedule.State.ENDED;
+                assertEquals("Widget text must remain readable", darkMode() ? ended ? 0xFF87919C : 0xFFE6EDF3 : ended ? 0xFF9AA0A6 : 0xFF202124, title.getCurrentTextColor());
+            }
+        });
+    }
     private void screenshot(String name) throws Exception {
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
         instrumentation.waitForIdleSync();
         // RemoteViewsの値が反映されてからSurfaceFlingerにフレームが届くまで待つ。
         Thread.sleep(1000);
         Bitmap bitmap = instrumentation.getUiAutomation().takeScreenshot();
-        File output = new File(instrumentation.getTargetContext().getExternalFilesDir(null), name);
+        File output = new File(instrumentation.getTargetContext().getExternalFilesDir(null), (darkMode() ? "dark-" : "light-") + name);
         try (FileOutputStream file = new FileOutputStream(output)) { bitmap.compress(Bitmap.CompressFormat.PNG, 100, file); }
     }
     private void waitForMode(WidgetHostTestActivity host, boolean pair, FeedModel model) throws Exception {
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
-        String title = "山口 取締り";
+        String title = "山口県警取り締まり情報";
         for (int attempt = 0; attempt < 80; attempt++) {
             final boolean[] ready = {false};
             instrumentation.runOnMainSync(() -> {
@@ -91,9 +107,15 @@ public class WidgetSmokeTest {
     @Test public void nativeScreenAndActualWidgetRender() throws Exception {
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
         Context context = instrumentation.getTargetContext();
+        assertEquals("System night mode must be applied", darkMode() ? android.content.res.Configuration.UI_MODE_NIGHT_YES : android.content.res.Configuration.UI_MODE_NIGHT_NO,
+                context.getResources().getConfiguration().uiMode & android.content.res.Configuration.UI_MODE_NIGHT_MASK);
+        assertEquals("山口県警取り締まり情報", context.getApplicationInfo().loadLabel(context.getPackageManager()).toString());
         MainActivity activity = (MainActivity) instrumentation.startActivitySync(new Intent(context, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         instrumentation.waitForIdleSync();
-        assertTrue(hasText(activity.getWindow().getDecorView(), "山口 きょうの取締り"));
+        assertTrue(hasText(activity.getWindow().getDecorView(), "山口県警取り締まり情報"));
+        android.widget.FrameLayout appRoot = activity.findViewById(android.R.id.content);
+        android.graphics.drawable.ColorDrawable appBackground = (android.graphics.drawable.ColorDrawable) appRoot.getChildAt(0).getBackground();
+        assertEquals("App surface must follow system theme", darkMode() ? 0xFF0D1117 : 0xFFF5F7FA, appBackground.getColor());
         screenshot("native-screen.png");
         instrumentation.runOnMainSync(activity::finish);
         Intent hostIntent = new Intent(context, WidgetHostTestActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
@@ -112,6 +134,7 @@ public class WidgetSmokeTest {
         }
         assertTrue("Actual data date must be rendered", hasText(host.getWindow().getDecorView(), model.date.substring(5).replace('-', '/')));
         if (!model.items.isEmpty()) assertTrue("First enforcement item must be rendered", hasText(host.getWindow().getDecorView(), new RoadPresentation(new WidgetSchedule(model, java.time.ZonedDateTime.now(FeedModel.JAPAN)).rows.get(0).item).roadLabel()));
+        assertWidgetTheme(host, model);
         screenshot("widget-screen.png");
         AppWidgetProviderInfo info = host.widgetView.getAppWidgetInfo();
         assertEquals("Both resize directions must be supported", AppWidgetProviderInfo.RESIZE_BOTH, info.resizeMode);

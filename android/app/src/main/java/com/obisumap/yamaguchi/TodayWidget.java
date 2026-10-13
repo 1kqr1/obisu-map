@@ -7,7 +7,7 @@ import android.appwidget.AppWidgetProvider;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
+import android.util.TypedValue;
 import android.view.View;
 import android.os.Bundle;
 import android.util.SizeF;
@@ -71,16 +71,17 @@ public final class TodayWidget extends AppWidgetProvider {
         String date = model == null ? FeedModel.today() : model.date;
         String summary = date.substring(5).replace('-', '/') + "  " + schedule.summary();
         if (aggregateTime) summary += "  " + schedule.commonTime;
-        views.setTextViewText(R.id.widget_title, "山口 取締り");
+        views.setTextViewText(R.id.widget_title, context.getString(R.string.app_name));
+        views.setTextViewTextSize(R.id.widget_title, TypedValue.COMPLEX_UNIT_SP, size.getWidth() < 250 ? 11 : 14);
         views.setTextViewText(R.id.widget_date, summary);
         views.setContentDescription(R.id.widget_date, date + " 公表予定: 予定時間内" + schedule.within + "件、開始前" + schedule.before + "件、時間終了" + schedule.ended + "件、時間未公表" + schedule.unknown + "件" + (aggregateTime ? "、共通時間" + schedule.commonTime : ""));
         views.setTextViewText(R.id.widget_message, model == null ? "更新して公表情報を取得" : model.coverageMessage());
         views.setViewVisibility(R.id.widget_message, model != null && model.covered ? View.GONE : View.VISIBLE);
         views.setTextViewText(R.id.widget_empty, model == null ? "情報を未取得です" : model.emptyMessage());
         String clock = schedule.now.format(DateTimeFormatter.ofPattern("HH:mm"));
-        String foot = clock + "基準 · 内=予定時間内";
+        String foot = clock + "基準 · 🚨=予定時間内";
         String checked = FeedStore.compactStatus(context);
-        if ("通信エラー".equals(checked)) foot = clock + "基準 · 通信エラー · 内=予定時間内";
+        if ("通信エラー".equals(checked)) foot = clock + "基準 · 通信エラー · 🚨=予定時間内";
         else if (size.getWidth() >= 300) foot += " · " + checked;
         if (model != null && size.getWidth() >= 250) foot += " · " + ("manual_snapshot".equals(model.xStatus) ? "X確認分" : "api".equals(model.xStatus) ? "X取得済" : "X未取得");
         views.setTextViewText(R.id.widget_freshness, foot);
@@ -117,17 +118,20 @@ public final class TodayWidget extends AppWidgetProvider {
         String area = road.stations.replaceFirst("^管内：", "");
         row.setTextViewText(R.id.row_stations, area.isEmpty() ? "公表告知" : area);
         row.setTextViewText(R.id.row_state, data.state.mark);
+        row.setTextViewTextSize(R.id.row_state, TypedValue.COMPLEX_UNIT_SP, data.state == WidgetSchedule.State.WITHIN ? 14 : 11);
         row.setTextViewText(R.id.row_detail, WidgetSchedule.shortTime(item));
         row.setViewVisibility(R.id.row_detail, aggregateTime ? View.GONE : View.VISIBLE);
-        row.setInt(R.id.row_state_bar, "setBackgroundColor", data.state.color);
-        row.setTextColor(R.id.row_state, data.state.color);
+        int stateColor = data.state == WidgetSchedule.State.WITHIN ? R.color.state_within
+                : data.state == WidgetSchedule.State.BEFORE ? R.color.state_before : R.color.state_neutral;
+        row.setColor(R.id.row_state_bar, "setBackgroundColor", stateColor);
+        row.setColor(R.id.row_state, "setTextColor", stateColor);
         boolean ended = data.state == WidgetSchedule.State.ENDED;
         row.setInt(R.id.road_badge_number, "setBackgroundResource", ended || !road.numbered ? R.drawable.road_dense_neutral : R.drawable.road_dense_badge);
-        row.setTextColor(R.id.row_title, ended ? 0xFF9AA0A6 : 0xFF202124);
-        row.setTextColor(R.id.row_stations, ended ? 0xFF9AA0A6 : 0xFF525B68);
-        row.setTextColor(R.id.row_detail, ended ? 0xFF9AA0A6 : 0xFF525B68);
-        row.setInt(R.id.row_root, "setBackgroundColor", first && data.state == WidgetSchedule.State.WITHIN ? 0xFFFFF3F2
-                : first && data.state == WidgetSchedule.State.BEFORE ? 0xFFF0F6FF : Color.WHITE);
+        row.setColor(R.id.row_title, "setTextColor", ended ? R.color.text_ended : R.color.text_primary);
+        row.setColor(R.id.row_stations, "setTextColor", ended ? R.color.text_ended : R.color.text_secondary);
+        row.setColor(R.id.row_detail, "setTextColor", ended ? R.color.text_ended : R.color.text_secondary);
+        row.setColor(R.id.row_root, "setBackgroundColor", first && data.state == WidgetSchedule.State.WITHIN ? R.color.highlight_within
+                : first && data.state == WidgetSchedule.State.BEFORE ? R.color.highlight_before : R.color.surface);
         row.setContentDescription(R.id.row_root, road.roadLabel() + "、" + area + "、" + data.state.label + "、" + item.timeLabel(false) + "。公表予定であり実施確認ではありません。");
         // 小サイズは項目のタップもアプリを開く。通常サイズは省略前の原情報へ進める。
         Intent fill = new Intent();

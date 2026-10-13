@@ -9,8 +9,8 @@ import java.util.List;
 /** 公表予定の時間帯との比較。実際の取締り実施を確認した状態ではない。 */
 public final class WidgetSchedule {
     public enum State {
-        WITHIN("内", "予定時間内", 0, 0xFFD93025),
-        BEFORE("予", "予定開始前", 1, 0xFF1A73E8),
+        WITHIN("🚨", "予定時間内", 0, 0xFFD93025),
+        BEFORE("予定", "予定開始前", 1, 0xFF1A73E8),
         UNKNOWN("告", "時間未公表の告知", 2, 0xFF9AA0A6),
         ENDED("終", "予定時間終了", 3, 0xFF9AA0A6);
         public final String mark, label;
@@ -54,7 +54,7 @@ public final class WidgetSchedule {
         within = active; before = pending; ended = finished; unknown = untimed;
         commonTime = common == null || "未公表".equals(common) ? "" : common;
     }
-    public String summary() { return "内" + within + " 予" + before + " 終" + ended + (unknown > 0 ? " 告" + unknown : ""); }
+    public String summary() { return "🚨" + within + " 予定" + before + " 終" + ended + (unknown > 0 ? " 告" + unknown : ""); }
     public static String shortTime(FeedModel.Item item) {
         if (!"speed".equals(item.kind)) return "未公表";
         switch (item.timeBand) { case "day": return "6-18"; case "night_early": return "18-翌6"; case "early": return "0-6"; default: return "未公表"; }

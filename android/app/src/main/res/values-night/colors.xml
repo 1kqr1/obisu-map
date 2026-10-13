@@ -1,0 +1,18 @@
+<resources>
+    <color name="surface">#161B22</color>
+    <color name="app_background">#0D1117</color>
+    <color name="text_primary">#E6EDF3</color>
+    <color name="text_secondary">#9DA7B3</color>
+    <color name="text_ended">#87919C</color>
+    <color name="divider">#30363D</color>
+    <color name="frame_border">#30363D</color>
+    <color name="state_within">#FF8078</color>
+    <color name="state_before">#8AB4F8</color>
+    <color name="state_neutral">#87919C</color>
+    <color name="badge_blue">#2563AD</color>
+    <color name="badge_neutral">#57616D</color>
+    <color name="highlight_within">#351E24</color>
+    <color name="highlight_before">#15283F</color>
+    <color name="time_day">#E7B971</color>
+    <color name="time_night">#B7ABFF</color>
+</resources>

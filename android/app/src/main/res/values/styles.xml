@@ -2,10 +2,14 @@
 <resources>
     <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
         <item name="android:fontFamily">sans</item>
-        <item name="android:colorAccent">#1D3557</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:navigationBarColor">@color/app_background</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:colorAccent">@color/state_before</item>
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:statusBarColor">#F5F7FA</item>
-        <item name="android:windowBackground">#F5F7FA</item>
+        <item name="android:statusBarColor">@color/app_background</item>
+        <item name="android:windowBackground">@color/app_background</item>
     </style>
-    <string name="widget_description">山口県の今日の取締り予定。更新ボタンで最新情報を確認できます。</string>
+    <string name="app_name">山口県警取り締まり情報</string>
+    <string name="widget_description">山口県警の公表予定を表示する非公式アプリ。更新ボタンで最新情報を確認できます。</string>
 </resources>

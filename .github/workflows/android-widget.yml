@@ -65,9 +65,14 @@ jobs:
             adb shell appwidget grantbind --package com.obisumap.yamaguchi.test
             adb shell am force-stop com.google.android.apps.nexuslauncher
             adb shell am force-stop com.android.launcher3
-            adb shell am instrument -w com.obisumap.yamaguchi.test/androidx.test.runner.AndroidJUnitRunner | tee android/app/build/instrumentation-result.txt
+            adb shell cmd uimode night no
+            adb shell am instrument -w -e theme light com.obisumap.yamaguchi.test/androidx.test.runner.AndroidJUnitRunner | tee android/app/build/instrumentation-result.txt
             adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files android/app/build/widget-captures
             grep -q 'OK (1 test)' android/app/build/instrumentation-result.txt
+            adb shell cmd uimode night yes
+            adb shell am instrument -w -e theme dark com.obisumap.yamaguchi.test/androidx.test.runner.AndroidJUnitRunner | tee android/app/build/instrumentation-dark-result.txt
+            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files android/app/build/widget-captures-dark
+            grep -q 'OK (1 test)' android/app/build/instrumentation-dark-result.txt
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -76,7 +81,9 @@ jobs:
             android/app/build/outputs/apk/release/*.apk
             android/app/build/reports/
             android/app/build/widget-captures/
+            android/app/build/widget-captures-dark/
             android/app/build/instrumentation-result.txt
+            android/app/build/instrumentation-dark-result.txt
       - name: 検証済みAPKを配布
         env:
           GH_TOKEN: ${{ github.token }}
@@ -87,7 +94,7 @@ jobs:
           cp android/app/build/outputs/apk/release/app-release.apk "$apk_name"
           sha256sum "$apk_name" > "$apk_name.sha256"
           if ! gh release view "$tag" >/dev/null 2>&1; then
-            gh release create "$tag" --target "$GITHUB_SHA" --title "山口 きょうの取締り Android $APK_VERSION" --notes-file android/RELEASE_NOTES.md
+            gh release create "$tag" --target "$GITHUB_SHA" --title "山口県警取り締まり情報 Android $APK_VERSION" --notes-file android/RELEASE_NOTES.md
           fi
           gh release upload "$tag" "$apk_name" "$apk_name.sha256" --clobber
       - name: サイトにも同じ署名付きAPKを配置

@@ -13,9 +13,9 @@ public final class RoadViews {
         if (!"speed".equals(item.kind)) return R.drawable.road_notice_badge;
         return road.road.startsWith("国道") ? R.drawable.road_shield : R.drawable.road_other_badge;
     }
-    private static int timeColor(FeedModel.Item item) {
+    private static int timeColorResource(FeedModel.Item item) {
         return item.timeBand.equals("night_early") || item.timeBand.equals("early") || item.timeBand.equals("night")
-                ? Color.rgb(67, 56, 138) : Color.rgb(143, 81, 14);
+                ? R.color.time_night : R.color.time_day;
     }
     private static float numberSize(RoadPresentation road, boolean compact) {
         return road.numbered ? (compact ? (road.number.length() == 3 ? 15 : 21) : (road.number.length() == 3 ? 20 : 28)) : (compact ? 11 : 15);
@@ -31,7 +31,7 @@ public final class RoadViews {
         row.setTextViewText(R.id.row_stations, road.stations);
         row.setViewVisibility(R.id.row_stations, road.stations.isEmpty() ? View.GONE : View.VISIBLE);
         row.setTextViewText(R.id.row_detail, item.timeLabel(compact));
-        row.setTextColor(R.id.row_detail, timeColor(item));
+        row.setColor(R.id.row_detail, "setTextColor", timeColorResource(item));
         row.setContentDescription(R.id.row_root, item.title + "、" + item.timeLabel(compact) + "。県警の原情報を見る");
     }
     public static void bind(View row, FeedModel.Item item) {
@@ -45,7 +45,7 @@ public final class RoadViews {
         TextView stations = row.findViewById(R.id.row_stations);
         stations.setText(road.stations); stations.setVisibility(road.stations.isEmpty() ? View.GONE : View.VISIBLE);
         TextView time = row.findViewById(R.id.row_detail);
-        time.setText(item.timeLabel(false)); time.setTextColor(timeColor(item));
+        time.setText(item.timeLabel(false)); time.setTextColor(row.getContext().getColor(timeColorResource(item)));
         row.setContentDescription(item.title + "、" + item.timeLabel(false) + "。県警の原情報を見る");
     }
 }

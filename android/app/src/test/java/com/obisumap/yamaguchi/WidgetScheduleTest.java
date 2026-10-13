@@ -25,7 +25,7 @@ public class WidgetScheduleTest {
         assertEquals("1", s.rows.get(0).item.id);
         assertEquals(1, s.within); assertEquals(1, s.ended); assertEquals(1, s.unknown);
         assertEquals(WidgetSchedule.State.UNKNOWN, s.rows.get(1).state);
-        assertEquals("内1 予0 終1 告1", s.summary());
+        assertEquals("🚨1 予定0 終1 告1", s.summary());
     }
     @Test public void previousNightAndJapanTimezoneAreHandled() throws Exception {
         assertEquals(WidgetSchedule.State.WITHIN, schedule("night_early", "2026-10-14T05:59:59+09:00").rows.get(0).state);
