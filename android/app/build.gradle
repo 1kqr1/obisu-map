@@ -41,6 +41,7 @@ tasks.register('copyWidgetFeed', Copy) {
 tasks.named('preBuild').configure { dependsOn 'copyWidgetFeed' }
 tasks.matching { it.name.endsWith('JavaRes') || it.name.endsWith('Assets') }.configureEach { dependsOn 'copyWidgetFeed' }
 dependencies {
+    implementation 'androidx.core:core:1.17.0'
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'org.json:json:20250517'
     androidTestImplementation 'androidx.test:runner:1.6.2'

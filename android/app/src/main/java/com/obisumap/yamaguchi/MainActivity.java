@@ -10,6 +10,7 @@ import android.content.IntentFilter;
 import android.graphics.Insets;
 import android.net.Uri;
 import android.os.Build;
+import androidx.core.content.ContextCompat;
 import android.os.Bundle;
 import android.view.WindowInsets;
 import android.widget.Button;
@@ -47,8 +48,7 @@ public final class MainActivity extends Activity {
     }
     @Override protected void onResume() {
         super.onResume();
-        if (Build.VERSION.SDK_INT >= 33) registerReceiver(changed, new IntentFilter(FeedStore.CHANGED), Context.RECEIVER_NOT_EXPORTED);
-        else registerReceiver(changed, new IntentFilter(FeedStore.CHANGED));
+        ContextCompat.registerReceiver(this, changed, new IntentFilter(FeedStore.CHANGED), ContextCompat.RECEIVER_NOT_EXPORTED);
         registered = true; render();
     }
     @Override protected void onPause() { if (registered) { unregisterReceiver(changed); registered = false; } super.onPause(); }
