@@ -15,13 +15,16 @@ import java.io.FileOutputStream;
 
 public class WidgetSmokeTest {
     private boolean hasText(View view, String text) {
-        if (view instanceof TextView && ((TextView) view).getText().toString().contains(text)) return true;
+        if (view instanceof TextView && view.isShown() && ((TextView) view).getText().toString().contains(text)) return true;
         if (view instanceof ViewGroup) for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++)
             if (hasText(((ViewGroup) view).getChildAt(i), text)) return true;
         return false;
     }
     private void screenshot(String name) throws Exception {
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
+        instrumentation.waitForIdleSync();
+        // RemoteViewsの値が反映されてからSurfaceFlingerにフレームが届くまで待つ。
+        Thread.sleep(1000);
         Bitmap bitmap = instrumentation.getUiAutomation().takeScreenshot();
         File output = new File(instrumentation.getTargetContext().getExternalFilesDir(null), name);
         try (FileOutputStream file = new FileOutputStream(output)) { bitmap.compress(Bitmap.CompressFormat.PNG, 100, file); }
