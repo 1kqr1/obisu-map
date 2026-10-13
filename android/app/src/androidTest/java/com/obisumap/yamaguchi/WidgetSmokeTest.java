@@ -21,6 +21,15 @@ public class WidgetSmokeTest {
             if (hasText(((ViewGroup) view).getChildAt(i), text)) return true;
         return false;
     }
+    // AppWidgetHostViewの子はRemoteViewsの名前空間なので、外側のfindViewByIdでは探索できない。
+    private View findById(View view, int id) {
+        if (view.getId() == id) return view;
+        if (view instanceof ViewGroup) for (int i = 0; i < ((ViewGroup) view).getChildCount(); i++) {
+            View found = findById(((ViewGroup) view).getChildAt(i), id);
+            if (found != null) return found;
+        }
+        return null;
+    }
     private void screenshot(String name) throws Exception {
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
         instrumentation.waitForIdleSync();
@@ -36,8 +45,8 @@ public class WidgetSmokeTest {
         for (int attempt = 0; attempt < 80; attempt++) {
             final boolean[] ready = {false};
             instrumentation.runOnMainSync(() -> {
-                TextView heading = host.widgetView.findViewById(R.id.widget_title);
-                TextView number = host.widgetView.findViewById(R.id.road_badge_number);
+                TextView heading = (TextView) findById(host.widgetView, R.id.widget_title);
+                TextView number = (TextView) findById(host.widgetView, R.id.road_badge_number);
                 ready[0] = heading != null && title.equals(heading.getText().toString())
                         && (model.items.isEmpty() || number != null && new RoadPresentation(model.items.get(0)).badgeMain.equals(number.getText().toString()));
             });
@@ -45,14 +54,15 @@ public class WidgetSmokeTest {
             Thread.sleep(250);
         }
         screenshot("widget-failed-mode.png");
+        final String[] diagnostics = {""};
         instrumentation.runOnMainSync(() -> {
-            TextView heading = host.widgetView.findViewById(R.id.widget_title);
-            TextView number = host.widgetView.findViewById(R.id.road_badge_number);
-            System.out.println("Resize diagnostics: title=" + (heading == null ? "null" : heading.getText())
+            TextView heading = (TextView) findById(host.widgetView, R.id.widget_title);
+            TextView number = (TextView) findById(host.widgetView, R.id.road_badge_number);
+            diagnostics[0] = "title=" + (heading == null ? "null" : heading.getText())
                     + " badge=" + (number == null ? "null" : number.getText())
-                    + " host=" + host.widgetView.getWidth() + "x" + host.widgetView.getHeight());
+                    + " host=" + host.widgetView.getWidth() + "x" + host.widgetView.getHeight();
         });
-        fail("Widget size switch must render the title and road badge: " + title);
+        fail("Widget size switch must render the title and road badge: " + title + " · " + diagnostics[0]);
     }
     @Test public void nativeScreenAndActualWidgetRender() throws Exception {
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();

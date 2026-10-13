@@ -63,6 +63,8 @@ jobs:
             adb install -r android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
             adb shell appwidget grantbind --package com.obisumap.yamaguchi
             adb shell appwidget grantbind --package com.obisumap.yamaguchi.test
+            adb shell am force-stop com.google.android.apps.nexuslauncher
+            adb shell am force-stop com.android.launcher3
             adb shell am instrument -w com.obisumap.yamaguchi.test/androidx.test.runner.AndroidJUnitRunner | tee android/app/build/instrumentation-result.txt
             adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files android/app/build/widget-captures
             grep -q 'OK (1 test)' android/app/build/instrumentation-result.txt

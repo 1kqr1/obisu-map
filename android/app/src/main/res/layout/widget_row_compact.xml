@@ -10,7 +10,7 @@
     </FrameLayout>
     <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
         <TextView android:id="@+id/row_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="13sp" android:textStyle="bold" android:textColor="#1D3557" />
-        <TextView android:id="@+id/row_stations" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:textColor="#26394A" android:layout_marginTop="3dp" />
         <TextView android:id="@+id/row_detail" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:textStyle="bold" android:textColor="#9B5C16" android:layout_marginTop="2dp" />
+        <TextView android:id="@+id/row_stations" android:layout_width="match_parent" android:layout_height="wrap_content" android:textSize="11sp" android:textColor="#26394A" android:layout_marginTop="3dp" />
     </LinearLayout>
 </LinearLayout>
