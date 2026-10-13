@@ -14,6 +14,7 @@ const FILES = [
   "enforcement_segments_yamaguchi.json",
   "enforcement_segments_nagasaki.json",
   "yamaguchi_enforcement_raw.json",
+  "yamaguchi_x_information.json",
   "nagasaki_enforcement_raw.json",
   "oita_enforcement_points.json",
   "fixed_cameras.json",

@@ -8,6 +8,21 @@
   font-family: system-ui, -apple-system, "Hiragino Sans", "Yu Gothic", sans-serif;
 }
 
+#x-information {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  font-size: 0.78rem;
+}
+
+#x-information h2 { font-size: 0.95rem; color: var(--accent); margin: 0 0 8px; }
+#x-information-status { color: var(--muted); line-height: 1.5; }
+.x-notice { border: 1px solid var(--border); border-radius: 8px; padding: 10px; margin-top: 10px; }
+.x-notice h3 { font-size: 0.85rem; margin: 0 0 8px; }
+.x-notice p { line-height: 1.6; overflow-wrap: anywhere; }
+.x-notice-text { white-space: pre-wrap; }
+.x-notice a { color: var(--accent); }
+.x-notice summary { cursor: pointer; }
+
 * {
   box-sizing: border-box;
 }

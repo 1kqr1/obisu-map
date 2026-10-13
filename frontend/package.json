@@ -8,6 +8,7 @@
     "dev": "vite",
     "prebuild": "node scripts/copy-data.mjs && node scripts/copy-maplibre-worker.mjs",
     "build": "tsc && vite build",
+    "test": "node --test tests/*.test.mjs",
     "preview": "vite preview"
   },
   "devDependencies": {

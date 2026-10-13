@@ -28,6 +28,9 @@ const statusEl = document.getElementById("route-status")!;
 const resultsEl = document.getElementById("route-results")!;
 const lastUpdatedEl = document.getElementById("last-updated")!;
 const clearButton = document.getElementById("clear-route-button") as HTMLButtonElement;
+const xStatusEl = document.getElementById("x-information-status")!;
+const xNoticesEl = document.getElementById("x-notices")!;
+const xSelectedDateOnly = document.getElementById("x-selected-date-only") as HTMLInputElement;
 
 const filterFixed = document.getElementById("filter-fixed") as HTMLInputElement;
 const filterMobileSegments = document.getElementById("filter-mobile-segments") as HTMLInputElement;
@@ -59,6 +62,7 @@ function currentFilters(): MapFilters {
 
 function onFiltersChanged(): void {
   obisuMap.applyFilters(currentFilters());
+  renderXInformation();
   if (lastRouteLine && appData) {
     renderMatches(lastRouteLine, appData, dateInput.value, timeBandInput.value as TimeBandFilter);
   }
@@ -68,6 +72,52 @@ for (const el of [filterFixed, filterMobileSegments, filterMobilePoints, ...filt
   el.addEventListener("change", onFiltersChanged);
 }
 timeBandInput.addEventListener("change", onFiltersChanged);
+dateInput.addEventListener("change", onFiltersChanged);
+xSelectedDateOnly.addEventListener("change", renderXInformation);
+
+function renderXInformation(): void {
+  if (!appData) return;
+  const info = appData.xInformation;
+  const verified = info.verified_at ? info.verified_at.slice(0, 10) : "不明";
+  xStatusEl.textContent = info.status === "api"
+    ? `公式X 最終取得: ${verified}`
+    : info.status === "manual_snapshot"
+      ? `確認済み投稿（${verified}確認）。自動更新は準備中です。`
+      : "公式Xの情報を読み込めませんでした。HPの予定を表示しています。";
+  const prefSet = new Set(currentFilters().prefectures);
+  const geometryIds = new Set(appData.segments.map((s) => s.id));
+  // 新しい路線・未知の管轄でジオメトリを作れなくても、予定自体は落とさない。
+  const unmapped = appData.schedules.filter((s) => !geometryIds.has(s.segment_id) && prefSet.has(s.prefecture))
+    .filter((s) => !xSelectedDateOnly.checked || !dateInput.value || s.date === dateInput.value)
+    .filter((s) => timeBandMatchesFilter(s.time_band, timeBandInput.value as TimeBandFilter));
+  const unmappedHtml = unmapped.length ? `<details class="x-notice"><summary>地図に表示できない予定（${unmapped.length}件）</summary><ul>${unmapped.map((s) =>
+    `<li>${escapeHtml(s.date)} ${escapeHtml(timeBandLabel(s.time_band))} ${escapeHtml(s.road)} / ${escapeHtml(s.police_station_raw)}</li>`
+  ).join("")}</ul><p>場所は各県警の原情報を確認してください。</p></details>` : "";
+  const notices = info.notices
+    .filter((n) => prefSet.has(n.prefecture))
+    .filter((n) => !xSelectedDateOnly.checked || !dateInput.value || n.dates.length === 0 || n.dates.includes(dateInput.value))
+    .filter((n) => timeBandMatchesFilter(n.time_band, timeBandInput.value as TimeBandFilter))
+    .sort((a, b) => b.published_at.localeCompare(a.published_at));
+  if (!notices.length) {
+    xNoticesEl.innerHTML = "<p>この条件に該当する追加情報はありません。</p>" + unmappedHtml;
+    return;
+  }
+  const today = toLocalISODate(new Date());
+  xNoticesEl.innerHTML = notices.map((n) => {
+    const past = n.dates.length > 0 && n.dates.every((d) => d < today);
+    const dateLabel = n.dates.length ? n.dates.map((d) => d.slice(5).replace("-", "/")).join("・") : "日付は原投稿を確認";
+    // 市内予告は場所を特定できないため、地図の点や特定国道へ変換しない。
+    const source = /^https:\/\/x\.com\/YamaguchiPolice\/status\/\d+$/.test(n.source_url)
+      ? `<a href="${escapeHtml(n.source_url)}" target="_blank" rel="noopener noreferrer">公式Xの原投稿</a>` : "出典を確認できません";
+    return `<article class="x-notice">
+      <h3>${escapeHtml(n.title)}${past ? "（過去の告知）" : ""}</h3>
+      <p>${escapeHtml(dateLabel)} / ${escapeHtml(n.location)}</p>
+      <p>${escapeHtml(timeBandLabel(n.time_band))}${n.location_accuracy === "city_level" ? "・市内の具体的な場所は公表されていません" : ""}</p>
+      <details><summary>投稿内容</summary><p class="x-notice-text">${escapeHtml(n.text)}</p></details>
+      <p>${source}</p>
+    </article>`;
+  }).join("") + unmappedHtml;
+}
 
 async function init(): Promise<void> {
   await obisuMap.whenReady();
@@ -75,6 +125,7 @@ async function init(): Promise<void> {
     appData = await loadAppData();
     obisuMap.setData(appData.segments, appData.schedules, appData.fixedCameras, appData.mobilePoints);
     obisuMap.applyFilters(defaultFilters());
+    renderXInformation();
     if (appData.lastUpdated) {
       const d = new Date(appData.lastUpdated);
       lastUpdatedEl.textContent = `データ最終更新: ${d.toLocaleString("ja-JP")}`;
@@ -192,7 +243,7 @@ function renderResults(
     html += "</ul>";
   }
   if (segments.length > 0) {
-    html += `<h2>可搬式オービス 取締り区間（${segments.length}件、出発地から近い順）</h2><ul>`;
+    html += `<h2>速度取締り予定の区間（${segments.length}件、出発地から近い順）</h2><ul>`;
     for (const seg of segments) {
       const dates = schedulesForSegment(data.schedules, seg.id)
         .filter((s) => !targetDate || s.date === targetDate)

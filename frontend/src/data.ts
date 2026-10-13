@@ -4,7 +4,9 @@ import type {
   EnforcementSegment,
   FixedCamera,
   MobilePoint,
+  XInformation,
 } from "./types";
+import { mergeSchedules } from "./schedules";
 
 const DATA_BASE = `${import.meta.env.BASE_URL}data`;
 
@@ -18,7 +20,7 @@ const SEGMENT_SOURCES = [
 const MOBILE_POINT_SOURCES = ["oita_enforcement_points.json"];
 
 export async function loadAppData(): Promise<AppData> {
-  const [fixedCameras, segmentSourceResults, mobilePointResults] = await Promise.all([
+  const [fixedCameras, segmentSourceResults, mobilePointResults, xInformation] = await Promise.all([
     fetchJson<FixedCamera[]>(`${DATA_BASE}/fixed_cameras.json`),
     Promise.all(
       SEGMENT_SOURCES.map(async (src) => ({
@@ -27,9 +29,12 @@ export async function loadAppData(): Promise<AppData> {
       })),
     ),
     Promise.all(MOBILE_POINT_SOURCES.map((f) => fetchJson<MobilePoint[]>(`${DATA_BASE}/${f}`))),
+    fetchJson<XInformation>(`${DATA_BASE}/yamaguchi_x_information.json`).catch(() => ({
+      status: "unavailable" as const, verified_at: null, schedules: [], notices: [],
+    })),
   ]);
 
-  const schedules = segmentSourceResults.flatMap((r) => r.schedules);
+  const schedules = mergeSchedules(segmentSourceResults.flatMap((r) => r.schedules), xInformation.schedules);
   const segments = segmentSourceResults.flatMap((r) => r.segments);
   const mobilePoints = mobilePointResults.flat();
 
@@ -39,7 +44,7 @@ export async function loadAppData(): Promise<AppData> {
   ].filter(Boolean);
   const lastUpdated = timestamps.length > 0 ? timestamps.sort().at(-1)! : null;
 
-  return { fixedCameras, segments, schedules, mobilePoints, lastUpdated };
+  return { fixedCameras, segments, schedules, mobilePoints, lastUpdated, xInformation };
 }
 
 async function fetchJson<T>(url: string): Promise<T> {

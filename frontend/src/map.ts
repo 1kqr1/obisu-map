@@ -379,7 +379,12 @@ export class ObisuMap {
     );
     const scheduleRows = upcoming
       .slice(0, 8)
-      .map((s) => `<li>${s.date}（${s.weekday}） ${timeBandLabel(s.time_band)}</li>`)
+      .map((s) => {
+        const sources = [{ source: s.source, source_url: s.source_url }, ...(s.additional_sources ?? [])];
+        const links = sources.filter((source) => /^https:\/\/(?:www\.pref\.yamaguchi\.lg\.jp\/|x\.com\/YamaguchiPolice\/status\/\d+$)/.test(source.source_url))
+          .map((source) => `<a href="${escapeHtml(source.source_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.source)}</a>`).join(" / ");
+        return `<li>${s.date}（${s.weekday}） ${timeBandLabel(s.time_band)}${links ? `<br>${links}` : ""}</li>`;
+      })
       .join("");
 
     const html = `

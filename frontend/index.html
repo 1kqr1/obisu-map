@@ -13,8 +13,8 @@
       <div id="map">
         <details id="map-legend">
           <summary>地図の見方</summary>
-          <p><span class="legend-swatch legend-line-red"></span> 可搬式オービス 取締り区間（国道特定できたもの）</p>
-          <p><span class="legend-swatch legend-fill-orange"></span> 可搬式オービス 取締り区間（国道不明・市区町村全体を表示）</p>
+          <p><span class="legend-swatch legend-line-red"></span> 速度取締り予定の区間（国道特定できたもの）</p>
+          <p><span class="legend-swatch legend-fill-orange"></span> 速度取締り予定の範囲（国道不明・市区町村全体を表示）</p>
           <p><span class="legend-swatch legend-dot-orange"></span> 可搬式オービス 取締り地点（大分県、住所からジオコーディング）</p>
           <p><span class="legend-swatch legend-dot-navy"></span> 固定式オービス（現在データなし）</p>
           <p><span class="legend-swatch legend-line-teal"></span> 検索した経路</p>
@@ -33,7 +33,7 @@
           <div class="filter-group">
             <span class="filter-group-label">種別</span>
             <label><input type="checkbox" id="filter-fixed" checked /> 固定式</label>
-            <label><input type="checkbox" id="filter-mobile-segments" checked /> 可搬式（区間）</label>
+            <label><input type="checkbox" id="filter-mobile-segments" checked /> 速度取締り（区間）</label>
             <label><input type="checkbox" id="filter-mobile-points" checked /> 可搬式（地点）</label>
           </div>
           <div class="filter-group">
@@ -71,6 +71,13 @@
 
         <div id="route-status" role="status"></div>
         <div id="route-results"></div>
+
+        <section id="x-information" aria-labelledby="x-information-heading">
+          <h2 id="x-information-heading">山口県警 公式Xの追加情報</h2>
+          <p id="x-information-status" role="status"></p>
+          <label><input type="checkbox" id="x-selected-date-only" /> 出発予定日の情報のみ</label>
+          <div id="x-notices"></div>
+        </section>
 
         <footer id="app-footer">
           <p id="last-updated"></p>

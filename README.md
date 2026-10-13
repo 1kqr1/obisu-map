@@ -32,6 +32,7 @@ pip install -r requirements.txt
 
 ```bash
 python scripts/scrape_yamaguchi.py   # → data/processed/yamaguchi_enforcement_raw.json（区間ベース）
+python scripts/scrape_yamaguchi_x.py # → data/processed/yamaguchi_x_information.json（公式Xの追加情報）
 python scripts/scrape_nagasaki.py    # → data/processed/nagasaki_enforcement_raw.json（区間ベース）
 python scripts/scrape_oita.py        # → data/processed/oita_enforcement_points.json（点ベース、ジオコーディング込み）
 ```
@@ -40,6 +41,7 @@ python scripts/scrape_oita.py        # → data/processed/oita_enforcement_point
 
 ```bash
 python scripts/scrape_yamaguchi.py --local-pdf tests/fixtures/yamaguchi_sample_202608_late.pdf
+python scripts/scrape_yamaguchi_x.py --local-posts data/manual/yamaguchi_x_verified_20261013.json
 python scripts/scrape_oita.py --local-csv tests/fixtures/oita_sample_202608_early.csv tests/fixtures/oita_sample_202608_late.csv
 python scripts/scrape_nagasaki.py --local-html /path/to/saved.html
 ```
@@ -47,7 +49,7 @@ python scripts/scrape_nagasaki.py --local-html /path/to/saved.html
 ## 区間ジオメトリの生成（山口県・長崎県）
 
 ```bash
-python scripts/build_segments.py --prefecture yamaguchi
+python scripts/build_segments.py --prefecture yamaguchi --additional-schedules data/processed/yamaguchi_x_information.json
 python scripts/build_segments.py --prefecture nagasaki
 ```
 
@@ -68,6 +70,10 @@ npm run dev
 デプロイは `main` への push で GitHub Actions が自動的にビルド・公開する。
 
 ## 重要な注意
+
+- 山口県はHPを基本データにし、公式Xの速度取締り本文、可搬式オービスの市内予告、飲酒運転強化日を補足する。重複した予定は1件にまとめ、HPにのみある予定は保持する。市内予告を特定地点・特定国道に変換しない。解析できない取締り投稿も原文とリンクを追加情報欄に表示する。添付画像・動画のOCRは未実装。
+- X自動取得にはGitHubの **Settings → Secrets and variables → Actions** に `X_BEARER_TOKEN` の設定が必要。現在は未設定のため、2026-10-13に確認した16投稿（速度取締り14投稿、可搬式オービス1投稿、飲酒運転1投稿）の転記データを表示する。認証情報はPython取得処理だけで使用し、フロントエンド・リポジトリへ保存しない。
+- X公式APIは従量課金。[公式仕様](https://docs.x.com/x-api/users/get-posts)に従いユーザーの投稿を取得し、初回は直近30日、以降は成功時の投稿ID以降をページングする。未設定時は取得せず、APIエラー・部分エラー・ページ上限時は既存データとカーソルを保持する。APIを実際に呼び出す検証は未実施。HP/Xの取得は06:00・18:15 JST、成功後にPagesを再ビルドする。
 
 - 可搬式オービスの「取締り予定」の粒度は**県ごとに全く異なる**。山口県・長崎県は住所を含まず路線区間ハイライトで表現し、大分県は町丁レベルの住所がありジオコーディングした点で表現する。詳細は requirements.md 11.5/11.6節。
 - 福岡県・佐賀県は公式サイトに構造化データがなく、主な告知手段がX（Twitter）であるため、データ収集の対象外としている（プロジェクト方針としてSNSスクレイピングは行わない）。

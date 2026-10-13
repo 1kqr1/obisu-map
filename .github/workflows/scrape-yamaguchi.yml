@@ -4,6 +4,8 @@ on:
   schedule:
     # 06:00 JST = 21:00 UTC(前日)
     - cron: "0 21 * * *"
+    # 前日17時のX予告も当日夕方に反映（18:15 JST）。
+    - cron: "15 9 * * *"
   workflow_dispatch: {}
 
 jobs:
@@ -23,10 +25,20 @@ jobs:
       - name: 山口県データ取得・パース
         run: python scripts/scrape_yamaguchi.py
 
+      - name: 公式Xの取締り情報を取得
+        continue-on-error: true # X障害時も保持済み投稿とHPの更新を公開する。
+        env:
+          X_BEARER_TOKEN: ${{ secrets.X_BEARER_TOKEN }}
+        run: python scripts/scrape_yamaguchi_x.py
+
+      - name: 追加された路線・管轄の地図区間を更新
+        continue-on-error: true # 未対応の路線は一覧で原投稿を表示する。
+        run: python scripts/build_segments.py --prefecture yamaguchi --additional-schedules data/processed/yamaguchi_x_information.json --incremental
+
       - name: 差分があればコミット
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/processed/yamaguchi_enforcement_raw.json
+          git add data/processed/yamaguchi_enforcement_raw.json data/processed/yamaguchi_x_information.json data/processed/enforcement_segments_yamaguchi.json
           git diff --cached --quiet || git commit -m "data: 山口県 取締り予定を更新 ($(date -u +%Y-%m-%d))"
           git push

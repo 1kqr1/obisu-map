@@ -39,6 +39,31 @@ export interface EnforcementSchedule {
   source: string;
   source_url: string;
   fetched_at: string;
+  additional_sources?: { source: string; source_url: string }[];
+}
+
+export interface EnforcementNotice {
+  id: string;
+  prefecture: string;
+  kind: "mobile_orbis" | "drink_driving" | "unparsed";
+  title: string;
+  dates: string[];
+  time_band: string;
+  location: string;
+  location_accuracy: "city_level" | "unspecified";
+  text: string;
+  published_at: string;
+  source: string;
+  source_url: string;
+  fetched_at: string;
+}
+
+export interface XInformation {
+  status: "manual_snapshot" | "api" | "unavailable";
+  verified_at: string | null;
+  api_last_success_at?: string | null;
+  schedules: EnforcementSchedule[];
+  notices: EnforcementNotice[];
 }
 
 // 大分県のように住所レベルで地名が特定できる県は、区間ハイライトではなく
@@ -64,4 +89,5 @@ export interface AppData {
   schedules: EnforcementSchedule[];
   mobilePoints: MobilePoint[];
   lastUpdated: string | null;
+  xInformation: XInformation;
 }

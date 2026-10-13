@@ -224,17 +224,22 @@ class SegmentBuilder:
         }
 
 
-def run(prefecture: PrefectureConfig) -> int:
+def run(prefecture: PrefectureConfig, additional_schedules: Path | None = None, incremental: bool = False) -> int:
     jurisdiction = json.loads(prefecture.jurisdiction_path.read_text(encoding="utf-8"))
     schedules = json.loads(prefecture.schedules_path.read_text(encoding="utf-8"))
+    if additional_schedules and additional_schedules.exists():
+        schedules.extend(json.loads(additional_schedules.read_text(encoding="utf-8")).get("schedules", []))
 
     pairs = sorted({(r["road"], r["police_station_raw"]) for r in schedules})
     print(f"[INFO] [{prefecture.slug}] {len(pairs)} 件のユニークな (road, station) の組を処理します")
 
     builder = SegmentBuilder(prefecture=prefecture, jurisdiction=jurisdiction)
-    segments = []
+    segments = json.loads(prefecture.output_path.read_text(encoding="utf-8")) if incremental and prefecture.output_path.exists() else []
+    existing_ids = {s["id"] for s in segments}
     errors = []
     for road, station_raw in pairs:
+        if segment_id_for(prefecture.slug, road, station_raw) in existing_ids:
+            continue
         try:
             segments.append(builder.build(road, station_raw))
             print(f"  ok: {road} / {station_raw}")
@@ -242,24 +247,27 @@ def run(prefecture: PrefectureConfig) -> int:
             errors.append((road, station_raw, str(exc)))
             print(f"  NG: {road} / {station_raw} -> {exc}")
 
-    prefecture.output_path.parent.mkdir(parents=True, exist_ok=True)
-    prefecture.output_path.write_text(
-        json.dumps(segments, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    print(f"[OK] [{prefecture.slug}] {len(segments)} 件の区間を {prefecture.output_path} に出力しました")
     if errors:
         print(f"[WARN] [{prefecture.slug}] {len(errors)} 件でエラーが発生しました:")
         for road, station_raw, msg in errors:
             print(f"  - {road} / {station_raw}: {msg}")
+        print("[WARN] 既存の区間データを保持します")
         return 1
+    prefecture.output_path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = prefecture.output_path.with_suffix(".tmp")
+    temporary.write_text(json.dumps(segments, ensure_ascii=False, indent=2), encoding="utf-8")
+    temporary.replace(prefecture.output_path)
+    print(f"[OK] [{prefecture.slug}] {len(segments)} 件の区間を {prefecture.output_path} に出力しました")
     return 0
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--prefecture", choices=sorted(PREFECTURES), required=True)
+    parser.add_argument("--additional-schedules", type=Path, help="X等の追加スケジュールを含むJSON")
+    parser.add_argument("--incremental", action="store_true", help="既存区間を維持し、新しい道路・管轄のみ生成する")
     args = parser.parse_args()
-    return run(PREFECTURES[args.prefecture])
+    return run(PREFECTURES[args.prefecture], args.additional_schedules, args.incremental)
 
 
 if __name__ == "__main__":
