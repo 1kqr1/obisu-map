@@ -62,7 +62,7 @@ public class WidgetSmokeTest {
         File output = new File(instrumentation.getTargetContext().getExternalFilesDir(null), name);
         try (FileOutputStream file = new FileOutputStream(output)) { bitmap.compress(Bitmap.CompressFormat.PNG, 100, file); }
     }
-    private void waitForMode(WidgetHostTestActivity host, boolean compact, FeedModel model) throws Exception {
+    private void waitForMode(WidgetHostTestActivity host, boolean pair, FeedModel model) throws Exception {
         Instrumentation instrumentation = InstrumentationRegistry.getInstrumentation();
         String title = "山口 取締り";
         for (int attempt = 0; attempt < 80; attempt++) {
@@ -71,6 +71,7 @@ public class WidgetSmokeTest {
                 TextView heading = (TextView) findById(host.widgetView, R.id.widget_title);
                 TextView number = (TextView) findById(host.widgetView, R.id.road_badge_number);
                 ready[0] = heading != null && title.equals(heading.getText().toString())
+                        && ((findById(host.widgetView, R.id.row_left) != null) == pair)
                         && (model.items.isEmpty() || number != null && expectedBadge(model).equals(number.getText().toString()));
             });
             if (ready[0]) return;
@@ -115,7 +116,7 @@ public class WidgetSmokeTest {
         AppWidgetProviderInfo info = host.widgetView.getAppWidgetInfo();
         assertEquals("Both resize directions must be supported", AppWidgetProviderInfo.RESIZE_BOTH, info.resizeMode);
         instrumentation.runOnMainSync(() -> host.resize(180, 180));
-        waitForMode(host, true, model);
+        waitForMode(host, false, model);
         screenshot("widget-compact.png");
         instrumentation.runOnMainSync(() -> host.resize(360, 480));
         waitForMode(host, false, model);

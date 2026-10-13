@@ -79,7 +79,10 @@ public final class TodayWidget extends AppWidgetProvider {
         views.setTextViewText(R.id.widget_empty, model == null ? "情報を未取得です" : model.emptyMessage());
         String clock = schedule.now.format(DateTimeFormatter.ofPattern("HH:mm"));
         String foot = clock + "基準 · 内=予定時間内";
-        if (size.getWidth() >= 300) foot += " · " + FeedStore.compactStatus(context);
+        String checked = FeedStore.compactStatus(context);
+        if ("通信エラー".equals(checked)) foot = clock + "基準 · 通信エラー · 内=予定時間内";
+        else if (size.getWidth() >= 300) foot += " · " + checked;
+        if (model != null && size.getWidth() >= 250) foot += " · " + ("manual_snapshot".equals(model.xStatus) ? "X確認分" : "api".equals(model.xStatus) ? "X取得済" : "X未取得");
         views.setTextViewText(R.id.widget_freshness, foot);
         views.setContentDescription(R.id.widget_freshness, foot + "。実施確認ではありません。公表外の取締り・予定変更があります。" + (model == null ? "" : model.sourceLabel()));
         boolean hasItems = !schedule.rows.isEmpty();
