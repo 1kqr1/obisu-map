@@ -17,3 +17,10 @@ frontend/dist/
 frontend/public/data/
 # maplibre-glのWorker本体。ビルド時に自動生成される（frontend/scripts/copy-maplibre-worker.mjs）
 frontend/public/maplibre/
+
+# Androidのビルド結果・ローカルSDK設定・署名鍵
+android/.gradle/
+android/**/build/
+android/local.properties
+*.jks
+*.keystore

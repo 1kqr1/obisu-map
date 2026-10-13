@@ -1,0 +1,77 @@
+name: Androidウィジェットをビルド
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths: ["android/**", ".github/workflows/android-widget.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: android-widget
+  cancel-in-progress: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.13"
+      - name: 署名鍵を一時ファイルへ復元
+        env:
+          SIGNING_KEYSTORE: ${{ secrets.ANDROID_SIGNING_KEYSTORE }}
+        run: |
+          test -n "$SIGNING_KEYSTORE"
+          printf '%s' "$SIGNING_KEYSTORE" | base64 --decode > "$RUNNER_TEMP/widget-signing.jks"
+          chmod 600 "$RUNNER_TEMP/widget-signing.jks"
+      - name: テスト・Lint・署名付きAPKを生成
+        working-directory: android
+        env:
+          ANDROID_KEYSTORE_PATH: ${{ runner.temp }}/widget-signing.jks
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+        run: gradle testDebugUnitTest lintRelease assembleRelease assembleDebug assembleDebugAndroidTest --no-daemon
+      - name: エミュレータのKVMアクセスを設定
+        run: |
+          sudo chown runner:kvm /dev/kvm
+          sudo chmod 660 /dev/kvm
+      - uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 35
+          arch: x86_64
+          profile: pixel_7
+          disable-animations: true
+          script: |
+            adb install -r android/app/build/outputs/apk/debug/app-debug.apk
+            adb install -r android/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk
+            adb shell appwidget grantbind --package com.obisumap.yamaguchi
+            adb shell appwidget grantbind --package com.obisumap.yamaguchi.test
+            adb shell am instrument -w com.obisumap.yamaguchi.test/androidx.test.runner.AndroidJUnitRunner | tee android/app/build/instrumentation-result.txt
+            grep -q 'OK (1 test)' android/app/build/instrumentation-result.txt
+            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/native-screen.png android/app/build/native-screen.png
+            adb pull /sdcard/Android/data/com.obisumap.yamaguchi/files/widget-screen.png android/app/build/widget-screen.png
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: android-widget-build
+          path: |
+            android/app/build/outputs/apk/release/*.apk
+            android/app/build/reports/
+            android/app/build/*screen.png
+            android/app/build/instrumentation-result.txt
+      - name: 検証済みAPKを配布
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp android/app/build/outputs/apk/release/app-release.apk yamaguchi-today-1.0.0.apk
+          sha256sum yamaguchi-today-1.0.0.apk > yamaguchi-today-1.0.0.apk.sha256
+          if ! gh release view android-v1.0.0 >/dev/null 2>&1; then
+            gh release create android-v1.0.0 --target "$GITHUB_SHA" --title "山口 きょうの取締り Android 1.0.0" --notes-file android/RELEASE_NOTES.md
+          fi
+          gh release upload android-v1.0.0 yamaguchi-today-1.0.0.apk yamaguchi-today-1.0.0.apk.sha256 --clobber
+      - name: 一時署名鍵を削除
+        if: always()
+        run: rm -f "$RUNNER_TEMP/widget-signing.jks"

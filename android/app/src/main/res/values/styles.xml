@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#1D3557</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#F5F7FA</item>
+        <item name="android:windowBackground">#F5F7FA</item>
+    </style>
+    <string name="widget_description">山口県の今日の取締り予定。更新ボタンで最新情報を確認できます。</string>
+</resources>

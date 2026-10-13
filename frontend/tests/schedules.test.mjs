@@ -7,8 +7,8 @@ import ts from "typescript";
 const source = readFileSync(new URL("../src/schedules.ts", import.meta.url), "utf8");
 const compiled = ts.transpileModule(source, { compilerOptions: { module: ts.ModuleKind.ESNext, target: ts.ScriptTarget.ES2022 } }).outputText;
 const { mergeSchedules } = await import(`data:text/javascript;base64,${Buffer.from(compiled).toString("base64")}`);
-const hp = JSON.parse(readFileSync(new URL("../../data/processed/yamaguchi_enforcement_raw.json", import.meta.url)));
-const x = JSON.parse(readFileSync(new URL("../../data/processed/yamaguchi_x_information.json", import.meta.url))).schedules;
+const hp = JSON.parse(readFileSync(new URL("../../tests/fixtures/yamaguchi_hp_20261013.json", import.meta.url)));
+const x = JSON.parse(readFileSync(new URL("../../tests/fixtures/yamaguchi_x_schedules_20261013.json", import.meta.url)));
 
 test("X本文にないHP予定を残し、123件の重複を増やさず出典を補足する", () => {
   const merged = mergeSchedules(hp, x);
