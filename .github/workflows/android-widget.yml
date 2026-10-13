@@ -54,8 +54,7 @@ jobs:
           profile: pixel_7
           disable-animations: true
           script: |
-            signer=$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -n 1)
-            "$signer" verify --verbose android/app/build/outputs/apk/release/app-release.apk
+            signer=$(find "$ANDROID_HOME/build-tools" -name apksigner -type f | sort -V | tail -n 1); "$signer" verify --verbose android/app/build/outputs/apk/release/app-release.apk
             adb install -r frontend/public/downloads/yamaguchi-today-1.0.0.apk
             adb install -r android/app/build/outputs/apk/release/app-release.apk
             adb shell am start -W -n com.obisumap.yamaguchi/.MainActivity
