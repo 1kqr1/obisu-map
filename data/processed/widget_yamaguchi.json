@@ -2,24 +2,9 @@
   "schema_version": 1,
   "prefecture": "山口県",
   "timezone": "Asia/Tokyo",
-  "generated_at": "2026-11-27T12:33:12+09:00",
-  "hp_updated_at": "2026-11-27T12:33:12+09:00",
+  "generated_at": "2026-11-28T04:01:37+09:00",
+  "hp_updated_at": "2026-11-28T04:01:36+09:00",
   "hp_coverage_dates": [
-    "2026-11-01",
-    "2026-11-02",
-    "2026-11-03",
-    "2026-11-04",
-    "2026-11-05",
-    "2026-11-06",
-    "2026-11-07",
-    "2026-11-08",
-    "2026-11-09",
-    "2026-11-10",
-    "2026-11-11",
-    "2026-11-12",
-    "2026-11-13",
-    "2026-11-14",
-    "2026-11-15",
     "2026-11-16",
     "2026-11-17",
     "2026-11-18",
@@ -34,1617 +19,26 @@
     "2026-11-27",
     "2026-11-28",
     "2026-11-29",
-    "2026-11-30"
+    "2026-11-30",
+    "2026-12-01",
+    "2026-12-02",
+    "2026-12-03",
+    "2026-12-04",
+    "2026-12-05",
+    "2026-12-06",
+    "2026-12-07",
+    "2026-12-08",
+    "2026-12-09",
+    "2026-12-10",
+    "2026-12-11",
+    "2026-12-12",
+    "2026-12-13",
+    "2026-12-14",
+    "2026-12-15"
   ],
   "x_status": "manual_snapshot",
   "x_verified_at": "2026-10-13",
   "days": {
-    "2026-11-01": [
-      {
-        "id": "2026-11-01-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 美祢",
-        "road": "国道その他",
-        "police_stations": [
-          "美祢"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-02": [
-      {
-        "id": "2026-11-02-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 柳井・光・防府・宇部・山陽小野田・小串",
-        "road": "その他道路",
-        "police_stations": [
-          "柳井",
-          "光",
-          "防府",
-          "宇部",
-          "山陽小野田",
-          "小串"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 6
-      },
-      {
-        "id": "2026-11-02-day-国道188号",
-        "kind": "speed",
-        "title": "国道188号 / 下松",
-        "road": "国道188号",
-        "police_stations": [
-          "下松"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-02-day-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 長門・下関",
-        "road": "国道191号",
-        "police_stations": [
-          "長門",
-          "下関"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-02-day-国道262号",
-        "kind": "speed",
-        "title": "国道262号 / 山口",
-        "road": "国道262号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-02-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国・周南・山口南・長府",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国",
-          "周南",
-          "山口南",
-          "長府"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 4
-      },
-      {
-        "id": "2026-11-02-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 山口",
-        "road": "国道その他",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-02-night_early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-02-night_early-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口",
-        "road": "国道9号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-03": [
-      {
-        "id": "2026-11-03-early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-03-early-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口",
-        "road": "国道9号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-03-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 防府",
-        "road": "その他道路",
-        "police_stations": [
-          "防府"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-03-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-03-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 山口・小串",
-        "road": "国道その他",
-        "police_stations": [
-          "山口",
-          "小串"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      }
-    ],
-    "2026-11-04": [
-      {
-        "id": "2026-11-04-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 岩国・柳井・防府・山口南",
-        "road": "その他道路",
-        "police_stations": [
-          "岩国",
-          "柳井",
-          "防府",
-          "山口南"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 4
-      },
-      {
-        "id": "2026-11-04-day-国道188号",
-        "kind": "speed",
-        "title": "国道188号 / 光",
-        "road": "国道188号",
-        "police_stations": [
-          "光"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-04-day-国道262号",
-        "kind": "speed",
-        "title": "国道262号 / 萩",
-        "road": "国道262号",
-        "police_stations": [
-          "萩"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-04-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 下松・周南・山口南・長府",
-        "road": "国道2号",
-        "police_stations": [
-          "下松",
-          "周南",
-          "山口南",
-          "長府"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 4
-      },
-      {
-        "id": "2026-11-04-day-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口",
-        "road": "国道9号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-04-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 美祢",
-        "road": "国道その他",
-        "police_stations": [
-          "美祢"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-04-night_early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 長門",
-        "road": "その他道路",
-        "police_stations": [
-          "長門"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-04-night_early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 下関",
-        "road": "国道191号",
-        "police_stations": [
-          "下関"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-04-night_early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 周南",
-        "road": "国道2号",
-        "police_stations": [
-          "周南"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-05": [
-      {
-        "id": "2026-11-05-early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 長門",
-        "road": "その他道路",
-        "police_stations": [
-          "長門"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-05-early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 下関",
-        "road": "国道191号",
-        "police_stations": [
-          "下関"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-05-early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 周南",
-        "road": "国道2号",
-        "police_stations": [
-          "周南"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-05-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 光・防府・長府",
-        "road": "その他道路",
-        "police_stations": [
-          "光",
-          "防府",
-          "長府"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 3
-      },
-      {
-        "id": "2026-11-05-day-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 萩",
-        "road": "国道191号",
-        "police_stations": [
-          "萩"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-05-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 周南・山口",
-        "road": "国道その他",
-        "police_stations": [
-          "周南",
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-05-night_early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 美祢・長門",
-        "road": "その他道路",
-        "police_stations": [
-          "美祢",
-          "長門"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-05-night_early-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口・下関",
-        "road": "国道9号",
-        "police_stations": [
-          "山口",
-          "下関"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      }
-    ],
-    "2026-11-06": [
-      {
-        "id": "2026-11-06-early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 美祢・長門",
-        "road": "その他道路",
-        "police_stations": [
-          "美祢",
-          "長門"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-06-early-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口・下関",
-        "road": "国道9号",
-        "police_stations": [
-          "山口",
-          "下関"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-06-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 岩国・柳井・周南・防府・宇部",
-        "road": "その他道路",
-        "police_stations": [
-          "岩国",
-          "柳井",
-          "周南",
-          "防府",
-          "宇部"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 5
-      },
-      {
-        "id": "2026-11-06-day-国道188号",
-        "kind": "speed",
-        "title": "国道188号 / 光",
-        "road": "国道188号",
-        "police_stations": [
-          "光"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-06-day-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 萩・下関",
-        "road": "国道191号",
-        "police_stations": [
-          "萩",
-          "下関"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-06-day-国道262号",
-        "kind": "speed",
-        "title": "国道262号 / 山口",
-        "road": "国道262号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-06-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 周南・山口南",
-        "road": "国道2号",
-        "police_stations": [
-          "周南",
-          "山口南"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-06-day-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口",
-        "road": "国道9号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-06-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 周南",
-        "road": "国道その他",
-        "police_stations": [
-          "周南"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-06-night_early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 岩国",
-        "road": "その他道路",
-        "police_stations": [
-          "岩国"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-06-night_early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 下松・長府",
-        "road": "国道2号",
-        "police_stations": [
-          "下松",
-          "長府"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-06-night_early-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 小串",
-        "road": "国道その他",
-        "police_stations": [
-          "小串"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-07": [
-      {
-        "id": "2026-11-07-early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 岩国",
-        "road": "その他道路",
-        "police_stations": [
-          "岩国"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-07-early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 下松・長府",
-        "road": "国道2号",
-        "police_stations": [
-          "下松",
-          "長府"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-07-early-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 小串",
-        "road": "国道その他",
-        "police_stations": [
-          "小串"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-07-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 柳井・山陽小野田・長門",
-        "road": "その他道路",
-        "police_stations": [
-          "柳井",
-          "山陽小野田",
-          "長門"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 3
-      },
-      {
-        "id": "2026-11-07-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国・下松・山口南",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国",
-          "下松",
-          "山口南"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 3
-      }
-    ],
-    "2026-11-08": [
-      {
-        "id": "2026-11-08-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 下関",
-        "road": "その他道路",
-        "police_stations": [
-          "下関"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-08-day-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 下関",
-        "road": "国道191号",
-        "police_stations": [
-          "下関"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-08-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 美祢",
-        "road": "国道その他",
-        "police_stations": [
-          "美祢"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-09": [
-      {
-        "id": "2026-11-09-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 防府・山口南・宇部",
-        "road": "その他道路",
-        "police_stations": [
-          "防府",
-          "山口南",
-          "宇部"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 3
-      },
-      {
-        "id": "2026-11-09-day-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 長門",
-        "road": "国道191号",
-        "police_stations": [
-          "長門"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-09-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国・下松・周南・長府",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国",
-          "下松",
-          "周南",
-          "長府"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 4
-      },
-      {
-        "id": "2026-11-09-day-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口",
-        "road": "国道9号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-09-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 小串",
-        "road": "国道その他",
-        "police_stations": [
-          "小串"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-09-night_early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 柳井",
-        "road": "その他道路",
-        "police_stations": [
-          "柳井"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-09-night_early-国道188号",
-        "kind": "speed",
-        "title": "国道188号 / 光",
-        "road": "国道188号",
-        "police_stations": [
-          "光"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-09-night_early-国道190号",
-        "kind": "speed",
-        "title": "国道190号 / 山陽小野田",
-        "road": "国道190号",
-        "police_stations": [
-          "山陽小野田"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-09-night_early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 萩・下関",
-        "road": "国道191号",
-        "police_stations": [
-          "萩",
-          "下関"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-09-night_early-国道262号",
-        "kind": "speed",
-        "title": "国道262号 / 山口",
-        "road": "国道262号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-10": [
-      {
-        "id": "2026-11-10-early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 柳井",
-        "road": "その他道路",
-        "police_stations": [
-          "柳井"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-10-early-国道188号",
-        "kind": "speed",
-        "title": "国道188号 / 光",
-        "road": "国道188号",
-        "police_stations": [
-          "光"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-10-early-国道190号",
-        "kind": "speed",
-        "title": "国道190号 / 山陽小野田",
-        "road": "国道190号",
-        "police_stations": [
-          "山陽小野田"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-10-early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 萩・下関",
-        "road": "国道191号",
-        "police_stations": [
-          "萩",
-          "下関"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-10-early-国道262号",
-        "kind": "speed",
-        "title": "国道262号 / 山口",
-        "road": "国道262号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-10-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 光・周南・防府・山陽小野田・下関",
-        "road": "その他道路",
-        "police_stations": [
-          "光",
-          "周南",
-          "防府",
-          "山陽小野田",
-          "下関"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 5
-      },
-      {
-        "id": "2026-11-10-day-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 長門",
-        "road": "国道191号",
-        "police_stations": [
-          "長門"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-10-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国・下松・周南・山口南・長府",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国",
-          "下松",
-          "周南",
-          "山口南",
-          "長府"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 5
-      },
-      {
-        "id": "2026-11-10-day-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口",
-        "road": "国道9号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-10-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 美祢",
-        "road": "国道その他",
-        "police_stations": [
-          "美祢"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-10-night_early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 萩",
-        "road": "その他道路",
-        "police_stations": [
-          "萩"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-11": [
-      {
-        "id": "2026-11-11-early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 萩",
-        "road": "その他道路",
-        "police_stations": [
-          "萩"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-11-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 柳井・防府・山口南・宇部・山陽小野田・長門・下関・長府",
-        "road": "その他道路",
-        "police_stations": [
-          "柳井",
-          "防府",
-          "山口南",
-          "宇部",
-          "山陽小野田",
-          "長門",
-          "下関",
-          "長府"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 8
-      },
-      {
-        "id": "2026-11-11-day-国道188号",
-        "kind": "speed",
-        "title": "国道188号 / 光",
-        "road": "国道188号",
-        "police_stations": [
-          "光"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-11-day-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 萩",
-        "road": "国道191号",
-        "police_stations": [
-          "萩"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-11-day-国道262号",
-        "kind": "speed",
-        "title": "国道262号 / 山口",
-        "road": "国道262号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-11-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国・下松・周南",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国",
-          "下松",
-          "周南"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 3
-      },
-      {
-        "id": "2026-11-11-day-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口",
-        "road": "国道9号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-11-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 周南・小串",
-        "road": "国道その他",
-        "police_stations": [
-          "周南",
-          "小串"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-11-night_early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 萩・下関",
-        "road": "国道191号",
-        "police_stations": [
-          "萩",
-          "下関"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-11-night_early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 周南",
-        "road": "国道2号",
-        "police_stations": [
-          "周南"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-12": [
-      {
-        "id": "2026-11-12-early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 萩・下関",
-        "road": "国道191号",
-        "police_stations": [
-          "萩",
-          "下関"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-12-early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 周南",
-        "road": "国道2号",
-        "police_stations": [
-          "周南"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-12-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 岩国・柳井・防府・宇部・小串・下関",
-        "road": "その他道路",
-        "police_stations": [
-          "岩国",
-          "柳井",
-          "防府",
-          "宇部",
-          "小串",
-          "下関"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 6
-      },
-      {
-        "id": "2026-11-12-day-国道188号",
-        "kind": "speed",
-        "title": "国道188号 / 光",
-        "road": "国道188号",
-        "police_stations": [
-          "光"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-12-day-国道262号",
-        "kind": "speed",
-        "title": "国道262号 / 山口",
-        "road": "国道262号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-12-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 山口南・山陽小野田・長府",
-        "road": "国道2号",
-        "police_stations": [
-          "山口南",
-          "山陽小野田",
-          "長府"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 3
-      },
-      {
-        "id": "2026-11-12-night_early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 宇部・萩",
-        "road": "その他道路",
-        "police_stations": [
-          "宇部",
-          "萩"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-12-night_early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 長門",
-        "road": "国道191号",
-        "police_stations": [
-          "長門"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-12-night_early-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 美祢",
-        "road": "国道その他",
-        "police_stations": [
-          "美祢"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-13": [
-      {
-        "id": "2026-11-13-early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 宇部・萩",
-        "road": "その他道路",
-        "police_stations": [
-          "宇部",
-          "萩"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-13-early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 長門",
-        "road": "国道191号",
-        "police_stations": [
-          "長門"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-13-early-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 美祢",
-        "road": "国道その他",
-        "police_stations": [
-          "美祢"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-13-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 岩国・下関",
-        "road": "その他道路",
-        "police_stations": [
-          "岩国",
-          "下関"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-13-day-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 長門",
-        "road": "国道191号",
-        "police_stations": [
-          "長門"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-13-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-13-day-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口",
-        "road": "国道9号",
-        "police_stations": [
-          "山口"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-13-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 美祢",
-        "road": "国道その他",
-        "police_stations": [
-          "美祢"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-13-night_early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 防府・小串",
-        "road": "その他道路",
-        "police_stations": [
-          "防府",
-          "小串"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-13-night_early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 萩・下関",
-        "road": "国道191号",
-        "police_stations": [
-          "萩",
-          "下関"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-13-night_early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-13-night_early-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口・長府",
-        "road": "国道9号",
-        "police_stations": [
-          "山口",
-          "長府"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-13-night_early-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 柳井",
-        "road": "国道その他",
-        "police_stations": [
-          "柳井"
-        ],
-        "detail": "夜間 18:00〜翌6:00　実施署管内",
-        "time_band": "night_early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
-    "2026-11-14": [
-      {
-        "id": "2026-11-14-early-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 防府・小串",
-        "road": "その他道路",
-        "police_stations": [
-          "防府",
-          "小串"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-14-early-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 萩・下関",
-        "road": "国道191号",
-        "police_stations": [
-          "萩",
-          "下関"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-14-early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 岩国",
-        "road": "国道2号",
-        "police_stations": [
-          "岩国"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-14-early-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 山口・長府",
-        "road": "国道9号",
-        "police_stations": [
-          "山口",
-          "長府"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-14-early-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 柳井",
-        "road": "国道その他",
-        "police_stations": [
-          "柳井"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-14-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 宇部・山陽小野田",
-        "road": "その他道路",
-        "police_stations": [
-          "宇部",
-          "山陽小野田"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 2
-      },
-      {
-        "id": "2026-11-14-day-国道191号",
-        "kind": "speed",
-        "title": "国道191号 / 長門",
-        "road": "国道191号",
-        "police_stations": [
-          "長門"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-14-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 岩国・山口・小串",
-        "road": "国道その他",
-        "police_stations": [
-          "岩国",
-          "山口",
-          "小串"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 3
-      }
-    ],
-    "2026-11-15": [
-      {
-        "id": "2026-11-15-day-その他道路",
-        "kind": "speed",
-        "title": "その他道路 / 山口南",
-        "road": "その他道路",
-        "police_stations": [
-          "山口南"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-15-day-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 下松",
-        "road": "国道2号",
-        "police_stations": [
-          "下松"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-11-15-day-国道その他",
-        "kind": "speed",
-        "title": "国道その他 / 美祢",
-        "road": "国道その他",
-        "police_stations": [
-          "美祢"
-        ],
-        "detail": "昼間 6:00〜18:00　実施署管内",
-        "time_band": "day",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      }
-    ],
     "2026-11-16": [
       {
         "id": "2026-11-16-day-その他道路",
@@ -3415,6 +1809,1840 @@
         "record_count": 1
       }
     ],
+    "2026-12-01": [
+      {
+        "id": "2026-12-01-early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-01-early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 長府",
+        "road": "国道2号",
+        "police_stations": [
+          "長府"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-01-early-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 下関",
+        "road": "国道9号",
+        "police_stations": [
+          "下関"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-01-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 光・防府・宇部・美祢・萩・下関",
+        "road": "その他道路",
+        "police_stations": [
+          "光",
+          "防府",
+          "宇部",
+          "美祢",
+          "萩",
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 6
+      },
+      {
+        "id": "2026-12-01-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-01-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 岩国・下松・周南・山陽小野田・長府",
+        "road": "国道2号",
+        "police_stations": [
+          "岩国",
+          "下松",
+          "周南",
+          "山陽小野田",
+          "長府"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 5
+      },
+      {
+        "id": "2026-12-01-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-01-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 柳井",
+        "road": "国道その他",
+        "police_stations": [
+          "柳井"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-01-night_early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-02": [
+      {
+        "id": "2026-12-02-early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-02-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 岩国・柳井・防府・山口・山口南・宇部・山陽小野田",
+        "road": "その他道路",
+        "police_stations": [
+          "岩国",
+          "柳井",
+          "防府",
+          "山口",
+          "山口南",
+          "宇部",
+          "山陽小野田"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 7
+      },
+      {
+        "id": "2026-12-02-day-国道188号",
+        "kind": "speed",
+        "title": "国道188号 / 光・下松",
+        "road": "国道188号",
+        "police_stations": [
+          "光",
+          "下松"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-02-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 小串・長門・萩・下関",
+        "road": "国道191号",
+        "police_stations": [
+          "小串",
+          "長門",
+          "萩",
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 4
+      },
+      {
+        "id": "2026-12-02-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 周南・長府",
+        "road": "国道2号",
+        "police_stations": [
+          "周南",
+          "長府"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-02-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口・下関",
+        "road": "国道9号",
+        "police_stations": [
+          "山口",
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-02-night_early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 山口南・下関",
+        "road": "その他道路",
+        "police_stations": [
+          "山口南",
+          "下関"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-02-night_early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-03": [
+      {
+        "id": "2026-12-03-early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 山口南・下関",
+        "road": "その他道路",
+        "police_stations": [
+          "山口南",
+          "下関"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-03-early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-03-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 柳井・周南・防府・山口南・宇部・萩・下関・長府",
+        "road": "その他道路",
+        "police_stations": [
+          "柳井",
+          "周南",
+          "防府",
+          "山口南",
+          "宇部",
+          "萩",
+          "下関",
+          "長府"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 8
+      },
+      {
+        "id": "2026-12-03-day-国道188号",
+        "kind": "speed",
+        "title": "国道188号 / 光",
+        "road": "国道188号",
+        "police_stations": [
+          "光"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-03-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 岩国・下松・周南・山陽小野田",
+        "road": "国道2号",
+        "police_stations": [
+          "岩国",
+          "下松",
+          "周南",
+          "山陽小野田"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 4
+      },
+      {
+        "id": "2026-12-03-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-03-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 小串",
+        "road": "国道その他",
+        "police_stations": [
+          "小串"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-03-night_early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-03-night_early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 岩国",
+        "road": "国道2号",
+        "police_stations": [
+          "岩国"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-03-night_early-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 美祢",
+        "road": "国道その他",
+        "police_stations": [
+          "美祢"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-04": [
+      {
+        "id": "2026-12-04-early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 岩国",
+        "road": "国道2号",
+        "police_stations": [
+          "岩国"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-early-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 美祢",
+        "road": "国道その他",
+        "police_stations": [
+          "美祢"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 岩国・柳井・防府・山口南・美祢",
+        "road": "その他道路",
+        "police_stations": [
+          "岩国",
+          "柳井",
+          "防府",
+          "山口南",
+          "美祢"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 5
+      },
+      {
+        "id": "2026-12-04-day-国道188号",
+        "kind": "speed",
+        "title": "国道188号 / 光",
+        "road": "国道188号",
+        "police_stations": [
+          "光"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 下関",
+        "road": "国道191号",
+        "police_stations": [
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 周南",
+        "road": "国道2号",
+        "police_stations": [
+          "周南"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 山口",
+        "road": "国道その他",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-night_early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 小串",
+        "road": "その他道路",
+        "police_stations": [
+          "小串"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-night_early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-night_early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-night_early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 下松",
+        "road": "国道2号",
+        "police_stations": [
+          "下松"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-04-night_early-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 長府",
+        "road": "国道9号",
+        "police_stations": [
+          "長府"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-05": [
+      {
+        "id": "2026-12-05-early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 小串",
+        "road": "その他道路",
+        "police_stations": [
+          "小串"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-05-early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-05-early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-05-early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 下松",
+        "road": "国道2号",
+        "police_stations": [
+          "下松"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-05-early-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 長府",
+        "road": "国道9号",
+        "police_stations": [
+          "長府"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-05-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 柳井・下松・宇部・山陽小野田・長門",
+        "road": "その他道路",
+        "police_stations": [
+          "柳井",
+          "下松",
+          "宇部",
+          "山陽小野田",
+          "長門"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 5
+      },
+      {
+        "id": "2026-12-05-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 岩国",
+        "road": "国道2号",
+        "police_stations": [
+          "岩国"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-05-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-05-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 小串",
+        "road": "国道その他",
+        "police_stations": [
+          "小串"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-06": [
+      {
+        "id": "2026-12-06-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 美祢",
+        "road": "国道その他",
+        "police_stations": [
+          "美祢"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-07": [
+      {
+        "id": "2026-12-07-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 防府・山口・宇部・美祢",
+        "road": "その他道路",
+        "police_stations": [
+          "防府",
+          "山口",
+          "宇部",
+          "美祢"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 4
+      },
+      {
+        "id": "2026-12-07-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 萩",
+        "road": "国道191号",
+        "police_stations": [
+          "萩"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-07-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 岩国・周南・山口南",
+        "road": "国道2号",
+        "police_stations": [
+          "岩国",
+          "周南",
+          "山口南"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 3
+      },
+      {
+        "id": "2026-12-07-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 宇部",
+        "road": "国道その他",
+        "police_stations": [
+          "宇部"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-07-night_early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 防府",
+        "road": "その他道路",
+        "police_stations": [
+          "防府"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-07-night_early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-07-night_early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 光",
+        "road": "国道2号",
+        "police_stations": [
+          "光"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-07-night_early-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 下関",
+        "road": "国道9号",
+        "police_stations": [
+          "下関"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-08": [
+      {
+        "id": "2026-12-08-early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 防府",
+        "road": "その他道路",
+        "police_stations": [
+          "防府"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-08-early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-08-early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 光",
+        "road": "国道2号",
+        "police_stations": [
+          "光"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-08-early-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 下関",
+        "road": "国道9号",
+        "police_stations": [
+          "下関"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-08-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 柳井・防府・山口南・宇部・小串・萩・下関",
+        "road": "その他道路",
+        "police_stations": [
+          "柳井",
+          "防府",
+          "山口南",
+          "宇部",
+          "小串",
+          "萩",
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 7
+      },
+      {
+        "id": "2026-12-08-day-国道188号",
+        "kind": "speed",
+        "title": "国道188号 / 光・下松",
+        "road": "国道188号",
+        "police_stations": [
+          "光",
+          "下松"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-08-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 下関",
+        "road": "国道191号",
+        "police_stations": [
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-08-day-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-08-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 周南・山陽小野田・長府",
+        "road": "国道2号",
+        "police_stations": [
+          "周南",
+          "山陽小野田",
+          "長府"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 3
+      },
+      {
+        "id": "2026-12-08-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-08-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 岩国・周南",
+        "road": "国道その他",
+        "police_stations": [
+          "岩国",
+          "周南"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-08-night_early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-09": [
+      {
+        "id": "2026-12-09-early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門",
+        "road": "国道191号",
+        "police_stations": [
+          "長門"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-09-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 岩国・防府・山口・山口南・宇部・下関",
+        "road": "その他道路",
+        "police_stations": [
+          "岩国",
+          "防府",
+          "山口",
+          "山口南",
+          "宇部",
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 6
+      },
+      {
+        "id": "2026-12-09-day-国道188号",
+        "kind": "speed",
+        "title": "国道188号 / 光",
+        "road": "国道188号",
+        "police_stations": [
+          "光"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-09-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 小串・長門・萩",
+        "road": "国道191号",
+        "police_stations": [
+          "小串",
+          "長門",
+          "萩"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 3
+      },
+      {
+        "id": "2026-12-09-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 岩国・下松・周南・長府",
+        "road": "国道2号",
+        "police_stations": [
+          "岩国",
+          "下松",
+          "周南",
+          "長府"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 4
+      },
+      {
+        "id": "2026-12-09-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-09-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 周南",
+        "road": "国道その他",
+        "police_stations": [
+          "周南"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-09-night_early-国道190号",
+        "kind": "speed",
+        "title": "国道190号 / 山陽小野田",
+        "road": "国道190号",
+        "police_stations": [
+          "山陽小野田"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-09-night_early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 下関",
+        "road": "国道191号",
+        "police_stations": [
+          "下関"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-09-night_early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 岩国",
+        "road": "国道2号",
+        "police_stations": [
+          "岩国"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-10": [
+      {
+        "id": "2026-12-10-early-国道190号",
+        "kind": "speed",
+        "title": "国道190号 / 山陽小野田",
+        "road": "国道190号",
+        "police_stations": [
+          "山陽小野田"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-10-early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 下関",
+        "road": "国道191号",
+        "police_stations": [
+          "下関"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-10-early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 岩国",
+        "road": "国道2号",
+        "police_stations": [
+          "岩国"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-10-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 防府・宇部・山陽小野田",
+        "road": "その他道路",
+        "police_stations": [
+          "防府",
+          "宇部",
+          "山陽小野田"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 3
+      },
+      {
+        "id": "2026-12-10-day-国道188号",
+        "kind": "speed",
+        "title": "国道188号 / 光・下松",
+        "road": "国道188号",
+        "police_stations": [
+          "光",
+          "下松"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-10-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門・下関",
+        "road": "国道191号",
+        "police_stations": [
+          "長門",
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-10-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 長府",
+        "road": "国道2号",
+        "police_stations": [
+          "長府"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-10-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-10-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 岩国",
+        "road": "国道その他",
+        "police_stations": [
+          "岩国"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-10-night_early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 美祢",
+        "road": "その他道路",
+        "police_stations": [
+          "美祢"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-10-night_early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 萩",
+        "road": "国道262号",
+        "police_stations": [
+          "萩"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-11": [
+      {
+        "id": "2026-12-11-early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 美祢",
+        "road": "その他道路",
+        "police_stations": [
+          "美祢"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-11-early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 萩",
+        "road": "国道262号",
+        "police_stations": [
+          "萩"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-11-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 岩国・光・防府・山口南・宇部・下関",
+        "road": "その他道路",
+        "police_stations": [
+          "岩国",
+          "光",
+          "防府",
+          "山口南",
+          "宇部",
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 6
+      },
+      {
+        "id": "2026-12-11-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 周南",
+        "road": "国道2号",
+        "police_stations": [
+          "周南"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-11-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-11-night_early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 柳井・宇部・小串・長府",
+        "road": "その他道路",
+        "police_stations": [
+          "柳井",
+          "宇部",
+          "小串",
+          "長府"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 4
+      },
+      {
+        "id": "2026-12-11-night_early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 萩",
+        "road": "国道191号",
+        "police_stations": [
+          "萩"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-11-night_early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-11-night_early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 周南",
+        "road": "国道2号",
+        "police_stations": [
+          "周南"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-12": [
+      {
+        "id": "2026-12-12-early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 柳井・宇部・小串・長府",
+        "road": "その他道路",
+        "police_stations": [
+          "柳井",
+          "宇部",
+          "小串",
+          "長府"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 4
+      },
+      {
+        "id": "2026-12-12-early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 萩",
+        "road": "国道191号",
+        "police_stations": [
+          "萩"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-12-early-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-12-early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 周南",
+        "road": "国道2号",
+        "police_stations": [
+          "周南"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-12-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 岩国・柳井・長門",
+        "road": "その他道路",
+        "police_stations": [
+          "岩国",
+          "柳井",
+          "長門"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 3
+      },
+      {
+        "id": "2026-12-12-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 下関",
+        "road": "国道191号",
+        "police_stations": [
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-12-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 下松・山陽小野田",
+        "road": "国道2号",
+        "police_stations": [
+          "下松",
+          "山陽小野田"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-12-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-12-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 小串",
+        "road": "国道その他",
+        "police_stations": [
+          "小串"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-13": [
+      {
+        "id": "2026-12-13-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 山口南",
+        "road": "国道2号",
+        "police_stations": [
+          "山口南"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-13-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-13-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 美祢",
+        "road": "国道その他",
+        "police_stations": [
+          "美祢"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-14": [
+      {
+        "id": "2026-12-14-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 岩国・光・山口南・宇部・山陽小野田・小串・萩",
+        "road": "その他道路",
+        "police_stations": [
+          "岩国",
+          "光",
+          "山口南",
+          "宇部",
+          "山陽小野田",
+          "小串",
+          "萩"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 7
+      },
+      {
+        "id": "2026-12-14-day-国道188号",
+        "kind": "speed",
+        "title": "国道188号 / 下松",
+        "road": "国道188号",
+        "police_stations": [
+          "下松"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-14-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門・下関",
+        "road": "国道191号",
+        "police_stations": [
+          "長門",
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-14-day-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-14-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 周南・長府",
+        "road": "国道2号",
+        "police_stations": [
+          "周南",
+          "長府"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-14-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 柳井",
+        "road": "国道その他",
+        "police_stations": [
+          "柳井"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-14-night_early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 防府",
+        "road": "その他道路",
+        "police_stations": [
+          "防府"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-14-night_early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 周南",
+        "road": "国道2号",
+        "police_stations": [
+          "周南"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      }
+    ],
+    "2026-12-15": [
+      {
+        "id": "2026-12-15-early-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 防府",
+        "road": "その他道路",
+        "police_stations": [
+          "防府"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-15-early-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 周南",
+        "road": "国道2号",
+        "police_stations": [
+          "周南"
+        ],
+        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
+        "time_band": "early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-15-day-その他道路",
+        "kind": "speed",
+        "title": "その他道路 / 岩国・防府・宇部・萩",
+        "road": "その他道路",
+        "police_stations": [
+          "岩国",
+          "防府",
+          "宇部",
+          "萩"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 4
+      },
+      {
+        "id": "2026-12-15-day-国道188号",
+        "kind": "speed",
+        "title": "国道188号 / 光",
+        "road": "国道188号",
+        "police_stations": [
+          "光"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-15-day-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 萩・下関",
+        "road": "国道191号",
+        "police_stations": [
+          "萩",
+          "下関"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-15-day-国道262号",
+        "kind": "speed",
+        "title": "国道262号 / 山口",
+        "road": "国道262号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-15-day-国道2号",
+        "kind": "speed",
+        "title": "国道2号 / 下松・周南",
+        "road": "国道2号",
+        "police_stations": [
+          "下松",
+          "周南"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      },
+      {
+        "id": "2026-12-15-day-国道9号",
+        "kind": "speed",
+        "title": "国道9号 / 山口",
+        "road": "国道9号",
+        "police_stations": [
+          "山口"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 1
+      },
+      {
+        "id": "2026-12-15-day-国道その他",
+        "kind": "speed",
+        "title": "国道その他 / 柳井・周南・小串・美祢",
+        "road": "国道その他",
+        "police_stations": [
+          "柳井",
+          "周南",
+          "小串",
+          "美祢"
+        ],
+        "detail": "昼間 6:00〜18:00　実施署管内",
+        "time_band": "day",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 4
+      },
+      {
+        "id": "2026-12-15-night_early-国道191号",
+        "kind": "speed",
+        "title": "国道191号 / 長門・下関",
+        "road": "国道191号",
+        "police_stations": [
+          "長門",
+          "下関"
+        ],
+        "detail": "夜間 18:00〜翌6:00　実施署管内",
+        "time_band": "night_early",
+        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
+        "record_count": 2
+      }
+    ],
     "2026-10-01": [
       {
         "id": "2026-10-01-day-国道188号",
@@ -4856,45 +5084,20 @@
         "record_count": 2
       }
     ],
-    "2026-12-01": [
+    "2026-12-16": [
       {
-        "id": "2026-12-01-early-国道191号",
+        "id": "2026-12-16-early-国道191号",
         "kind": "speed",
-        "title": "国道191号 / 長門",
+        "title": "国道191号 / 長門・下関",
         "road": "国道191号",
         "police_stations": [
-          "長門"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-12-01-early-国道2号",
-        "kind": "speed",
-        "title": "国道2号 / 長府",
-        "road": "国道2号",
-        "police_stations": [
-          "長府"
-        ],
-        "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
-        "time_band": "early",
-        "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
-      },
-      {
-        "id": "2026-12-01-early-国道9号",
-        "kind": "speed",
-        "title": "国道9号 / 下関",
-        "road": "国道9号",
-        "police_stations": [
+          "長門",
           "下関"
         ],
         "detail": "早朝 0:00〜6:00（前日夜から）　実施署管内",
         "time_band": "early",
         "source_url": "https://www.pref.yamaguchi.lg.jp/site/police/10456.html",
-        "record_count": 1
+        "record_count": 2
       }
     ],
     "2026-10-16": [
